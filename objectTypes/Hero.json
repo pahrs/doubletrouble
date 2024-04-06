@@ -1,0 +1,97 @@
+{
+	"name": "Hero",
+	"plugin-id": "Sprite",
+	"sid": 527142546762116,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Dashing",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 758989117453924
+		},
+		{
+			"name": "DashTravel",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 479083164569920
+		},
+		{
+			"name": "DashCooldown",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 916390882832012
+		},
+		{
+			"name": "DashAvailable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 610455957955919
+		},
+		{
+			"name": "WallTime",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 491682904069205
+		},
+		{
+			"name": "WallSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 925322616792794
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 219125827190077
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 945058279571219
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 223883795189345
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4847084,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 568484294843386,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
