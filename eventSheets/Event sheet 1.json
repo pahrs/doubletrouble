@@ -25,7 +25,7 @@
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 171737207539243,
 							"parameters": {
 								"instance-variable": "Dashing"
@@ -36,7 +36,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 887236402783104,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -45,7 +45,7 @@
 						},
 						{
 							"id": "set-angle-of-motion",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 891020953497723,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -68,7 +68,7 @@
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 422671259681025,
 							"parameters": {
 								"instance-variable": "Dashing"
@@ -79,7 +79,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 391514159779692,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -88,7 +88,7 @@
 						},
 						{
 							"id": "set-angle-of-motion",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 943923799242898,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -111,7 +111,7 @@
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 618046503339200,
 							"parameters": {
 								"instance-variable": "Dashing"
@@ -122,7 +122,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 322842059730337,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -131,7 +131,7 @@
 						},
 						{
 							"id": "set-angle-of-motion",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 132130877613927,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -158,7 +158,7 @@
 						},
 						{
 							"id": "is-jumping",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 514007120827949,
 							"behaviorType": "Platform"
 						}
@@ -166,7 +166,7 @@
 					"actions": [
 						{
 							"id": "set-angle-of-motion",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 750799957586652,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -193,7 +193,7 @@
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 165283886230935,
 							"parameters": {
 								"instance-variable": "DashAvailable"
@@ -203,7 +203,7 @@
 					"actions": [
 						{
 							"id": "set-enabled",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 640598548340773,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -212,7 +212,7 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 732136562530104,
 							"parameters": {
 								"instance-variable": "Dashing",
@@ -221,18 +221,18 @@
 						},
 						{
 							"id": "start-timer",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 350068748097362,
 							"behaviorType": "Timer",
 							"parameters": {
-								"duration": "Hero.DashTravel",
+								"duration": "obj_playercontrol.DashTravel",
 								"type": "once",
 								"tag": "\"DashTravel\""
 							}
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 712287054763370,
 							"parameters": {
 								"instance-variable": "DashAvailable",
@@ -241,11 +241,11 @@
 						},
 						{
 							"id": "start-timer",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 733705655472231,
 							"behaviorType": "Timer",
 							"parameters": {
-								"duration": "Hero.DashCooldown",
+								"duration": "obj_playercontrol.DashCooldown",
 								"type": "once",
 								"tag": "\"DashCooldown\""
 							}
@@ -258,7 +258,7 @@
 					"conditions": [
 						{
 							"id": "on-timer",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 429045310603516,
 							"behaviorType": "Timer",
 							"parameters": {
@@ -269,7 +269,7 @@
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 105761783259740,
 							"parameters": {
 								"instance-variable": "DashAvailable",
@@ -284,7 +284,7 @@
 					"conditions": [
 						{
 							"id": "on-timer",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 993040801912923,
 							"behaviorType": "Timer",
 							"parameters": {
@@ -295,7 +295,7 @@
 					"actions": [
 						{
 							"id": "set-enabled",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 398176781398346,
 							"behaviorType": "Bullet",
 							"parameters": {
@@ -304,7 +304,7 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 123452742412050,
 							"parameters": {
 								"instance-variable": "Dashing",
@@ -333,7 +333,7 @@
 					"conditions": [
 						{
 							"id": "is-by-wall",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 539436334679984,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -342,7 +342,7 @@
 						},
 						{
 							"id": "is-on-floor",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 430928218106222,
 							"behaviorType": "Platform",
 							"isInverted": true
@@ -359,7 +359,7 @@
 					"actions": [
 						{
 							"id": "set-max-fall-speed",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 718018953491431,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -384,7 +384,7 @@
 					"actions": [
 						{
 							"id": "set-max-fall-speed",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 896761488058464,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -399,7 +399,7 @@
 					"conditions": [
 						{
 							"id": "is-by-wall",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 535576737672949,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -408,7 +408,7 @@
 						},
 						{
 							"id": "is-on-floor",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 265442690336919,
 							"behaviorType": "Platform",
 							"isInverted": true
@@ -425,7 +425,7 @@
 					"actions": [
 						{
 							"id": "set-max-fall-speed",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 594800830774428,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -450,7 +450,7 @@
 					"actions": [
 						{
 							"id": "set-max-fall-speed",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 821343379545928,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -477,7 +477,7 @@
 						},
 						{
 							"id": "is-by-wall",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 873371570000817,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -488,10 +488,10 @@
 					"actions": [
 						{
 							"id": "set-y",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 265534082986276,
 							"parameters": {
-								"y": "Hero.Y - Hero.WallSpeed"
+								"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
 							}
 						}
 					],
@@ -510,7 +510,7 @@
 						},
 						{
 							"id": "is-by-wall",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 732783549306637,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -521,10 +521,10 @@
 					"actions": [
 						{
 							"id": "set-y",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 185803189494056,
 							"parameters": {
-								"y": "Hero.Y + Hero.WallSpeed"
+								"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
 							}
 						}
 					],
@@ -543,7 +543,7 @@
 						},
 						{
 							"id": "is-by-wall",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 769719461622055,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -554,10 +554,10 @@
 					"actions": [
 						{
 							"id": "set-y",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 124101526300302,
 							"parameters": {
-								"y": "Hero.Y - Hero.WallSpeed"
+								"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
 							}
 						}
 					],
@@ -576,7 +576,7 @@
 						},
 						{
 							"id": "is-by-wall",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 638154040651335,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -587,10 +587,10 @@
 					"actions": [
 						{
 							"id": "set-y",
-							"objectClass": "Hero",
+							"objectClass": "obj_playercontrol",
 							"sid": 455881946467867,
 							"parameters": {
-								"y": "Hero.Y + Hero.WallSpeed"
+								"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
 							}
 						}
 					],
@@ -598,6 +598,37 @@
 				}
 			],
 			"sid": 647537917672042
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Misc",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 827290145226010
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "obj_hitbox",
+							"sid": 189932534814904,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 666568300187806
+				}
+			],
+			"sid": 737629639943694
 		}
 	],
 	"sid": 677904809921252
