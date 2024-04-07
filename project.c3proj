@@ -63,7 +63,8 @@
 			"obj_playercontrol",
 			"Keyboard",
 			"Sprite2",
-			"tilemap"
+			"tilemap",
+			"Sprite"
 		],
 		"subfolders": []
 	},
