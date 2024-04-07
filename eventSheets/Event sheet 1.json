@@ -4,600 +4,768 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Misc",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 550201304088514
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "obj_hitbox",
+							"sid": 322803253934488,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 121857982694907
+				}
+			],
+			"sid": 260731554869993
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Movement",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "comment",
-					"text": "Movimentação base, impossibilitando que o jogador se mova durante um dash;"
+					"eventType": "group",
+					"disabled": false,
+					"title": "Base Movement",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Movimentação base, impossibilitando que o jogador se mova durante um dash;"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 982972236069874,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 775259649920064,
+									"parameters": {
+										"instance-variable": "Dashing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "obj_playercontrol",
+									"sid": 331434771407833,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 659140395332019
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 175998305275789,
+									"parameters": {
+										"key": 65
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 432941853386872,
+									"parameters": {
+										"instance-variable": "Dashing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "obj_playercontrol",
+									"sid": 386668551643595,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 722298781755469,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 545729158701476
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 128933953550248,
+									"parameters": {
+										"key": 68
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 619393155806473,
+									"parameters": {
+										"instance-variable": "Dashing"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "obj_playercontrol",
+									"sid": 852067935655003,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 677825683643453,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "0"
+									}
+								}
+							],
+							"sid": 327802232656204
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-landed",
+									"objectClass": "obj_playercontrol",
+									"sid": 417706838271073,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-double-jump",
+									"objectClass": "obj_playercontrol",
+									"sid": 782672179141802,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 832656044499704
+						}
+					],
+					"sid": 493670220259966
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "Dash",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 902801851052528,
-							"parameters": {
-								"key": 87
-							}
+							"eventType": "comment",
+							"text": "Dash base, com sistema de cooldown;"
 						},
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Hero",
-							"sid": 171737207539243,
-							"parameters": {
-								"instance-variable": "Dashing"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "Hero",
-							"sid": 887236402783104,
-							"behaviorType": "Platform",
-							"parameters": {
-								"control": "jump"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 353412429686281,
+									"parameters": {
+										"key": 16
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 507188364195243,
+									"parameters": {
+										"instance-variable": "DashAvailable"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "obj_playercontrol",
+									"sid": 926049366815889,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 884390904773922,
+									"parameters": {
+										"instance-variable": "Dashing",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 311488046210856,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "0"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 870564983951307,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.DashTravel",
+										"type": "once",
+										"tag": "\"DashTravel\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 276767592750026,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "false"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 831177146884857,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.DashCooldown",
+										"type": "once",
+										"tag": "\"DashCooldown\""
+									}
+								}
+							],
+							"sid": 617338750961739
 						},
 						{
-							"id": "set-angle-of-motion",
-							"objectClass": "Hero",
-							"sid": 891020953497723,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "270"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 340275920449637,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"DashCooldown\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 896588514314429,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 138234959181795
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 860978926300810,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"DashTravel\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "obj_playercontrol",
+									"sid": 191430206937418,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 804921431848437,
+									"parameters": {
+										"instance-variable": "Dashing",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 317143496265799,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "1000"
+									}
+								}
+							],
+							"sid": 491572469695409
 						}
 					],
-					"sid": 893829343741907
+					"sid": 133698694939008
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "Wall Climb",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 836926209517649,
-							"parameters": {
-								"key": 65
-							}
+							"eventType": "comment",
+							"text": "Faz com que o jogador possa se mover para cima e para baixo quando preso na parede."
 						},
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Hero",
-							"sid": 422671259681025,
-							"parameters": {
-								"instance-variable": "Dashing"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "Hero",
-							"sid": 391514159779692,
-							"behaviorType": "Platform",
-							"parameters": {
-								"control": "left"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 445682667348986,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 998416243998124,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "obj_playercontrol",
+									"sid": 337207865544180,
+									"parameters": {
+										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
+									}
+								}
+							],
+							"sid": 737207273837773
 						},
 						{
-							"id": "set-angle-of-motion",
-							"objectClass": "Hero",
-							"sid": 943923799242898,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "180"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 159088976843516,
+									"parameters": {
+										"key": 83
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 458139382638905,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "obj_playercontrol",
+									"sid": 984741093196834,
+									"parameters": {
+										"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
+									}
+								}
+							],
+							"sid": 570403172959743
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 338650338441134,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 567538994497201,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "obj_playercontrol",
+									"sid": 415195842359180,
+									"parameters": {
+										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
+									}
+								}
+							],
+							"sid": 386460616429030
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 526747736926212,
+									"parameters": {
+										"key": 83
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 978121244408451,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "obj_playercontrol",
+									"sid": 319676237539475,
+									"parameters": {
+										"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
+									}
+								}
+							],
+							"sid": 635860545753817
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 862563418784621,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"WallTime\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 939062173578335,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "1000"
+									}
+								}
+							],
+							"sid": 141318418302918
 						}
 					],
-					"sid": 492726324638412
+					"sid": 183521335418157
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "Wall Jump (Left)",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 828462620634092,
-							"parameters": {
-								"key": 68
-							}
+							"eventType": "comment",
+							"text": "Faz com que o jogador se prenda a parede por \"Walltime\" segundos, podendo reduzir esse tempo soltando a tecla."
 						},
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Hero",
-							"sid": 618046503339200,
-							"parameters": {
-								"instance-variable": "Dashing"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "Hero",
-							"sid": 322842059730337,
-							"behaviorType": "Platform",
-							"parameters": {
-								"control": "right"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 247502629762064,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 732127241765319,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 145261598773938,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 501349410297016,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "0"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 624678616069110,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.WallTime",
+										"type": "once",
+										"tag": "\"WallTime\""
+									}
+								},
+								{
+									"id": "set-double-jump",
+									"objectClass": "obj_playercontrol",
+									"sid": 406553272612586,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 707893546851241
 						},
 						{
-							"id": "set-angle-of-motion",
-							"objectClass": "Hero",
-							"sid": 132130877613927,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "0"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 948453235466083,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 738146269380854,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "1000"
+									}
+								},
+								{
+									"id": "set-double-jump",
+									"objectClass": "obj_playercontrol",
+									"sid": 306535779092258,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 233863374027704
 						}
 					],
-					"sid": 573978834688186
+					"sid": 895639156258616
 				},
 				{
-					"eventType": "comment",
-					"text": "Faz com que o jogador não de dash para cima com tanta facilidade, visto que normalmente ele vai querer se mover para os lados com o dash;"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "Wall Jump (Right)",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "on-key-released",
-							"objectClass": "Keyboard",
-							"sid": 417658999471821,
-							"parameters": {
-								"key": 87
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 777580937301223,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 911239269458318,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "left"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 959356548562186,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 415336788994879,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "0"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 645491713927409,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.WallTime",
+										"type": "once",
+										"tag": "\"WallTime\""
+									}
+								},
+								{
+									"id": "set-double-jump",
+									"objectClass": "obj_playercontrol",
+									"sid": 927072344332391,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 307409446581259
 						},
 						{
-							"id": "is-jumping",
-							"objectClass": "Hero",
-							"sid": 514007120827949,
-							"behaviorType": "Platform"
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 922377152240415,
+									"parameters": {
+										"key": 68
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 796328797743392,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 358251020860992,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 894990089708813,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "1000"
+									}
+								},
+								{
+									"id": "set-double-jump",
+									"objectClass": "obj_playercontrol",
+									"sid": 331003311547553,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 207515718862445
 						}
 					],
-					"actions": [
-						{
-							"id": "set-angle-of-motion",
-							"objectClass": "Hero",
-							"sid": 750799957586652,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "0"
-							}
-						}
-					],
-					"sid": 530525269125497
-				},
-				{
-					"eventType": "comment",
-					"text": "Dash base, com sistema de cooldown;"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 714315723426502,
-							"parameters": {
-								"key": 16
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Hero",
-							"sid": 165283886230935,
-							"parameters": {
-								"instance-variable": "DashAvailable"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "Hero",
-							"sid": 640598548340773,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Hero",
-							"sid": 732136562530104,
-							"parameters": {
-								"instance-variable": "Dashing",
-								"value": "true"
-							}
-						},
-						{
-							"id": "start-timer",
-							"objectClass": "Hero",
-							"sid": 350068748097362,
-							"behaviorType": "Timer",
-							"parameters": {
-								"duration": "Hero.DashTravel",
-								"type": "once",
-								"tag": "\"DashTravel\""
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Hero",
-							"sid": 712287054763370,
-							"parameters": {
-								"instance-variable": "DashAvailable",
-								"value": "false"
-							}
-						},
-						{
-							"id": "start-timer",
-							"objectClass": "Hero",
-							"sid": 733705655472231,
-							"behaviorType": "Timer",
-							"parameters": {
-								"duration": "Hero.DashCooldown",
-								"type": "once",
-								"tag": "\"DashCooldown\""
-							}
-						}
-					],
-					"sid": 746769579224147
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-timer",
-							"objectClass": "Hero",
-							"sid": 429045310603516,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"DashCooldown\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Hero",
-							"sid": 105761783259740,
-							"parameters": {
-								"instance-variable": "DashAvailable",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 106131173754308
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-timer",
-							"objectClass": "Hero",
-							"sid": 993040801912923,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"DashTravel\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "Hero",
-							"sid": 398176781398346,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Hero",
-							"sid": 123452742412050,
-							"parameters": {
-								"instance-variable": "Dashing",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 123110246465338
+					"sid": 832248717963006
 				}
 			],
 			"sid": 972272841367651
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Wall Jump ",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "comment",
-					"text": "Faz com que o jogador se prenda a parede por \"Walltime\" segundos, podendo reduzir esse tempo soltando a tecla."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-by-wall",
-							"objectClass": "Hero",
-							"sid": 539436334679984,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "left"
-							}
-						},
-						{
-							"id": "is-on-floor",
-							"objectClass": "Hero",
-							"sid": 430928218106222,
-							"behaviorType": "Platform",
-							"isInverted": true
-						},
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 480229830254279,
-							"parameters": {
-								"key": 65
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-max-fall-speed",
-							"objectClass": "Hero",
-							"sid": 718018953491431,
-							"behaviorType": "Platform",
-							"parameters": {
-								"max-fall-speed": "0"
-							}
-						}
-					],
-					"sid": 778086043291453
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-released",
-							"objectClass": "Keyboard",
-							"sid": 295174565223809,
-							"parameters": {
-								"key": 65
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-max-fall-speed",
-							"objectClass": "Hero",
-							"sid": 896761488058464,
-							"behaviorType": "Platform",
-							"parameters": {
-								"max-fall-speed": "1000"
-							}
-						}
-					],
-					"sid": 408678898090819
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-by-wall",
-							"objectClass": "Hero",
-							"sid": 535576737672949,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "right"
-							}
-						},
-						{
-							"id": "is-on-floor",
-							"objectClass": "Hero",
-							"sid": 265442690336919,
-							"behaviorType": "Platform",
-							"isInverted": true
-						},
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 889447131946986,
-							"parameters": {
-								"key": 68
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-max-fall-speed",
-							"objectClass": "Hero",
-							"sid": 594800830774428,
-							"behaviorType": "Platform",
-							"parameters": {
-								"max-fall-speed": "0"
-							}
-						}
-					],
-					"sid": 831717175585468
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-released",
-							"objectClass": "Keyboard",
-							"sid": 260201565047883,
-							"parameters": {
-								"key": 68
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-max-fall-speed",
-							"objectClass": "Hero",
-							"sid": 821343379545928,
-							"behaviorType": "Platform",
-							"parameters": {
-								"max-fall-speed": "1000"
-							}
-						}
-					],
-					"sid": 954239379150590
-				},
-				{
-					"eventType": "comment",
-					"text": "Faz com que o jogador possa se mover para cima e para baixo quando preso na parede."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 754443011213626,
-							"parameters": {
-								"key": 87
-							}
-						},
-						{
-							"id": "is-by-wall",
-							"objectClass": "Hero",
-							"sid": 873371570000817,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "left"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "Hero",
-							"sid": 265534082986276,
-							"parameters": {
-								"y": "Hero.Y - Hero.WallSpeed"
-							}
-						}
-					],
-					"sid": 665159492518600
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 222095687636657,
-							"parameters": {
-								"key": 83
-							}
-						},
-						{
-							"id": "is-by-wall",
-							"objectClass": "Hero",
-							"sid": 732783549306637,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "left"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "Hero",
-							"sid": 185803189494056,
-							"parameters": {
-								"y": "Hero.Y + Hero.WallSpeed"
-							}
-						}
-					],
-					"sid": 814941421535149
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 122428946107181,
-							"parameters": {
-								"key": 87
-							}
-						},
-						{
-							"id": "is-by-wall",
-							"objectClass": "Hero",
-							"sid": 769719461622055,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "right"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "Hero",
-							"sid": 124101526300302,
-							"parameters": {
-								"y": "Hero.Y - Hero.WallSpeed"
-							}
-						}
-					],
-					"sid": 959104503846982
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 672852192580007,
-							"parameters": {
-								"key": 83
-							}
-						},
-						{
-							"id": "is-by-wall",
-							"objectClass": "Hero",
-							"sid": 638154040651335,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "right"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "Hero",
-							"sid": 455881946467867,
-							"parameters": {
-								"y": "Hero.Y + Hero.WallSpeed"
-							}
-						}
-					],
-					"sid": 429250053435323
-				}
-			],
-			"sid": 647537917672042
 		}
 	],
 	"sid": 677904809921252

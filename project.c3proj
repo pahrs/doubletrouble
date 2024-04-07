@@ -59,10 +59,11 @@
 	"uniqueId": "zfsc26n4fby",
 	"objectTypes": {
 		"items": [
-			"Tilemap",
-			"Sprite",
-			"Hero",
-			"Keyboard"
+			"obj_hitbox",
+			"obj_playercontrol",
+			"Keyboard",
+			"Sprite2",
+			"tilemap"
 		],
 		"subfolders": []
 	},
@@ -74,7 +75,7 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"rm_test"
 		],
 		"subfolders": []
 	},
