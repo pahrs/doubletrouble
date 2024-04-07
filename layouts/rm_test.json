@@ -112,7 +112,7 @@
 							"height": 18,
 							"max-width": 35,
 							"max-height": 18,
-							"data": "23,16x24,23,43,81hd,0,13x41vd,81,3,43,2x0,14x41vd,3,43,16x41vd,3,43,16x41vd,3,43,16x41vd,3,43,16x41vd,3,43,8x41vd,0,7x41vd,3,43,7x41vd,2x0,7x41vd,3,43,6x41vd,0,41vd,0,7x41vd,3,43,2x41vd,2x0,2x41vd,4x0,6x41vd,3,43,2x41vd,2x0,41vd,5x0,6x41vd,3,43,2x41vd,2x0,41vd,0,41vd,4x0,5x41vd,3,43,3x41vd,0,41vd,0,3x41vd,2x0,5x41vd,3,43,3x41vd,3x0,41vd,62,41vd,3x0,4x41vd,3,43,3x41vd,3x0,41vd,3,8x22,3,43,5x41vd,0,41vd,3,8x24,3,43,3x41vd,0,41vd,2x0,64,4x0,4x41vd,3,43,5x41vd,0,2x41vd,4x0,4x41vd,3,43,3x41vd,0,41vd,0,4x41vd,2x0,4x41vd,3,43,3x41vd,0,41vd,2x0,3x41vd,2x0,4x41vd,3,43,3x41vd,0,41vd,2x0,3x41vd,2x0,4x41vd,3,43,3x41vd,0,2x41vd,5x0,5x41vd,3,43,3x41vd,0,41vd,2x0,9x41vd,3,43,3x41vd,4x0,9x41vd,3,43,3x41vd,5x0,8x41vd,3,43,4x41vd,0,11x41vd,3,43,4x41vd,5x0,7x41vd,3,43,4x41vd,6x0,6x41vd,3,43,9x41vd,2x0,5x41vd,3,43,81hv,9x41vd,0,4x41vd,81vd,3,23,16x22,23,54x0"
+							"data": "23,16x24,23,43,81hd,0,13x41vd,81,3,43,2x0,14x41vd,3,43,16x41vd,3,43,16x41vd,3,43,16x41vd,3,43,16x41vd,3,43,8x41vd,0,7x41vd,3,43,7x41vd,2x0,7x41vd,3,43,6x41vd,0,41vd,0,7x41vd,3,43,2x41vd,2x0,2x41vd,4x0,6x41vd,3,43,2x41vd,2x0,41vd,5x0,6x41vd,3,43,2x41vd,2x0,41vd,0,41vd,4x0,5x41vd,3,43,3x41vd,0,41vd,0,3x41vd,2x0,5x41vd,3,43,3x41vd,3x0,41vd,62,81hv,3x0,3x41vd,81vd,3,43,3x41vd,3x0,41vd,3,8x22,3,43,5x41vd,0,41vd,3,8x24,3,43,3x41vd,0,41vd,2x0,64,81hd,3x0,3x41vd,81,3,43,5x41vd,0,2x41vd,4x0,4x41vd,3,43,3x41vd,0,41vd,0,4x41vd,2x0,4x41vd,3,43,3x41vd,0,41vd,2x0,3x41vd,2x0,4x41vd,3,43,3x41vd,0,41vd,2x0,3x41vd,2x0,4x41vd,3,43,3x41vd,0,2x41vd,5x0,5x41vd,3,43,3x41vd,0,41vd,2x0,9x41vd,3,43,3x41vd,4x0,9x41vd,3,43,3x41vd,5x0,8x41vd,3,43,4x41vd,0,11x41vd,3,43,4x41vd,5x0,7x41vd,3,43,4x41vd,6x0,6x41vd,3,43,9x41vd,2x0,5x41vd,3,43,81hv,9x41vd,0,4x41vd,81vd,3,23,16x22,23,54x0"
 						},
 						"tile-width": 10,
 						"tile-height": 10,
@@ -297,7 +297,7 @@
 			"global": false
 		},
 		{
-			"name": "TILEMAP TOP",
+			"name": "TILEMAP TOP (CENÁRIO)",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
@@ -467,6 +467,78 @@
 						"y": 90,
 						"width": 10,
 						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "obj_hitbox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 923918,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 160,
+						"y": 85,
+						"width": 40,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "obj_hitbox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 327915,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 160,
+						"y": 130,
+						"width": 20,
+						"height": 80,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
