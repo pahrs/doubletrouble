@@ -66,19 +66,19 @@
 					"uid": 218398,
 					"instanceVariables": {
 						"Dashing": false,
-						"DashTravel": 0.15,
+						"DashTravel": 0.06,
 						"DashCooldown": 0,
 						"DashAvailable": true,
-						"WallTime": 2,
+						"WallTime": 1,
 						"WallSpeed": 0.3
 					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 250,
+								"max-speed": 80,
 								"acceleration": 1500,
 								"deceleration": 1500,
-								"jump-strength": 400,
+								"jump-strength": 260,
 								"gravity": 1500,
 								"max-fall-speed": 1000,
 								"double-jump": false,
@@ -89,7 +89,7 @@
 						},
 						"Bullet": {
 							"properties": {
-								"speed": 500,
+								"speed": 350,
 								"acceleration": 0,
 								"gravity": 0,
 								"bounce-off-solids": false,
@@ -170,44 +170,8 @@
 					"world": {
 						"x": 160,
 						"y": 5,
-						"width": 320,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "obj_hitbox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 639475,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 160,
-						"y": 175,
-						"width": 320,
-						"height": 10,
+						"width": 352,
+						"height": 11,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -242,8 +206,8 @@
 					"world": {
 						"x": 315,
 						"y": 90,
-						"width": 10,
-						"height": 180,
+						"width": 11,
+						"height": 198,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -278,8 +242,44 @@
 					"world": {
 						"x": 5,
 						"y": 90,
-						"width": 10,
-						"height": 180,
+						"width": 11,
+						"height": 198,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "obj_hitbox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 654245,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 160,
+						"y": 175,
+						"width": 352,
+						"height": 11,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
