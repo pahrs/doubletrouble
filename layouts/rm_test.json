@@ -2,7 +2,7 @@
 	"name": "rm_test",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "TILEMAP BACKGROUND",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -20,7 +20,7 @@
 						"tile-y-drawing-offset": 0,
 						"drawing-mode": "top-to-right"
 					},
-					"uid": 740932,
+					"uid": 281892,
 					"instanceVariables": {},
 					"behaviors": {},
 					"ownData": {
@@ -29,7 +29,7 @@
 							"height": 18,
 							"max-width": 35,
 							"max-height": 18,
-							"data": "19x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,6x1,21,9x1,2x21,6x1,12x21,6x1,12x21,6x1,21,9x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,2x21,16x1,19x21,54x0"
+							"data": "576x6,54x0"
 						},
 						"tile-width": 10,
 						"tile-height": 10,
@@ -53,7 +53,125 @@
 						],
 						"zElevation": 0
 					}
-				},
+				}
+			],
+			"sid": 947573909952609,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "TILEMAP BOT",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "tilemap",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 10,
+						"tile-height": 10,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 512357,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 32,
+							"height": 18,
+							"max-width": 35,
+							"max-height": 18,
+							"data": "23,16x24,23,43,81hd,0,13x41vd,81,3,43,2x0,14x41vd,3,43,16x41vd,3,43,16x41vd,3,43,16x41vd,3,43,16x41vd,3,43,8x41vd,0,7x41vd,3,43,7x41vd,2x0,7x41vd,3,43,6x41vd,0,41vd,0,7x41vd,3,43,2x41vd,2x0,2x41vd,4x0,6x41vd,3,43,2x41vd,2x0,41vd,5x0,6x41vd,3,43,2x41vd,2x0,41vd,0,41vd,4x0,5x41vd,3,43,3x41vd,0,41vd,0,3x41vd,2x0,5x41vd,3,43,3x41vd,3x0,41vd,62,41vd,3x0,4x41vd,3,43,3x41vd,3x0,41vd,3,8x22,3,43,5x41vd,0,41vd,3,8x24,3,43,3x41vd,0,41vd,2x0,64,4x0,4x41vd,3,43,5x41vd,0,2x41vd,4x0,4x41vd,3,43,3x41vd,0,41vd,0,4x41vd,2x0,4x41vd,3,43,3x41vd,0,41vd,2x0,3x41vd,2x0,4x41vd,3,43,3x41vd,0,41vd,2x0,3x41vd,2x0,4x41vd,3,43,3x41vd,0,2x41vd,5x0,5x41vd,3,43,3x41vd,0,41vd,2x0,9x41vd,3,43,3x41vd,4x0,9x41vd,3,43,3x41vd,5x0,8x41vd,3,43,4x41vd,0,11x41vd,3,43,4x41vd,5x0,7x41vd,3,43,4x41vd,6x0,6x41vd,3,43,9x41vd,2x0,5x41vd,3,43,81hv,9x41vd,0,4x41vd,81vd,3,23,16x22,23,54x0"
+						},
+						"tile-width": 10,
+						"tile-height": 10,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 320,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 934789970648720,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.9490196078431372,
+				0.9490196078431372,
+				0.9490196078431372,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "PLAYER",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
 				{
 					"type": "obj_playercontrol",
 					"properties": {
@@ -63,7 +181,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 218398,
+					"uid": 800294,
 					"instanceVariables": {
 						"Dashing": false,
 						"DashTravel": 0.06,
@@ -103,8 +221,8 @@
 						}
 					},
 					"world": {
-						"x": 103.04839454552004,
-						"y": 162.07097325689182,
+						"x": 100,
+						"y": 135,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -128,12 +246,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 824428,
+					"uid": 994159,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 150,
-						"y": 160,
+						"x": 120,
+						"y": 135,
 						"width": 20,
 						"height": 20,
 						"originX": 0.5,
@@ -147,7 +265,76 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
+				}
+			],
+			"sid": 884265759206050,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "TILEMAP TOP",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 788168929586821,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "HITBOXES",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
 				{
 					"type": "obj_hitbox",
 					"properties": {
@@ -157,7 +344,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 839460,
+					"uid": 387437,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -193,7 +380,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 491517,
+					"uid": 556185,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -229,7 +416,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 460850,
+					"uid": 872266,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -265,7 +452,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 779007,
+					"uid": 231408,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -293,7 +480,7 @@
 					}
 				}
 			],
-			"sid": 934789970648720,
+			"sid": 107913773015599,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -310,7 +497,7 @@
 				0.5019607843137255,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
