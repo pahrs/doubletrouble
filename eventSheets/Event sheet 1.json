@@ -192,6 +192,54 @@
 								}
 							],
 							"sid": 832656044499704
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-released",
+									"objectClass": "Keyboard",
+									"sid": 512281918327614,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-gravity",
+									"objectClass": "obj_playercontrol",
+									"sid": 370833569625930,
+									"behaviorType": "Platform",
+									"parameters": {
+										"gravity": "2500"
+									}
+								}
+							],
+							"sid": 130648183168332
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-landed",
+									"objectClass": "obj_playercontrol",
+									"sid": 149660712458463,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-gravity",
+									"objectClass": "obj_playercontrol",
+									"sid": 932638139738091,
+									"behaviorType": "Platform",
+									"parameters": {
+										"gravity": "1500"
+									}
+								}
+							],
+							"sid": 445288607205438
 						}
 					],
 					"sid": 493670220259966
@@ -725,10 +773,10 @@
 								{
 									"id": "is-by-wall",
 									"objectClass": "obj_playercontrol",
-									"sid": 796328797743392,
+									"sid": 976356677720227,
 									"behaviorType": "Platform",
 									"parameters": {
-										"side": "right"
+										"side": "left"
 									}
 								},
 								{

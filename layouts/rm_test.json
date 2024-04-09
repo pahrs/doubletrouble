@@ -184,7 +184,7 @@
 					"uid": 800294,
 					"instanceVariables": {
 						"Dashing": false,
-						"DashTravel": 0.06,
+						"DashTravel": 0.1,
 						"DashCooldown": 0,
 						"DashAvailable": true,
 						"WallTime": 1,
@@ -193,10 +193,10 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 80,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 260,
+								"max-speed": 100,
+								"acceleration": 450,
+								"deceleration": 700,
+								"jump-strength": 350,
 								"gravity": 1500,
 								"max-fall-speed": 1000,
 								"double-jump": false,
@@ -550,78 +550,6 @@
 						"y": 90,
 						"width": 10,
 						"height": 180,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "obj_hitbox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 923918,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 160,
-						"y": 85,
-						"width": 40,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "obj_hitbox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 327915,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 160,
-						"y": 130,
-						"width": 20,
-						"height": 80,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
