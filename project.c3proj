@@ -72,8 +72,8 @@
 			"Sprite2",
 			"tilemap",
 			"Sprite",
-			"TiledBackground",
-			"Sprite3"
+			"Sprite3",
+			"debugjump"
 		],
 		"subfolders": []
 	},

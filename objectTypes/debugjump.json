@@ -1,7 +1,7 @@
 {
-	"name": "TiledBackground",
+	"name": "debugjump",
 	"plugin-id": "TiledBg",
-	"sid": 861263988805526,
+	"sid": 520881563466369,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -14,7 +14,7 @@
 		"originalSource": "",
 		"exportFormat": "lossless",
 		"exportQuality": 0.8,
-		"imageSpriteId": 877778,
+		"imageSpriteId": 4167658,
 		"useCollisionPoly": true,
 		"tag": ""
 	}

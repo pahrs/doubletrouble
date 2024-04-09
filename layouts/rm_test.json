@@ -29,7 +29,7 @@
 							"height": 18,
 							"max-width": 35,
 							"max-height": 18,
-							"data": "576x26hv,54x0"
+							"data": "576x6,54x0"
 						},
 						"tile-width": 10,
 						"tile-height": 10,
@@ -90,37 +90,27 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "tilemap",
+					"type": "debugjump",
 					"properties": {
 						"initially-visible": true,
-						"tile-width": 10,
-						"tile-height": 10,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0,
-						"tile-x-drawing-offset": 0,
-						"tile-y-drawing-offset": 0,
-						"drawing-mode": "top-to-right"
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
 					},
-					"uid": 512357,
+					"uid": 297281,
 					"instanceVariables": {},
 					"behaviors": {},
-					"ownData": {
-						"tilemapData": {
-							"width": 32,
-							"height": 18,
-							"max-width": 35,
-							"max-height": 18,
-							"data": "23,16x24,23,63,16x0,3,63,2x0,12x1,2x0,3,63,2x0,11x1,3x0,3,63,2x0,11x1,0,1,0,3,63,0,12x1,0,1,0,3,63,0,12x1,0,1,0,3,63,2x0,6x1,0,4x1,0,1,0,3,63,0,6x1,2x0,6x1,0,3,63,2x0,4x1,0,1,0,4x1,0,1,0,3,63,4x0,2x1,4x0,5x1,0,3,63,0,1,2x0,1,5x0,2x1,0,2x1,0,3,63,4x0,1,0,1,4x0,1,0,2x1,0,3,63,0,1,2x0,1,0,3x1,3x0,3x1,0,3,63,6x0,1,5x0,3x1,0,3,63,16x0,3,63,16x0,3,63,4x0,1,7x0,3x1,0,3,63,2x0,3x1,0,1,5x0,3x1,0,3,63,2x0,1,0,1,0,4x1,2x0,3x1,0,3,63,0,2x1,0,1,2x0,3x1,2x0,3x1,0,3,63,0,2x1,0,1,2x0,3x1,2x0,2x1,2x0,3,63,0,2x1,0,2x1,10x0,3,63,0,2x1,0,1,9x0,1,0,3,63,0,2x1,13x0,3,63,0,2x1,9x0,2x1,2x0,3,63,0,3x1,0,3x1,0,5x1,2x0,3,63,0,3x1,5x0,5x1,2x0,3,63,0,3x1,9x0,1,2x0,3,63,2x0,7x1,7x0,3,63,16x0,3,23,16x22,23,54x0"
-						},
-						"tile-width": 10,
-						"tile-height": 10,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0
-					},
 					"world": {
 						"x": 0,
 						"y": 0,
@@ -134,6 +124,7 @@
 							1,
 							1
 						],
+						"angle": 0,
 						"zElevation": 0
 					}
 				}
@@ -221,8 +212,8 @@
 						}
 					},
 					"world": {
-						"x": 100,
-						"y": 135,
+						"x": 90,
+						"y": 131,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -250,8 +241,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 120,
-						"y": 135,
+						"x": 124,
+						"y": 151,
 						"width": 20,
 						"height": 20,
 						"originX": 0.5,
@@ -300,7 +291,56 @@
 			"name": "TILEMAP TOP (CENÁRIO)",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "tilemap",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 10,
+						"tile-height": 10,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 601060,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 32,
+							"height": 18,
+							"max-width": 35,
+							"max-height": 18,
+							"data": "23,15x24,3,27,63,15x0,3,27,63,2x0,12x1,0,3,27,63,2x0,11x1,2x0,3,27,63,2x0,11x1,0,1,3,27,63,0,12x1,0,1,3,27,63,0,12x1,0,1,3,27,63,2x0,6x1,0,4x1,0,1,3,27,63,0,6x1,2x0,6x1,3,27,63,2x0,4x1,0,1,0,4x1,0,1,3,27,63,4x0,2x1,4x0,5x1,3,27,63,0,1,2x0,1,5x0,2x1,0,2x1,3,27,63,4x0,1,0,1,4x0,1,0,2x1,3,27,63,0,1,2x0,1,0,3x1,3x0,3x1,3,27,63,6x0,1,5x0,3x1,3,27,63,15x0,3,27,63,15x0,3,27,63,4x0,1,7x0,3x1,3,27,63,2x0,3x1,0,1,5x0,3x1,3,27,63,2x0,1,0,1,0,4x1,2x0,3x1,3,27,63,0,2x1,0,1,2x0,3x1,2x0,3x1,3,27,63,0,2x1,0,1,2x0,3x1,2x0,2x1,0,3,27,63,0,2x1,0,2x1,9x0,3,27,63,0,2x1,0,1,9x0,1,3,27,63,0,2x1,12x0,3,27,63,0,2x1,9x0,2x1,0,3,27,63,0,3x1,0,3x1,0,5x1,0,3,27,63,0,3x1,5x0,5x1,0,3,27,63,0,3x1,9x0,1,0,3,27,63,2x0,7x1,6x0,3,27,63,15x0,3,27,23,15x22,3,27,54x0"
+						},
+						"tile-width": 10,
+						"tile-height": 10,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 320,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 788168929586821,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -358,7 +398,7 @@
 							"height": 18,
 							"max-width": 35,
 							"max-height": 18,
-							"data": "61,16x81,61vd,81hd,2x0,2x1,5x0,1,6x0,81vd,81hd,2x0,3x1,0,9x1,0,81vd,81hd,15x1,0,81vd,81hd,15x1,0,81vd,81hd,15x1,0,81vd,81hd,16x1,81vd,81hd,8x1,0,6x1,0,81vd,81hd,7x1,2x0,6x1,0,81vd,81hd,6x1,0,1,0,6x1,0,81vd,81hd,2x1,2x0,2x1,4x0,5x1,0,81vd,81hd,2x1,2x0,1,5x0,4x1,2x0,81vd,81hd,2x1,2x0,1,0,1,4x0,3x1,2x0,81vd,81hd,3x1,0,1,0,2x1,3x0,4x1,0,81vd,81hd,3x1,3x0,1,5x0,3x1,0,81vd,81hd,3x1,3x0,1,9x0,81vd,81hd,5x1,0,1,9x0,81vd,81hd,3x1,0,1,7x0,3x1,0,81vd,81hd,5x1,0,1,5x0,4x1,81vd,81hd,3x1,0,1,0,1,2x0,1,2x0,4x1,81vd,81hd,3x1,0,1,2x0,3x1,2x0,4x1,81vd,81hd,3x1,0,1,2x0,3x1,2x0,2x1,0,1,81vd,81hd,3x1,0,2x1,9x0,1,81vd,81hd,3x1,0,1,9x0,2x1,81vd,81hd,0,2x1,12x0,1,81vd,81hd,0,2x1,9x0,2x1,0,1,81vd,81hd,0,3x1,0,3x1,0,5x1,0,1,81vd,81hd,0,3x1,5x0,5x1,0,1,81vd,81hd,0,3x1,9x0,1,0,1,81vd,81hd,9x1,7x0,81vd,81hd,0,9x1,6x0,81vd,61hd,16x81hv,61hv,54x0"
+							"data": "73,16x97,73vd,97hd,2x0,2x1,5x0,1,6x0,97vd,97hd,2x0,3x1,0,9x1,0,97vd,97hd,15x1,0,97vd,97hd,15x1,0,97vd,97hd,15x1,0,97vd,97hd,16x1,97vd,97hd,8x1,0,6x1,0,97vd,97hd,7x1,2x0,6x1,0,97vd,97hd,6x1,0,1,0,6x1,0,97vd,97hd,2x1,2x0,2x1,4x0,5x1,0,97vd,97hd,2x1,2x0,1,5x0,4x1,2x0,97vd,97hd,2x1,2x0,1,0,1,4x0,3x1,2x0,97vd,97hd,3x1,0,1,0,2x1,3x0,4x1,0,97vd,97hd,3x1,3x0,1,5x0,3x1,0,97vd,97hd,3x1,3x0,1,9x0,97vd,97hd,5x1,0,1,9x0,97vd,97hd,3x1,0,1,7x0,3x1,0,97vd,97hd,5x1,0,1,5x0,4x1,97vd,97hd,3x1,0,1,0,1,2x0,1,2x0,4x1,97vd,97hd,3x1,0,1,2x0,3x1,2x0,4x1,97vd,97hd,3x1,0,1,2x0,3x1,2x0,2x1,0,1,97vd,97hd,3x1,0,2x1,9x0,1,97vd,97hd,3x1,0,1,9x0,2x1,97vd,97hd,0,2x1,12x0,1,97vd,97hd,0,2x1,9x0,2x1,0,1,97vd,97hd,0,3x1,0,3x1,0,5x1,0,1,97vd,97hd,0,3x1,5x0,5x1,0,1,97vd,97hd,0,3x1,9x0,1,0,1,97vd,97hd,9x1,7x0,97vd,97hd,0,9x1,6x0,97vd,73hd,16x97hv,73hv,54x0"
 						},
 						"tile-width": 10,
 						"tile-height": 10,
@@ -463,42 +503,6 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 556185,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 160,
-						"y": 175,
-						"width": 320,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "obj_hitbox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 872266,
 					"instanceVariables": {},
 					"behaviors": {
@@ -550,6 +554,42 @@
 						"y": 90,
 						"width": 10,
 						"height": 180,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "obj_hitbox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 874405,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 160,
+						"y": 170.5,
+						"width": 320,
+						"height": 19,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
