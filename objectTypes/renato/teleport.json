@@ -1,0 +1,68 @@
+{
+	"name": "teleport",
+	"plugin-id": "Sprite",
+	"sid": 396048879163680,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 199057253575107
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.52,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9089492,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.84,
+								1,
+								0.84,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "trigger",
+								"x": 0.5,
+								"y": 0.42
+							},
+							{
+								"name": "flash",
+								"x": 0.2,
+								"y": -2
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 127701049490766,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
