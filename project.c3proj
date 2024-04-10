@@ -116,7 +116,9 @@
 					"teleport",
 					"teleportTrigger",
 					"Flash",
-					"Background"
+					"Background",
+					"SpriteWall",
+					"JumpPad"
 				],
 				"subfolders": [],
 				"name": "renato"

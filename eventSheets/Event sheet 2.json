@@ -1139,6 +1139,51 @@
 				}
 			],
 			"sid": 423203969656135
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "JumpPad",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Quando ele cair em cima do JUMP_PAD, ele é jogado pra cima"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol",
+							"sid": 883153978538983,
+							"parameters": {
+								"object": "JumpPad"
+							}
+						},
+						{
+							"id": "is-falling",
+							"objectClass": "obj_playercontrol",
+							"sid": 646110372377963,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "obj_playercontrol",
+							"sid": 423121894049777,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "-600"
+							}
+						}
+					],
+					"sid": 596674414805381
+				}
+			],
+			"sid": 405914105396069
 		}
 	],
 	"sid": 319962163705504
