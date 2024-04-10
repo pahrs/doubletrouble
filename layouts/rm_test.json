@@ -135,20 +135,22 @@
 					"uid": 800294,
 					"instanceVariables": {
 						"Dashing": false,
-						"DashTravel": 0.1,
+						"DashTravel": 0.06,
 						"DashCooldown": 0,
 						"DashAvailable": true,
 						"WallTime": 1,
-						"WallSpeed": 0.3
+						"WallSpeed": 0.3,
+						"DashSpeed": 80,
+						"DashUpSpeed": -20
 					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 100,
+								"max-speed": 80,
 								"acceleration": 450,
 								"deceleration": 700,
-								"jump-strength": 350,
-								"gravity": 1500,
+								"jump-strength": 280,
+								"gravity": 1200,
 								"max-fall-speed": 1000,
 								"double-jump": false,
 								"jump-sustain": 0,
@@ -169,6 +171,20 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Physics": {
+							"properties": {
+								"immovable": false,
+								"collision-mask": "use-collision-polygon",
+								"prevent-rotation": false,
+								"density": 1,
+								"friction": 0.5,
+								"elasticity": 0.2,
+								"linear-damping": 0,
+								"angular-damping": 0.01,
+								"bullet": false,
+								"enabled": true
+							}
 						}
 					},
 					"world": {

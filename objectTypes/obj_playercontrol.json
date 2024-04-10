@@ -45,6 +45,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 925322616792794
+		},
+		{
+			"name": "DashSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 498997323157119
+		},
+		{
+			"name": "DashUpSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 570100006542513
 		}
 	],
 	"behaviorTypes": [
@@ -62,6 +76,11 @@
 			"behaviorId": "Timer",
 			"name": "Timer",
 			"sid": 223883795189345
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 594586880647081
 		}
 	],
 	"effectTypes": [],

@@ -43,6 +43,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",

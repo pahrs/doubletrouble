@@ -203,16 +203,30 @@
 									"parameters": {
 										"key": 87
 									}
+								},
+								{
+									"id": "is-falling",
+									"objectClass": "obj_playercontrol",
+									"sid": 356694618484577,
+									"behaviorType": "Platform",
+									"isInverted": true
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 264570486142416,
+									"behaviorType": "Platform",
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
 									"id": "set-gravity",
 									"objectClass": "obj_playercontrol",
-									"sid": 370833569625930,
+									"sid": 369967920034383,
 									"behaviorType": "Platform",
 									"parameters": {
-										"gravity": "2500"
+										"gravity": "2000"
 									}
 								}
 							],
@@ -232,10 +246,10 @@
 								{
 									"id": "set-gravity",
 									"objectClass": "obj_playercontrol",
-									"sid": 932638139738091,
+									"sid": 105006865734890,
 									"behaviorType": "Platform",
 									"parameters": {
-										"gravity": "1500"
+										"gravity": "1200"
 									}
 								}
 							],
@@ -297,10 +311,10 @@
 								{
 									"id": "set-max-fall-speed",
 									"objectClass": "obj_playercontrol",
-									"sid": 311488046210856,
+									"sid": 357336384659838,
 									"behaviorType": "Platform",
 									"parameters": {
-										"max-fall-speed": "0"
+										"max-fall-speed": "20"
 									}
 								},
 								{
@@ -814,6 +828,176 @@
 				}
 			],
 			"sid": 972272841367651
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "Dash (Prototipo Physics)",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 216697707858265,
+							"parameters": {
+								"key": 16
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 165166912784282,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse",
+							"objectClass": "obj_playercontrol",
+							"sid": 399270019687208,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse-x": "obj_playercontrol.DashSpeed * obj_playercontrol.Physics.Density",
+								"implulse-y": "0",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 549010333865416,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 745083740106348,
+							"parameters": {
+								"key": 16
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 336098934453409,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse",
+							"objectClass": "obj_playercontrol",
+							"sid": 116893155464210,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse-x": "-obj_playercontrol.DashSpeed*obj_playercontrol.Physics.Density",
+								"implulse-y": "0",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 300113428069329,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 169289642135641,
+							"parameters": {
+								"key": 16
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 543040838501385,
+							"parameters": {
+								"key": 87
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 290634107525462,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse",
+							"objectClass": "obj_playercontrol",
+							"sid": 125773681186741,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse-x": "obj_playercontrol.DashSpeed * obj_playercontrol.Physics.Density",
+								"implulse-y": "obj_playercontrol.DashUpSpeed*obj_playercontrol.Physics.Density",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 847932225442586,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 273302683778391,
+							"parameters": {
+								"key": 16
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 790308899473965,
+							"parameters": {
+								"key": 87
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 593076124321775,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse",
+							"objectClass": "obj_playercontrol",
+							"sid": 808815961586367,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse-x": "-obj_playercontrol.DashSpeed * obj_playercontrol.Physics.Density",
+								"implulse-y": "obj_playercontrol.DashUpSpeed*obj_playercontrol.Physics.Density",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 761067316935452,
+					"disabled": true
+				}
+			],
+			"sid": 436073653051835
 		}
 	],
 	"sid": 677904809921252
