@@ -897,23 +897,58 @@
 							}
 						},
 						{
-							"id": "destroy",
-							"objectClass": "obj_playercontrol",
-							"sid": 910543873312158
-						},
-						{
 							"id": "spawn-another-object",
 							"objectClass": "teleport",
-							"sid": 602819025964589,
+							"sid": 673868650680740,
 							"parameters": {
 								"object": "Flash",
 								"layer": "\"tilemap\"",
 								"image-point": "\"flash\"",
 								"create-hierarchy": false
 							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 382506591152628,
+							"parameters": {
+								"seconds": "0.10"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "obj_playercontrol",
+							"sid": 859677474896091,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
 						}
 					],
-					"sid": 447463427269306
+					"sid": 447463427269306,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol",
+									"sid": 278956173956230,
+									"parameters": {
+										"object": "Flash"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "obj_playercontrol",
+									"sid": 533807089351013
+								}
+							],
+							"sid": 804230419761693
+						}
+					]
 				},
 				{
 					"eventType": "comment",
