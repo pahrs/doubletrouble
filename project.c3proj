@@ -43,15 +43,15 @@
 		},
 		{
 			"type": "behavior",
-			"id": "LOS",
-			"name": "Line of sight",
+			"id": "Physics",
+			"name": "Physics",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "Physics",
-			"name": "Physics",
+			"id": "Pin",
+			"name": "Pin",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -71,29 +71,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Tween",
-			"name": "Tween",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "effect",
-			"id": "glowhorizontal",
-			"name": "Glow horizontal",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "effect",
-			"id": "glowvertical",
-			"name": "Glow vertical",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -110,20 +89,7 @@
 			"Sprite3",
 			"debugjump"
 		],
-		"subfolders": [
-			{
-				"items": [
-					"teleport",
-					"teleportTrigger",
-					"Flash",
-					"Background",
-					"SpriteWall",
-					"JumpPad"
-				],
-				"subfolders": [],
-				"name": "renato"
-			}
-		]
+		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -133,15 +99,13 @@
 	},
 	"layouts": {
 		"items": [
-			"rm_test",
-			"Renato_test"
+			"rm_test"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1",
-			"Event sheet 2"
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},

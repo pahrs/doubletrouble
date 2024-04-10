@@ -136,9 +136,9 @@
 					"instanceVariables": {
 						"Dashing": false,
 						"DashTravel": 0.06,
-						"DashCooldown": 0,
+						"DashCooldown": 2,
 						"DashAvailable": true,
-						"WallTime": 1,
+						"WallTime": 0.5,
 						"WallSpeed": 0.3,
 						"DashSpeed": 80,
 						"DashUpSpeed": -20
@@ -188,8 +188,8 @@
 						}
 					},
 					"world": {
-						"x": 90,
-						"y": 131,
+						"x": 124,
+						"y": 153,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -215,7 +215,13 @@
 					},
 					"uid": 994159,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
 						"x": 124,
 						"y": 151,

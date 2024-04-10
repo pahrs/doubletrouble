@@ -25,6 +25,29 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "obj_playercontrol",
+							"sid": 614142761654178,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Sprite2",
+							"sid": 889639799520617,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "obj_playercontrol",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 121857982694907
@@ -184,10 +207,10 @@
 								{
 									"id": "set-double-jump",
 									"objectClass": "obj_playercontrol",
-									"sid": 782672179141802,
+									"sid": 892781141655265,
 									"behaviorType": "Platform",
 									"parameters": {
-										"state": "enabled"
+										"state": "disabled"
 									}
 								}
 							],
@@ -611,9 +634,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
+									"id": "key-is-down",
 									"objectClass": "Keyboard",
-									"sid": 247502629762064,
+									"sid": 125743702667351,
 									"parameters": {
 										"key": 32
 									}
@@ -655,15 +678,6 @@
 										"type": "once",
 										"tag": "\"WallTime\""
 									}
-								},
-								{
-									"id": "set-double-jump",
-									"objectClass": "obj_playercontrol",
-									"sid": 406553272612586,
-									"behaviorType": "Platform",
-									"parameters": {
-										"state": "disabled"
-									}
 								}
 							],
 							"sid": 707893546851241
@@ -678,6 +692,22 @@
 									"parameters": {
 										"key": 65
 									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 557756329673754,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 713793718960436,
+									"behaviorType": "Platform",
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -691,12 +721,21 @@
 									}
 								},
 								{
-									"id": "set-double-jump",
+									"id": "stop-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 306535779092258,
-									"behaviorType": "Platform",
+									"sid": 464498849135388,
+									"behaviorType": "Timer",
 									"parameters": {
-										"state": "enabled"
+										"tag": "\"DashCooldown\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 488323538718954,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
 									}
 								}
 							],
@@ -718,7 +757,7 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 777580937301223,
+									"sid": 841364438268835,
 									"parameters": {
 										"key": 32
 									}
@@ -760,15 +799,6 @@
 										"type": "once",
 										"tag": "\"WallTime\""
 									}
-								},
-								{
-									"id": "set-double-jump",
-									"objectClass": "obj_playercontrol",
-									"sid": 927072344332391,
-									"behaviorType": "Platform",
-									"parameters": {
-										"state": "disabled"
-									}
 								}
 							],
 							"sid": 307409446581259
@@ -805,19 +835,28 @@
 								{
 									"id": "set-max-fall-speed",
 									"objectClass": "obj_playercontrol",
-									"sid": 894990089708813,
+									"sid": 641905156998647,
 									"behaviorType": "Platform",
 									"parameters": {
 										"max-fall-speed": "1000"
 									}
 								},
 								{
-									"id": "set-double-jump",
+									"id": "stop-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 331003311547553,
-									"behaviorType": "Platform",
+									"sid": 108272543487980,
+									"behaviorType": "Timer",
 									"parameters": {
-										"state": "enabled"
+										"tag": "\"DashCooldown\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 694738154104656,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
 									}
 								}
 							],
