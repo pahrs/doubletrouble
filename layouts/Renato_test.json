@@ -91,7 +91,13 @@
 					},
 					"uid": 749153,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
 						"x": 20,
 						"y": 19,

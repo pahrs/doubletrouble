@@ -25,6 +25,21 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Sprite2",
+							"sid": 721627032163699,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "obj_playercontrol",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
 						}
 					],
 					"sid": 121857982694907
@@ -169,29 +184,6 @@
 								}
 							],
 							"sid": 327802232656204
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-landed",
-									"objectClass": "obj_playercontrol",
-									"sid": 417706838271073,
-									"behaviorType": "Platform"
-								}
-							],
-							"actions": [
-								{
-									"id": "set-double-jump",
-									"objectClass": "obj_playercontrol",
-									"sid": 782672179141802,
-									"behaviorType": "Platform",
-									"parameters": {
-										"state": "enabled"
-									}
-								}
-							],
-							"sid": 832656044499704
 						},
 						{
 							"eventType": "block",
@@ -441,9 +433,9 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Keyboard",
-									"sid": 445682667348986,
+									"sid": 523478603021095,
 									"parameters": {
-										"key": 87
+										"key": 32
 									}
 								},
 								{
@@ -499,7 +491,8 @@
 									}
 								}
 							],
-							"sid": 570403172959743
+							"sid": 570403172959743,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -507,9 +500,9 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Keyboard",
-									"sid": 338650338441134,
+									"sid": 897552034560506,
 									"parameters": {
-										"key": 87
+										"key": 32
 									}
 								},
 								{
@@ -565,7 +558,8 @@
 									}
 								}
 							],
-							"sid": 635860545753817
+							"sid": 635860545753817,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -613,7 +607,7 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 247502629762064,
+									"sid": 891947908998922,
 									"parameters": {
 										"key": 32
 									}
@@ -639,7 +633,7 @@
 								{
 									"id": "set-max-fall-speed",
 									"objectClass": "obj_playercontrol",
-									"sid": 501349410297016,
+									"sid": 155300912256068,
 									"behaviorType": "Platform",
 									"parameters": {
 										"max-fall-speed": "0"
@@ -657,12 +651,21 @@
 									}
 								},
 								{
-									"id": "set-double-jump",
+									"id": "stop-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 406553272612586,
-									"behaviorType": "Platform",
+									"sid": 532470051186210,
+									"behaviorType": "Timer",
 									"parameters": {
-										"state": "disabled"
+										"tag": "\"DashCooldown\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 131747048550115,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
 									}
 								}
 							],
@@ -674,33 +677,40 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 948453235466083,
+									"sid": 214158075354717,
 									"parameters": {
 										"key": 65
 									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 883119758887045,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 112695150334550,
+									"behaviorType": "Platform",
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
 									"id": "set-max-fall-speed",
 									"objectClass": "obj_playercontrol",
-									"sid": 738146269380854,
+									"sid": 627487712327062,
 									"behaviorType": "Platform",
 									"parameters": {
 										"max-fall-speed": "1000"
 									}
-								},
-								{
-									"id": "set-double-jump",
-									"objectClass": "obj_playercontrol",
-									"sid": 306535779092258,
-									"behaviorType": "Platform",
-									"parameters": {
-										"state": "enabled"
-									}
 								}
 							],
-							"sid": 233863374027704
+							"sid": 391731478813110
 						}
 					],
 					"sid": 895639156258616
@@ -718,7 +728,7 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 777580937301223,
+									"sid": 914328333686059,
 									"parameters": {
 										"key": 32
 									}
@@ -744,7 +754,7 @@
 								{
 									"id": "set-max-fall-speed",
 									"objectClass": "obj_playercontrol",
-									"sid": 415336788994879,
+									"sid": 361337823439171,
 									"behaviorType": "Platform",
 									"parameters": {
 										"max-fall-speed": "0"
@@ -762,12 +772,21 @@
 									}
 								},
 								{
-									"id": "set-double-jump",
+									"id": "stop-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 927072344332391,
-									"behaviorType": "Platform",
+									"sid": 665948200933686,
+									"behaviorType": "Timer",
 									"parameters": {
-										"state": "disabled"
+										"tag": "\"DashCooldown\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 935600927996135,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
 									}
 								}
 							],
@@ -809,15 +828,6 @@
 									"behaviorType": "Platform",
 									"parameters": {
 										"max-fall-speed": "1000"
-									}
-								},
-								{
-									"id": "set-double-jump",
-									"objectClass": "obj_playercontrol",
-									"sid": 331003311547553,
-									"behaviorType": "Platform",
-									"parameters": {
-										"state": "enabled"
 									}
 								}
 							],

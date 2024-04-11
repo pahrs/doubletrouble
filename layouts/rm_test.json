@@ -136,7 +136,7 @@
 					"instanceVariables": {
 						"Dashing": false,
 						"DashTravel": 0.06,
-						"DashCooldown": 0,
+						"DashCooldown": 2,
 						"DashAvailable": true,
 						"WallTime": 1,
 						"WallSpeed": 0.3,
@@ -215,10 +215,16 @@
 					},
 					"uid": 994159,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"world": {
-						"x": 124,
-						"y": 151,
+						"x": 90,
+						"y": 129,
 						"width": 20,
 						"height": 20,
 						"originX": 0.5,
@@ -455,9 +461,9 @@
 					},
 					"world": {
 						"x": 160,
-						"y": 5,
+						"y": 4,
 						"width": 320,
-						"height": 10,
+						"height": 8,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -490,9 +496,9 @@
 						}
 					},
 					"world": {
-						"x": 5,
+						"x": 4,
 						"y": 90,
-						"width": 10,
+						"width": 8,
 						"height": 180,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -526,9 +532,9 @@
 						}
 					},
 					"world": {
-						"x": 315,
+						"x": 316,
 						"y": 90,
-						"width": 10,
+						"width": 8,
 						"height": 180,
 						"originX": 0.5,
 						"originY": 0.5,
