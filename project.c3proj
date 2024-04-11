@@ -101,13 +101,7 @@
 	"uniqueId": "zfsc26n4fby",
 	"objectTypes": {
 		"items": [
-			"obj_hitbox",
-			"obj_playercontrol",
-			"Keyboard",
 			"Sprite2",
-			"tilemap",
-			"Sprite",
-			"Sprite3",
 			"debugjump"
 		],
 		"subfolders": [
@@ -122,6 +116,16 @@
 				],
 				"subfolders": [],
 				"name": "renato"
+			},
+			{
+				"items": [
+					"ObjPlayerControl",
+					"Keyboard",
+					"SprTilemap",
+					"ObjHitbox"
+				],
+				"subfolders": [],
+				"name": "Misc"
 			}
 		]
 	},
@@ -136,11 +140,17 @@
 			"rm_test",
 			"Renato_test"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Levels"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1",
+			"MAIN_EVENTSHEET",
 			"Event sheet 2"
 		],
 		"subfolders": []
