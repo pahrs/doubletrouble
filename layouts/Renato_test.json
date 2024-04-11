@@ -756,7 +756,7 @@
 					"instanceVariables": {
 						"direção": "baixo",
 						"distancia_X": 30,
-						"distancia_Y": 20,
+						"distancia_Y": 60,
 						"tempo_Y": 1,
 						"tempo_X": 1,
 						"movendo": false
@@ -778,7 +778,7 @@
 					},
 					"world": {
 						"x": 131,
-						"y": 35,
+						"y": 60,
 						"width": 12,
 						"height": 12,
 						"originX": 0.5,

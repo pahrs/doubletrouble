@@ -22,6 +22,7 @@
 							"id": "set-visible",
 							"objectClass": "obj_hitbox",
 							"sid": 322803253934488,
+							"disabled": true,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -700,7 +701,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Wall Jump (Left)",
+					"title": "Wall Jump (Right)",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -861,7 +862,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Wall Jump (Right)",
+					"title": "Wall Jump (Left)",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -881,7 +882,7 @@
 								{
 									"id": "start-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 599426354557621,
+									"sid": 495032407888827,
 									"behaviorType": "Timer",
 									"parameters": {
 										"duration": "0.1",

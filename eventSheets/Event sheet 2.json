@@ -1389,7 +1389,7 @@
 		},
 		{
 			"eventType": "group",
-			"disabled": true,
+			"disabled": false,
 			"title": "Saw (failed)",
 			"description": "",
 			"isActiveOnStart": true,
@@ -1430,12 +1430,12 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "Saw",
-							"sid": 200068725787958,
+							"sid": 662894422070629,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"baixo\"",
 								"property": "offsetY",
-								"end-value": "Self.X + Saw.distancia_Y",
+								"end-value": "Self.Y + Saw.distancia_Y",
 								"time": "Saw.tempo_Y",
 								"ease": "easeinoutsine",
 								"destroy-on-complete": "no",
@@ -1445,8 +1445,7 @@
 							}
 						}
 					],
-					"sid": 958209078296151,
-					"disabled": true
+					"sid": 958209078296151
 				},
 				{
 					"eventType": "block",
@@ -1484,12 +1483,12 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "Saw",
-							"sid": 715938126710645,
+							"sid": 135415619429184,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"cima\"",
 								"property": "offsetY",
-								"end-value": "Self.X - Saw.distancia_Y",
+								"end-value": "Self.Y - Saw.distancia_Y",
 								"time": "Saw.tempo_Y",
 								"ease": "easeinoutsine",
 								"destroy-on-complete": "no",
@@ -1499,8 +1498,7 @@
 							}
 						}
 					],
-					"sid": 593622540347613,
-					"disabled": true
+					"sid": 593622540347613
 				},
 				{
 					"eventType": "block",
@@ -1535,8 +1533,7 @@
 							}
 						}
 					],
-					"sid": 908429329121854,
-					"disabled": true
+					"sid": 908429329121854
 				},
 				{
 					"eventType": "block",
@@ -1571,8 +1568,7 @@
 							}
 						}
 					],
-					"sid": 526692850015694,
-					"disabled": true
+					"sid": 526692850015694
 				}
 			],
 			"sid": 127349525685209
