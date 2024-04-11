@@ -141,7 +141,8 @@
 						"WallTime": 1,
 						"WallSpeed": 0.3,
 						"DashSpeed": 80,
-						"DashUpSpeed": -20
+						"DashUpSpeed": -20,
+						"Stamina": true
 					},
 					"behaviors": {
 						"Platform": {

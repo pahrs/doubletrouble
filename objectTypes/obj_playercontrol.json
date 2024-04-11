@@ -59,6 +59,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 570100006542513
+		},
+		{
+			"name": "Stamina",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 723505626521241
 		}
 	],
 	"behaviorTypes": [

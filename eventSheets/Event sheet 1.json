@@ -243,6 +243,15 @@
 									"parameters": {
 										"gravity": "1200"
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 482301960427932,
+									"parameters": {
+										"instance-variable": "Stamina",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 445288607205438
@@ -583,6 +592,15 @@
 									"parameters": {
 										"max-fall-speed": "1000"
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 733784575772795,
+									"parameters": {
+										"instance-variable": "Stamina",
+										"value": "false"
+									}
 								}
 							],
 							"sid": 141318418302918
@@ -627,16 +645,24 @@
 									"sid": 145261598773938,
 									"behaviorType": "Platform",
 									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 695818095555840,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-max-fall-speed",
 									"objectClass": "obj_playercontrol",
-									"sid": 155300912256068,
+									"sid": 413613435006081,
 									"behaviorType": "Platform",
 									"parameters": {
-										"max-fall-speed": "0"
+										"max-fall-speed": "100"
 									}
 								},
 								{
@@ -748,16 +774,24 @@
 									"sid": 959356548562186,
 									"behaviorType": "Platform",
 									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 923577666239813,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-max-fall-speed",
 									"objectClass": "obj_playercontrol",
-									"sid": 361337823439171,
+									"sid": 126540935438841,
 									"behaviorType": "Platform",
 									"parameters": {
-										"max-fall-speed": "0"
+										"max-fall-speed": "20"
 									}
 								},
 								{
