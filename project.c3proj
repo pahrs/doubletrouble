@@ -78,6 +78,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
 			"author": "Scirra",
@@ -143,7 +150,8 @@
 					"CoinItem",
 					"CoinIcone",
 					"Text",
-					"Thorns"
+					"Thorns",
+					"Saw"
 				],
 				"subfolders": [],
 				"name": "renato"

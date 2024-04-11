@@ -1,0 +1,92 @@
+{
+	"name": "Saw",
+	"plugin-id": "Sprite",
+	"sid": 421085625414157,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "direção",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 897853464795316
+		},
+		{
+			"name": "distancia_X",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 316282642601852
+		},
+		{
+			"name": "distancia_Y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 965957435587246
+		},
+		{
+			"name": "tempo_Y",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 518628309247864
+		},
+		{
+			"name": "tempo_X",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 337654520683044
+		},
+		{
+			"name": "movendo",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 772464112624754
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 890046505140949
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 852591402903773
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4281998,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 726537439809424,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1171,22 +1171,16 @@
 							"parameters": {
 								"object": "JumpPad"
 							}
-						},
-						{
-							"id": "is-falling",
-							"objectClass": "obj_playercontrol",
-							"sid": 646110372377963,
-							"behaviorType": "Platform"
 						}
 					],
 					"actions": [
 						{
 							"id": "set-vector-y",
 							"objectClass": "obj_playercontrol",
-							"sid": 423121894049777,
+							"sid": 151876850369024,
 							"behaviorType": "Platform",
 							"parameters": {
-								"vector-y": "-600"
+								"vector-y": "-500"
 							}
 						}
 					],
@@ -1336,6 +1330,28 @@
 						}
 					],
 					"sid": 786461546818800
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 435365048406489
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 957207928650803,
+							"parameters": {
+								"variable": "coins",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 629452361957182
 				}
 			],
 			"sid": 146882093282796
@@ -1370,6 +1386,196 @@
 				}
 			],
 			"sid": 648211533284253
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "Saw (failed)",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Saw",
+							"sid": 953369739306508,
+							"parameters": {
+								"instance-variable": "direção",
+								"comparison": 0,
+								"value": "\"baixo\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Saw",
+							"sid": 570691523195027,
+							"parameters": {
+								"instance-variable": "movendo"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Saw",
+							"sid": 698771463822932,
+							"parameters": {
+								"instance-variable": "movendo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Saw",
+							"sid": 200068725787958,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"baixo\"",
+								"property": "offsetY",
+								"end-value": "Self.X + Saw.distancia_Y",
+								"time": "Saw.tempo_Y",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 958209078296151,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Saw",
+							"sid": 263351689867027,
+							"parameters": {
+								"instance-variable": "direção",
+								"comparison": 0,
+								"value": "\"cima\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Saw",
+							"sid": 137131914869755,
+							"parameters": {
+								"instance-variable": "movendo"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Saw",
+							"sid": 768164961927326,
+							"parameters": {
+								"instance-variable": "movendo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Saw",
+							"sid": 715938126710645,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"cima\"",
+								"property": "offsetY",
+								"end-value": "Self.X - Saw.distancia_Y",
+								"time": "Saw.tempo_Y",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 593622540347613,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "Saw",
+							"sid": 602029467011327,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"baixo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Saw",
+							"sid": 791548633521511,
+							"parameters": {
+								"instance-variable": "direção",
+								"value": "\"cima\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Saw",
+							"sid": 544355078657669,
+							"parameters": {
+								"instance-variable": "movendo",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 908429329121854,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "Saw",
+							"sid": 652180786875867,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"cima\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Saw",
+							"sid": 728040481897898,
+							"parameters": {
+								"instance-variable": "direção",
+								"value": "\"baixo\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Saw",
+							"sid": 283288972000850,
+							"parameters": {
+								"instance-variable": "movendo",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 526692850015694,
+					"disabled": true
+				}
+			],
+			"sid": 127349525685209
 		}
 	],
 	"sid": 319962163705504
