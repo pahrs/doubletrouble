@@ -1,14 +1,14 @@
 {
-	"name": "ObjHitbox",
+	"name": "obj_hitbox",
 	"plugin-id": "Sprite",
-	"sid": 693336386164913,
+	"sid": 943937155526880,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 934313546919431
+			"sid": 692279787300614
 		}
 	],
 	"effectTypes": [],
@@ -17,20 +17,32 @@
 			{
 				"frames": [
 					{
-						"width": 10,
-						"height": 10,
+						"width": 22,
+						"height": 22,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1475495,
+						"imageSpriteId": 5322127,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 986639746112244,
+				"sid": 331299482039229,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

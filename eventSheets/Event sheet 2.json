@@ -20,8 +20,8 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "ObjHitbox",
-							"sid": 319919480567277,
+							"objectClass": "obj_hitbox",
+							"sid": 703423371549049,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -63,7 +63,7 @@
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 945138759999369,
 									"parameters": {
 										"instance-variable": "Dashing"
@@ -74,7 +74,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 519924143573377,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -97,7 +97,7 @@
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 309462511916036,
 									"parameters": {
 										"instance-variable": "Dashing"
@@ -108,7 +108,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 503044239619099,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -117,7 +117,7 @@
 								},
 								{
 									"id": "set-angle-of-motion",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 282087553330448,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -140,7 +140,7 @@
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 686051207563669,
 									"parameters": {
 										"instance-variable": "Dashing"
@@ -151,7 +151,7 @@
 							"actions": [
 								{
 									"id": "simulate-control",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 372426300231371,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -160,7 +160,7 @@
 								},
 								{
 									"id": "set-angle-of-motion",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 548454604517063,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -175,7 +175,7 @@
 							"conditions": [
 								{
 									"id": "on-landed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 574765106729962,
 									"behaviorType": "Platform"
 								}
@@ -183,7 +183,7 @@
 							"actions": [
 								{
 									"id": "set-double-jump",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 462263685960822,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -206,14 +206,14 @@
 								},
 								{
 									"id": "is-falling",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 872666236313127,
 									"behaviorType": "Platform",
 									"isInverted": true
 								},
 								{
 									"id": "is-on-floor",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 135032277894850,
 									"behaviorType": "Platform",
 									"isInverted": true
@@ -222,7 +222,7 @@
 							"actions": [
 								{
 									"id": "set-gravity",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 546611229092913,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -237,7 +237,7 @@
 							"conditions": [
 								{
 									"id": "on-landed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 574909489536013,
 									"behaviorType": "Platform"
 								}
@@ -245,7 +245,7 @@
 							"actions": [
 								{
 									"id": "set-gravity",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 697255795430865,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -282,7 +282,7 @@
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 125416207977303,
 									"parameters": {
 										"instance-variable": "DashAvailable"
@@ -292,7 +292,7 @@
 							"actions": [
 								{
 									"id": "set-enabled",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 864616729448510,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -301,7 +301,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 888008118734097,
 									"parameters": {
 										"instance-variable": "Dashing",
@@ -310,7 +310,7 @@
 								},
 								{
 									"id": "set-max-fall-speed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 532161893962469,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -319,18 +319,18 @@
 								},
 								{
 									"id": "start-timer",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 906709480633410,
 									"behaviorType": "Timer",
 									"parameters": {
-										"duration": "ObjPlayerControl.DashTravel",
+										"duration": "obj_playercontrol.DashTravel",
 										"type": "once",
 										"tag": "\"DashTravel\""
 									}
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 732731109612086,
 									"parameters": {
 										"instance-variable": "DashAvailable",
@@ -339,11 +339,11 @@
 								},
 								{
 									"id": "start-timer",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 919548691918568,
 									"behaviorType": "Timer",
 									"parameters": {
-										"duration": "ObjPlayerControl.DashCooldown",
+										"duration": "obj_playercontrol.DashCooldown",
 										"type": "once",
 										"tag": "\"DashCooldown\""
 									}
@@ -356,7 +356,7 @@
 							"conditions": [
 								{
 									"id": "on-timer",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 360703256594138,
 									"behaviorType": "Timer",
 									"parameters": {
@@ -367,7 +367,7 @@
 							"actions": [
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 806791892388448,
 									"parameters": {
 										"instance-variable": "DashAvailable",
@@ -382,7 +382,7 @@
 							"conditions": [
 								{
 									"id": "on-timer",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 319951453717280,
 									"behaviorType": "Timer",
 									"parameters": {
@@ -393,7 +393,7 @@
 							"actions": [
 								{
 									"id": "set-enabled",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 824707276833264,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -402,7 +402,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 725738666757510,
 									"parameters": {
 										"instance-variable": "Dashing",
@@ -411,7 +411,7 @@
 								},
 								{
 									"id": "set-max-fall-speed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 229212898414357,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -448,7 +448,7 @@
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 347171945851865,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -459,10 +459,10 @@
 							"actions": [
 								{
 									"id": "set-y",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 601940331420352,
 									"parameters": {
-										"y": "ObjPlayerControl.Y - ObjPlayerControl.WallSpeed"
+										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
 									}
 								}
 							],
@@ -481,7 +481,7 @@
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 306299233638372,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -492,10 +492,10 @@
 							"actions": [
 								{
 									"id": "set-y",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 234012073153144,
 									"parameters": {
-										"y": "ObjPlayerControl.Y + ObjPlayerControl.WallSpeed"
+										"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
 									}
 								}
 							],
@@ -514,7 +514,7 @@
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 357943224768599,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -525,10 +525,10 @@
 							"actions": [
 								{
 									"id": "set-y",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 326158918654372,
 									"parameters": {
-										"y": "ObjPlayerControl.Y - ObjPlayerControl.WallSpeed"
+										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
 									}
 								}
 							],
@@ -547,7 +547,7 @@
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 791328989043246,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -558,10 +558,10 @@
 							"actions": [
 								{
 									"id": "set-y",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 587471506040325,
 									"parameters": {
-										"y": "ObjPlayerControl.Y + ObjPlayerControl.WallSpeed"
+										"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
 									}
 								}
 							],
@@ -572,7 +572,7 @@
 							"conditions": [
 								{
 									"id": "on-timer",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 696440414472819,
 									"behaviorType": "Timer",
 									"parameters": {
@@ -583,7 +583,7 @@
 							"actions": [
 								{
 									"id": "set-max-fall-speed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 247335739660725,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -620,7 +620,7 @@
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 708009758390874,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -629,7 +629,7 @@
 								},
 								{
 									"id": "is-on-floor",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 745300982849589,
 									"behaviorType": "Platform",
 									"isInverted": true
@@ -638,7 +638,7 @@
 							"actions": [
 								{
 									"id": "set-max-fall-speed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 972380310071183,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -647,18 +647,18 @@
 								},
 								{
 									"id": "start-timer",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 914731916025773,
 									"behaviorType": "Timer",
 									"parameters": {
-										"duration": "ObjPlayerControl.WallTime",
+										"duration": "obj_playercontrol.WallTime",
 										"type": "once",
 										"tag": "\"WallTime\""
 									}
 								},
 								{
 									"id": "set-double-jump",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 519691386536643,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -683,7 +683,7 @@
 							"actions": [
 								{
 									"id": "set-max-fall-speed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 928981723305395,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -692,7 +692,7 @@
 								},
 								{
 									"id": "set-double-jump",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 165198073663077,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -725,7 +725,7 @@
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 838403165351811,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -734,7 +734,7 @@
 								},
 								{
 									"id": "is-on-floor",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 974897348644463,
 									"behaviorType": "Platform",
 									"isInverted": true
@@ -743,7 +743,7 @@
 							"actions": [
 								{
 									"id": "set-max-fall-speed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 428354444899814,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -752,18 +752,18 @@
 								},
 								{
 									"id": "start-timer",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 584362456712667,
 									"behaviorType": "Timer",
 									"parameters": {
-										"duration": "ObjPlayerControl.WallTime",
+										"duration": "obj_playercontrol.WallTime",
 										"type": "once",
 										"tag": "\"WallTime\""
 									}
 								},
 								{
 									"id": "set-double-jump",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 659542112763863,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -786,7 +786,7 @@
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 461564735209109,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -795,7 +795,7 @@
 								},
 								{
 									"id": "is-on-floor",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 893188620363688,
 									"behaviorType": "Platform",
 									"isInverted": true
@@ -804,7 +804,7 @@
 							"actions": [
 								{
 									"id": "set-max-fall-speed",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 127938306087243,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -813,7 +813,7 @@
 								},
 								{
 									"id": "set-double-jump",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 709248734028468,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -871,7 +871,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "ObjPlayerControl",
+							"objectClass": "obj_playercontrol",
 							"sid": 425930606934695,
 							"parameters": {
 								"object": "teleportTrigger"
@@ -917,7 +917,7 @@
 						},
 						{
 							"id": "set-enabled",
-							"objectClass": "ObjPlayerControl",
+							"objectClass": "obj_playercontrol",
 							"sid": 859677474896091,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -932,7 +932,7 @@
 							"conditions": [
 								{
 									"id": "is-overlapping-another-object",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 278956173956230,
 									"parameters": {
 										"object": "Flash"
@@ -942,7 +942,7 @@
 							"actions": [
 								{
 									"id": "destroy",
-									"objectClass": "ObjPlayerControl",
+									"objectClass": "obj_playercontrol",
 									"sid": 533807089351013
 								}
 							],
@@ -1156,7 +1156,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "ObjPlayerControl",
+							"objectClass": "obj_playercontrol",
 							"sid": 883153978538983,
 							"parameters": {
 								"object": "JumpPad"
@@ -1164,7 +1164,7 @@
 						},
 						{
 							"id": "is-falling",
-							"objectClass": "ObjPlayerControl",
+							"objectClass": "obj_playercontrol",
 							"sid": 646110372377963,
 							"behaviorType": "Platform"
 						}
@@ -1172,7 +1172,7 @@
 					"actions": [
 						{
 							"id": "set-vector-y",
-							"objectClass": "ObjPlayerControl",
+							"objectClass": "obj_playercontrol",
 							"sid": 423121894049777,
 							"behaviorType": "Platform",
 							"parameters": {

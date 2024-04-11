@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "SprTilemap",
+					"type": "tilemap",
 					"properties": {
 						"initially-visible": true,
 						"tile-width": 10,
@@ -124,7 +124,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "ObjPlayerControl",
+					"type": "obj_playercontrol",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -269,7 +269,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "SprTilemap",
+					"type": "tilemap",
 					"properties": {
 						"initially-visible": true,
 						"tile-width": 10,
@@ -352,7 +352,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "SprTilemap",
+					"type": "tilemap",
 					"properties": {
 						"initially-visible": true,
 						"tile-width": 10,
@@ -435,7 +435,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "ObjHitbox",
+					"type": "obj_hitbox",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -443,7 +443,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 470078,
+					"uid": 387437,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -454,9 +454,45 @@
 						}
 					},
 					"world": {
-						"x": 315.5,
+						"x": 160,
+						"y": 5,
+						"width": 320,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "obj_hitbox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 872266,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 5,
 						"y": 90,
-						"width": 9,
+						"width": 10,
 						"height": 180,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -471,7 +507,7 @@
 					}
 				},
 				{
-					"type": "ObjHitbox",
+					"type": "obj_hitbox",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -479,7 +515,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 854359,
+					"uid": 231408,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -490,9 +526,9 @@
 						}
 					},
 					"world": {
-						"x": 4.5,
+						"x": 315,
 						"y": 90,
-						"width": 9,
+						"width": 10,
 						"height": 180,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -507,7 +543,7 @@
 					}
 				},
 				{
-					"type": "ObjHitbox",
+					"type": "obj_hitbox",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -515,7 +551,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 929779,
+					"uid": 874405,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -527,45 +563,9 @@
 					},
 					"world": {
 						"x": 160,
-						"y": 4.5,
-						"width": 318,
-						"height": 9,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "ObjHitbox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 449304,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 160,
-						"y": 170,
-						"width": 318,
-						"height": 18,
+						"y": 170.5,
+						"width": 320,
+						"height": 19,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
