@@ -2,6 +2,16 @@
 	"name": "Event sheet 2",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "coins",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 594501589866374
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Misc_Renato",
@@ -1184,6 +1194,182 @@
 				}
 			],
 			"sid": 405914105396069
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Coins(seed)",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Quando colidir com a MOEDA(semente)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol",
+							"sid": 135378348434518,
+							"parameters": {
+								"object": "CoinItem"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Desativa a animação senoidal da moeda"
+						},
+						{
+							"id": "set-active",
+							"objectClass": "CoinItem",
+							"sid": 547514305433975,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Move da layer TILEMAP, para HUD (parallax 0,0)"
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "CoinItem",
+							"sid": 540282268419578,
+							"parameters": {
+								"layer": "\"hud\""
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Converte a posição da moeda usando as expressões do sistema \"CanvasToLayerX/Y\" e \"LayerToCanvasX/Y\", que neste caso são usadas para compensar a diferença entre cada camada, por causa de seus valores de parallax"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "CoinItem",
+							"sid": 817129346297381,
+							"parameters": {
+								"x": "CanvasToLayerX(\"hud\", LayerToCanvasX(\"tilemap\", CoinItem.X, CoinItem.Y), LayerToCanvasY(\"tilemap\", CoinItem.x, CoinItem.y))",
+								"y": "CanvasToLayerY(\"hud\", LayerToCanvasX(\"tilemap\", CoinItem.x, CoinItem.y), LayerToCanvasY(\"tilemap\", CoinItem.x, CoinItem.y))"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Animação do CoinItem para o CoinIcon"
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "CoinItem",
+							"sid": 248059856071722,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"CoinHUD\"",
+								"property": "position",
+								"end-x": "CoinIcone.X",
+								"end-y": "CoinIcone.Y",
+								"time": "0.5",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "yes",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 751376401167212
+				},
+				{
+					"eventType": "comment",
+					"text": "Quando CoinItem, chegar em CoinIcon adiciona pontuação"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "CoinItem",
+							"sid": 817412816297158,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"CoinHUD\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 869555872333407,
+							"parameters": {
+								"variable": "coins",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 496551811862631
+				},
+				{
+					"eventType": "comment",
+					"text": "A cada tick, atualiza para seguir a pontuação"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 533748882225341
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 990457654460134,
+							"parameters": {
+								"text": "coins"
+							}
+						}
+					],
+					"sid": 786461546818800
+				}
+			],
+			"sid": 146882093282796
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Thorns",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol",
+							"sid": 180384638922334,
+							"parameters": {
+								"object": "Thorns"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 907391917769806
+						}
+					],
+					"sid": 598845692204482
+				}
+			],
+			"sid": 648211533284253
 		}
 	],
 	"sid": 319962163705504

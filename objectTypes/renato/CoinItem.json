@@ -1,10 +1,21 @@
 {
-	"name": "SpriteWall",
+	"name": "CoinItem",
 	"plugin-id": "Sprite",
-	"sid": 136067756269068,
+	"sid": 477804923764618,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 392086592711548
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 952423516721988
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -18,13 +29,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8982742,
+						"imageSpriteId": 8507287,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 147492958180867,
+				"sid": 747719762272778,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

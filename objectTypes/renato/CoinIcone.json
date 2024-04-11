@@ -1,7 +1,7 @@
 {
-	"name": "SpriteWall",
+	"name": "CoinIcone",
 	"plugin-id": "Sprite",
-	"sid": 136067756269068,
+	"sid": 106540204538286,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,13 +18,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8982742,
+						"imageSpriteId": 4909026,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 147492958180867,
+				"sid": 668230268672922,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

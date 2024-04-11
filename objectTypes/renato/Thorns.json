@@ -1,16 +1,10 @@
 {
-	"name": "teleport",
+	"name": "Thorns",
 	"plugin-id": "Sprite",
-	"sid": 396048879163680,
+	"sid": 360269275161064,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 199057253575107
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -19,42 +13,38 @@
 					{
 						"width": 16,
 						"height": 16,
-						"originX": 0.52,
-						"originY": 1,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5662062,
+						"imageSpriteId": 4374664,
 						"collisionPoly": {
 							"points": [
-								0,
-								0.84,
+								0.25,
+								0.5,
+								0.6875,
+								0.5,
+								0.75,
+								0.5625,
+								0.875,
+								0.8125,
+								0.875,
 								1,
-								0.84,
+								0.0625,
 								1,
-								1,
-								0,
-								1
+								0.0625,
+								0.8125,
+								0.1875,
+								0.5625
 							]
 						},
 						"useCollisionPoly": true,
-						"imagePoints": [
-							{
-								"name": "trigger",
-								"x": 0.5,
-								"y": 0.42
-							},
-							{
-								"name": "flash",
-								"x": 0.125,
-								"y": -3.3125
-							}
-						],
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 127701049490766,
+				"sid": 578664870604016,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
