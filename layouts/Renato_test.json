@@ -84,7 +84,7 @@
 					"type": "Sprite2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Standby",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -101,10 +101,10 @@
 					"world": {
 						"x": 20,
 						"y": 19,
-						"width": 20,
-						"height": 20,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 15,
+						"height": 19.058823529411764,
+						"originX": 0.5333333333333333,
+						"originY": 0.5555555555555556,
 						"color": [
 							1,
 							1,
@@ -132,9 +132,8 @@
 						"DashAvailable": true,
 						"WallTime": 1,
 						"WallSpeed": 0.3,
-						"DashSpeed": 80,
-						"DashUpSpeed": -20,
-						"Stamina": true
+						"Stamina": true,
+						"ColideTest": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -995,7 +994,7 @@
 					"world": {
 						"x": 168.5,
 						"y": 120.5,
-						"width": 89,
+						"width": 89.00000000000001,
 						"height": 19,
 						"originX": 0.5,
 						"originY": 0.5,

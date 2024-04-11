@@ -40,6 +40,14 @@
 								"height-type": "no",
 								"z": false
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "obj_playercontrol",
+							"sid": 188917990068680,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 121857982694907
@@ -69,9 +77,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
+									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 982972236069874,
+									"sid": 597912700974179,
 									"parameters": {
 										"key": 87
 									}
@@ -131,6 +139,23 @@
 									}
 								},
 								{
+									"id": "set-animation",
+									"objectClass": "Sprite2",
+									"sid": 263772603235637,
+									"parameters": {
+										"animation": "\"Walking\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sprite2",
+									"sid": 544395191628752,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
 									"id": "set-angle-of-motion",
 									"objectClass": "obj_playercontrol",
 									"sid": 722298781755469,
@@ -171,6 +196,15 @@
 									"behaviorType": "Platform",
 									"parameters": {
 										"control": "right"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite2",
+									"sid": 201373758923144,
+									"parameters": {
+										"animation": "\"Walking\"",
+										"from": "beginning"
 									}
 								},
 								{
@@ -255,6 +289,29 @@
 								}
 							],
 							"sid": 445288607205438
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-stopped",
+									"objectClass": "obj_playercontrol",
+									"sid": 817266067272425,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite2",
+									"sid": 561541371931712,
+									"parameters": {
+										"animation": "\"Standby\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 261553327490013
 						}
 					],
 					"sid": 493670220259966
@@ -455,6 +512,13 @@
 									"parameters": {
 										"side": "left"
 									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 199931393013974,
+									"behaviorType": "Platform",
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -464,6 +528,15 @@
 									"sid": 337207865544180,
 									"parameters": {
 										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 761664497596461,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "0"
 									}
 								}
 							],
@@ -522,6 +595,13 @@
 									"parameters": {
 										"side": "right"
 									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 164774656015888,
+									"behaviorType": "Platform",
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -531,6 +611,15 @@
 									"sid": 415195842359180,
 									"parameters": {
 										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 396548465379663,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "180"
 									}
 								}
 							],
@@ -629,69 +718,18 @@
 									"parameters": {
 										"key": 32
 									}
-								},
-								{
-									"id": "is-by-wall",
-									"objectClass": "obj_playercontrol",
-									"sid": 732127241765319,
-									"behaviorType": "Platform",
-									"parameters": {
-										"side": "right"
-									}
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "obj_playercontrol",
-									"sid": 145261598773938,
-									"behaviorType": "Platform",
-									"isInverted": true
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
-									"sid": 695818095555840,
-									"parameters": {
-										"instance-variable": "Stamina"
-									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-max-fall-speed",
-									"objectClass": "obj_playercontrol",
-									"sid": 413613435006081,
-									"behaviorType": "Platform",
-									"parameters": {
-										"max-fall-speed": "100"
-									}
-								},
-								{
 									"id": "start-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 624678616069110,
+									"sid": 638126395917778,
 									"behaviorType": "Timer",
 									"parameters": {
-										"duration": "obj_playercontrol.WallTime",
+										"duration": "0.1",
 										"type": "once",
-										"tag": "\"WallTime\""
-									}
-								},
-								{
-									"id": "stop-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 532470051186210,
-									"behaviorType": "Timer",
-									"parameters": {
-										"tag": "\"DashCooldown\""
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "obj_playercontrol",
-									"sid": 131747048550115,
-									"parameters": {
-										"instance-variable": "DashAvailable",
-										"value": "true"
+										"tag": "\"CollideTest\""
 									}
 								}
 							],
@@ -737,6 +775,85 @@
 								}
 							],
 							"sid": 391731478813110
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 494205053596200,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"CollideTest\""
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 442320459272470,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 626024349701433,
+									"behaviorType": "Platform",
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 585187474568516,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 923672569173016,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "40"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 700733978608723,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.WallTime",
+										"type": "once",
+										"tag": "\"WallTime\""
+									}
+								},
+								{
+									"id": "stop-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 335202272535293,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"DashCooldown\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 577887094574036,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 821592751366255
 						}
 					],
 					"sid": 895639156258616
@@ -758,69 +875,18 @@
 									"parameters": {
 										"key": 32
 									}
-								},
-								{
-									"id": "is-by-wall",
-									"objectClass": "obj_playercontrol",
-									"sid": 911239269458318,
-									"behaviorType": "Platform",
-									"parameters": {
-										"side": "left"
-									}
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "obj_playercontrol",
-									"sid": 959356548562186,
-									"behaviorType": "Platform",
-									"isInverted": true
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
-									"sid": 923577666239813,
-									"parameters": {
-										"instance-variable": "Stamina"
-									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-max-fall-speed",
-									"objectClass": "obj_playercontrol",
-									"sid": 126540935438841,
-									"behaviorType": "Platform",
-									"parameters": {
-										"max-fall-speed": "20"
-									}
-								},
-								{
 									"id": "start-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 645491713927409,
+									"sid": 599426354557621,
 									"behaviorType": "Timer",
 									"parameters": {
-										"duration": "obj_playercontrol.WallTime",
+										"duration": "0.1",
 										"type": "once",
-										"tag": "\"WallTime\""
-									}
-								},
-								{
-									"id": "stop-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 665948200933686,
-									"behaviorType": "Timer",
-									"parameters": {
-										"tag": "\"DashCooldown\""
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "obj_playercontrol",
-									"sid": 935600927996135,
-									"parameters": {
-										"instance-variable": "DashAvailable",
-										"value": "true"
+										"tag": "\"CollideTest\""
 									}
 								}
 							],
@@ -866,182 +932,91 @@
 								}
 							],
 							"sid": 207515718862445
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 615883432023649,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"CollideTest\""
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 423208707252622,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "left"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 196678095281519,
+									"behaviorType": "Platform",
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 560654916364674,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 970128682427832,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "40"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 262703297273243,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.WallTime",
+										"type": "once",
+										"tag": "\"WallTime\""
+									}
+								},
+								{
+									"id": "stop-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 821684699368061,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"DashCooldown\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 369306456675469,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 993661031828980
 						}
 					],
 					"sid": 832248717963006
 				}
 			],
 			"sid": 972272841367651
-		},
-		{
-			"eventType": "group",
-			"disabled": true,
-			"title": "Dash (Prototipo Physics)",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 216697707858265,
-							"parameters": {
-								"key": 16
-							}
-						},
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 165166912784282,
-							"parameters": {
-								"key": 68
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "apply-impulse",
-							"objectClass": "obj_playercontrol",
-							"sid": 399270019687208,
-							"behaviorType": "Physics",
-							"parameters": {
-								"impulse-x": "obj_playercontrol.DashSpeed * obj_playercontrol.Physics.Density",
-								"implulse-y": "0",
-								"image-point": "0"
-							}
-						}
-					],
-					"sid": 549010333865416,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 745083740106348,
-							"parameters": {
-								"key": 16
-							}
-						},
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 336098934453409,
-							"parameters": {
-								"key": 65
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "apply-impulse",
-							"objectClass": "obj_playercontrol",
-							"sid": 116893155464210,
-							"behaviorType": "Physics",
-							"parameters": {
-								"impulse-x": "-obj_playercontrol.DashSpeed*obj_playercontrol.Physics.Density",
-								"implulse-y": "0",
-								"image-point": "0"
-							}
-						}
-					],
-					"sid": 300113428069329,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 169289642135641,
-							"parameters": {
-								"key": 16
-							}
-						},
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 543040838501385,
-							"parameters": {
-								"key": 87
-							}
-						},
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 290634107525462,
-							"parameters": {
-								"key": 68
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "apply-impulse",
-							"objectClass": "obj_playercontrol",
-							"sid": 125773681186741,
-							"behaviorType": "Physics",
-							"parameters": {
-								"impulse-x": "obj_playercontrol.DashSpeed * obj_playercontrol.Physics.Density",
-								"implulse-y": "obj_playercontrol.DashUpSpeed*obj_playercontrol.Physics.Density",
-								"image-point": "0"
-							}
-						}
-					],
-					"sid": 847932225442586,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 273302683778391,
-							"parameters": {
-								"key": 16
-							}
-						},
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 790308899473965,
-							"parameters": {
-								"key": 87
-							}
-						},
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 593076124321775,
-							"parameters": {
-								"key": 65
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "apply-impulse",
-							"objectClass": "obj_playercontrol",
-							"sid": 808815961586367,
-							"behaviorType": "Physics",
-							"parameters": {
-								"impulse-x": "-obj_playercontrol.DashSpeed * obj_playercontrol.Physics.Density",
-								"implulse-y": "obj_playercontrol.DashUpSpeed*obj_playercontrol.Physics.Density",
-								"image-point": "0"
-							}
-						}
-					],
-					"sid": 761067316935452,
-					"disabled": true
-				}
-			],
-			"sid": 436073653051835
 		}
 	],
 	"sid": 677904809921252

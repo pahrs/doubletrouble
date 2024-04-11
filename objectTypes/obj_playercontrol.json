@@ -47,25 +47,18 @@
 			"sid": 925322616792794
 		},
 		{
-			"name": "DashSpeed",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 498997323157119
-		},
-		{
-			"name": "DashUpSpeed",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 570100006542513
-		},
-		{
 			"name": "Stamina",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
 			"sid": 723505626521241
+		},
+		{
+			"name": "ColideTest",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 307493261364363
 		}
 	],
 	"behaviorTypes": [

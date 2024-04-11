@@ -138,11 +138,10 @@
 						"DashTravel": 0.06,
 						"DashCooldown": 2,
 						"DashAvailable": true,
-						"WallTime": 1,
-						"WallSpeed": 0.3,
-						"DashSpeed": 80,
-						"DashUpSpeed": -20,
-						"Stamina": true
+						"WallTime": 0.5,
+						"WallSpeed": 0.65,
+						"Stamina": true,
+						"ColideTest": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -189,8 +188,8 @@
 						}
 					},
 					"world": {
-						"x": 90,
-						"y": 131,
+						"x": 99,
+						"y": 148,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -209,7 +208,7 @@
 					"type": "Sprite2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Standby",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -224,12 +223,12 @@
 						}
 					},
 					"world": {
-						"x": 90,
-						"y": 129,
-						"width": 20,
-						"height": 20,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 100,
+						"y": 149,
+						"width": 15,
+						"height": 19.058823529411764,
+						"originX": 0.5333333333333333,
+						"originY": 0.5555555555555556,
 						"color": [
 							1,
 							1,
