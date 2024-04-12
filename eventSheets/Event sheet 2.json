@@ -1390,7 +1390,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Saw (failed)",
+			"title": "Saw ",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -1569,6 +1569,27 @@
 						}
 					],
 					"sid": 526692850015694
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol",
+							"sid": 721439615987707,
+							"parameters": {
+								"object": "Saw"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 435662048703107
+						}
+					],
+					"sid": 823859077010005
 				}
 			],
 			"sid": 127349525685209

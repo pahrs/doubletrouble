@@ -757,8 +757,8 @@
 						"direção": "baixo",
 						"distancia_X": 30,
 						"distancia_Y": 60,
-						"tempo_Y": 1,
-						"tempo_X": 1,
+						"tempo_Y": 2,
+						"tempo_X": 2,
 						"movendo": false
 					},
 					"behaviors": {
@@ -777,8 +777,8 @@
 						}
 					},
 					"world": {
-						"x": 131,
-						"y": 60,
+						"x": 132,
+						"y": 44,
 						"width": 12,
 						"height": 12,
 						"originX": 0.5,
