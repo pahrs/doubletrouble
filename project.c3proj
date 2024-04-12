@@ -169,7 +169,13 @@
 			"rm_test",
 			"Renato_test"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Levels"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
