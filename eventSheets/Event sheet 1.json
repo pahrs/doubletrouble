@@ -627,21 +627,12 @@
 									}
 								},
 								{
-									"id": "set-boolean-instvar",
+									"id": "set-position",
 									"objectClass": "obj_playercontrol",
-									"sid": 387670298868860,
+									"sid": 381346707529406,
 									"parameters": {
-										"instance-variable": "Dashing",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "obj_playercontrol",
-									"sid": 449890884653073,
-									"parameters": {
-										"instance-variable": "Gravity",
-										"value": "true"
+										"x": "obj_playercontrol.X",
+										"y": "obj_playercontrol.Y"
 									}
 								},
 								{
@@ -652,6 +643,24 @@
 									"parameters": {
 										"tag": "\"DashTravel\""
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 599947365485650,
+									"parameters": {
+										"instance-variable": "Dashing",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 785238326094122,
+									"parameters": {
+										"instance-variable": "Gravity",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 265103892763219
@@ -661,238 +670,198 @@
 				},
 				{
 					"eventType": "group",
-					"disabled": true,
-					"title": "Wall Jump (Right)",
+					"disabled": false,
+					"title": "Wall Grap (Left)",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
 						{
-							"eventType": "comment",
-							"text": "Faz com que o jogador se prenda a parede por \"Walltime\" segundos, podendo reduzir esse tempo soltando a tecla."
-						},
-						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-button-pressed",
+									"id": "is-button-down",
 									"objectClass": "Gamepad",
-									"sid": 280377387756181,
+									"sid": 932543919093091,
 									"parameters": {
 										"gamepad": "0",
 										"button": "right-shoulder-button"
 									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
-									"sid": 468227227654314,
-									"parameters": {
-										"instance-variable": "Stamina"
-									}
 								}
 							],
 							"actions": [
 								{
-									"id": "start-timer",
+									"id": "set-boolean-instvar",
 									"objectClass": "obj_playercontrol",
-									"sid": 990124571314010,
-									"behaviorType": "Timer",
+									"sid": 241602105885016,
 									"parameters": {
-										"duration": "0.5",
-										"type": "once",
-										"tag": "\"Collide\""
+										"instance-variable": "ColideTest",
+										"value": "true"
 									}
 								}
 							],
-							"sid": 707893546851241,
-							"disabled": true
+							"sid": 498870775469471
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 214158075354717,
+									"id": "on-button-released",
+									"objectClass": "Gamepad",
+									"sid": 726124389552435,
 									"parameters": {
-										"key": 65
+										"gamepad": "0",
+										"button": "right-shoulder-button"
 									}
-								},
-								{
-									"id": "is-by-wall",
-									"objectClass": "obj_playercontrol",
-									"sid": 883119758887045,
-									"behaviorType": "Platform",
-									"parameters": {
-										"side": "right"
-									}
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "obj_playercontrol",
-									"sid": 112695150334550,
-									"behaviorType": "Platform",
-									"isInverted": true
 								}
 							],
 							"actions": [
 								{
-									"id": "set-max-fall-speed",
+									"id": "set-boolean-instvar",
 									"objectClass": "obj_playercontrol",
-									"sid": 627487712327062,
-									"behaviorType": "Platform",
+									"sid": 885383574771028,
 									"parameters": {
-										"max-fall-speed": "1000"
-									}
-								}
-							],
-							"sid": 391731478813110,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-by-wall",
-									"objectClass": "obj_playercontrol",
-									"sid": 442320459272470,
-									"behaviorType": "Platform",
-									"parameters": {
-										"side": "right"
+										"instance-variable": "WallGrapLeft",
+										"value": "false"
 									}
 								},
 								{
-									"id": "is-on-floor",
+									"id": "set-boolean-instvar",
 									"objectClass": "obj_playercontrol",
-									"sid": 626024349701433,
-									"behaviorType": "Platform",
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-max-fall-speed",
-									"objectClass": "obj_playercontrol",
-									"sid": 923672569173016,
-									"behaviorType": "Platform",
+									"sid": 113848632909880,
 									"parameters": {
-										"max-fall-speed": "40"
-									}
-								},
-								{
-									"id": "start-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 700733978608723,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "obj_playercontrol.WallTime",
-										"type": "once",
-										"tag": "\"WallTime\""
+										"instance-variable": "ColideTest",
+										"value": "false"
 									}
 								},
 								{
 									"id": "stop-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 335202272535293,
+									"sid": 581070631723111,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"WallGrapTime\""
+									}
+								}
+							],
+							"sid": 717399230523875
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 825032643673891,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "left"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 896145137638671,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 913837069433814,
+									"parameters": {
+										"instance-variable": "LeftWall",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 650160117855096
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 477756062489483
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 694364734239911,
+									"parameters": {
+										"instance-variable": "LeftWall",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 909068094445124
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 415443345790371,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 865523148509297,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.WallTime",
+										"type": "regular",
+										"tag": "\"WallGrapTime\""
+									}
+								},
+								{
+									"id": "stop-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 108547052266277,
 									"behaviorType": "Timer",
 									"parameters": {
 										"tag": "\"DashCooldown\""
 									}
 								},
 								{
+									"id": "set-enabled",
+									"objectClass": "obj_playercontrol",
+									"sid": 168864825891681,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
 									"id": "set-boolean-instvar",
 									"objectClass": "obj_playercontrol",
-									"sid": 577887094574036,
+									"sid": 787856046992565,
 									"parameters": {
 										"instance-variable": "DashAvailable",
 										"value": "true"
 									}
-								}
-							],
-							"sid": 821592751366255,
-							"disabled": true
-						}
-					],
-					"sid": 895639156258616
-				},
-				{
-					"eventType": "group",
-					"disabled": true,
-					"title": "Wall Jump (Left)",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-button-pressed",
-									"objectClass": "Gamepad",
-									"sid": 923931322481468,
-									"parameters": {
-										"gamepad": "0",
-										"button": "right-shoulder-button"
-									}
 								},
 								{
-									"id": "is-boolean-instance-variable-set",
+									"id": "set-angle-of-motion",
 									"objectClass": "obj_playercontrol",
-									"sid": 324823797159716,
+									"sid": 932221284451215,
+									"behaviorType": "Bullet",
 									"parameters": {
-										"instance-variable": "Stamina"
+										"angle": "0"
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "obj_playercontrol",
-									"sid": 206239616497912,
-									"parameters": {
-										"instance-variable": "ColideTest",
-										"value": "true"
-									}
-								},
-								{
-									"id": "start-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 368436495148191,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "0.5",
-										"type": "once",
-										"tag": "\"Collide\""
-									}
-								}
-							],
-							"sid": 307409446581259,
-							"disabled": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 922377152240415,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "stop-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 532879858627574,
-									"behaviorType": "Timer",
-									"parameters": {
-										"tag": "\"WallTime\""
-									}
-								}
-							],
-							"sid": 207515718862445,
-							"disabled": true
+							"sid": 244689743153310
 						},
 						{
 							"eventType": "block",
@@ -900,7 +869,42 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 430587083742725,
+									"sid": 233911964375809,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 951543427964473,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "obj_playercontrol",
+									"sid": 388896066025966,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 787583935308079
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 338693452672502,
 									"parameters": {
 										"instance-variable": "ColideTest"
 									}
@@ -908,62 +912,82 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 684276519756438,
+									"sid": 559231793453812,
 									"parameters": {
-										"instance-variable": "Stamina"
+										"instance-variable": "LeftWall"
 									}
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 142995762899401,
+									"sid": 993789991468557,
 									"parameters": {
-										"instance-variable": "LeftWall"
+										"instance-variable": "Stamina"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-max-fall-speed",
-									"objectClass": "obj_playercontrol",
-									"sid": 208617336372938,
-									"behaviorType": "Platform",
-									"parameters": {
-										"max-fall-speed": "40"
-									}
-								},
-								{
-									"id": "start-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 262703297273243,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "obj_playercontrol.WallTime",
-										"type": "once",
-										"tag": "\"WallTime\""
-									}
-								},
-								{
-									"id": "stop-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 821684699368061,
-									"behaviorType": "Timer",
-									"parameters": {
-										"tag": "\"DashCooldown\""
-									}
-								},
-								{
 									"id": "set-boolean-instvar",
 									"objectClass": "obj_playercontrol",
-									"sid": 369306456675469,
+									"sid": 414211268926769,
 									"parameters": {
-										"instance-variable": "DashAvailable",
+										"instance-variable": "WallGrapLeft",
 										"value": "true"
 									}
 								}
 							],
-							"sid": 993661031828980,
-							"disabled": true
+							"sid": 691396513968212
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 988214950604364
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 662333412202181,
+									"parameters": {
+										"instance-variable": "WallGrapLeft",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 240358283057716
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 766285869218530,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-a"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 854171900176294,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.WallTime",
+										"type": "once",
+										"tag": "\"WallGrapTimer\""
+									}
+								}
+							],
+							"sid": 637534920872797
 						},
 						{
 							"eventType": "block",
@@ -971,10 +995,10 @@
 								{
 									"id": "on-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 830385132728416,
+									"sid": 185964670660204,
 									"behaviorType": "Timer",
 									"parameters": {
-										"tag": "\"Collide\""
+										"tag": "\"WallGrapTimer\""
 									}
 								}
 							],
@@ -982,863 +1006,512 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "obj_playercontrol",
-									"sid": 154871619737538,
+									"sid": 119692244288507,
 									"parameters": {
-										"instance-variable": "ColideTest",
+										"instance-variable": "Stamina",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 703180156478514,
-							"disabled": true
+							"sid": 447872816140460
 						}
 					],
-					"sid": 832248717963006
+					"sid": 750197261345559
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Wall Grap (Right)",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-released",
+									"objectClass": "Gamepad",
+									"sid": 251068694643505,
+									"parameters": {
+										"gamepad": "0",
+										"button": "right-shoulder-button"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 552371652851542,
+									"parameters": {
+										"instance-variable": "WallGrapRight",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 144644892055506,
+									"parameters": {
+										"instance-variable": "ColideTest",
+										"value": "false"
+									}
+								},
+								{
+									"id": "stop-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 195326976206385,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"WallGrapTime\""
+									}
+								}
+							],
+							"sid": 218906522051668
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-by-wall",
+									"objectClass": "obj_playercontrol",
+									"sid": 389329310615637,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "obj_playercontrol",
+									"sid": 459819405995510,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 979277530567338,
+									"parameters": {
+										"instance-variable": "RightWall",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 939438470223750
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 485418574764849
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 722337032166776,
+									"parameters": {
+										"instance-variable": "RightWall",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 912255655451783
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 762618941152864,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "start-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 104294988392494,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "obj_playercontrol.WallTime",
+										"type": "regular",
+										"tag": "\"WallGrapTime\""
+									}
+								},
+								{
+									"id": "stop-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 445996207239879,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"DashCooldown\""
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "obj_playercontrol",
+									"sid": 226898878243362,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 595911816201302,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 219445236920813,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 896203045939272
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 452705955234502,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 324754374092603,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "obj_playercontrol",
+									"sid": 139712606074070,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 451626786337365
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 808768058093901,
+									"parameters": {
+										"instance-variable": "ColideTest"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 224132747062231,
+									"parameters": {
+										"instance-variable": "RightWall"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 820725879714883,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 748167963584873,
+									"parameters": {
+										"instance-variable": "WallGrapRight",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 847653071510143
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 295964827127303
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 235345458339202,
+									"parameters": {
+										"instance-variable": "WallGrapRight",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 604370522000627
+						}
+					],
+					"sid": 767925446944193
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Wall Climb",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Faz com que o jogador possa se mover para cima e para baixo quando preso na parede."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 117522452986716,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-up"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 811872397450305,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 997484659480138,
+									"parameters": {
+										"instance-variable": "LeftWall"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "obj_playercontrol",
+									"sid": 315316707234951,
+									"parameters": {
+										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 588366944713660,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "0"
+									}
+								}
+							],
+							"sid": 997331699719887
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 244847137308362,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-down"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 593795226449919,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 201514363177188,
+									"parameters": {
+										"instance-variable": "LeftWall"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "obj_playercontrol",
+									"sid": 933756120885134,
+									"parameters": {
+										"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
+									}
+								}
+							],
+							"sid": 516020282328674
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 408314365623826,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-up"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 638535498876455,
+									"parameters": {
+										"instance-variable": "RightWall"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 969513279489713,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "obj_playercontrol",
+									"sid": 538071367308184,
+									"parameters": {
+										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 819887225125630,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 126254597680249
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 611268573578724,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-down"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 721748485714692,
+									"parameters": {
+										"instance-variable": "RightWall"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 450352025116653,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "obj_playercontrol",
+									"sid": 448796098516921,
+									"parameters": {
+										"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
+									}
+								}
+							],
+							"sid": 205096992701879
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "obj_playercontrol",
+									"sid": 393646302027892,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"WallTime\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol",
+									"sid": 996894769494184,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "1000"
+									}
+								}
+							],
+							"sid": 524574913695020
+						}
+					],
+					"sid": 852963102550380
 				}
 			],
 			"sid": 972272841367651
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Wall Grap (Left)",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-button-down",
-							"objectClass": "Gamepad",
-							"sid": 322744312091290,
-							"parameters": {
-								"gamepad": "0",
-								"button": "right-shoulder-button"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 822071648621439,
-							"parameters": {
-								"instance-variable": "ColideTest",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 445905051716196
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-button-released",
-							"objectClass": "Gamepad",
-							"sid": 980620125883653,
-							"parameters": {
-								"gamepad": "0",
-								"button": "right-shoulder-button"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 659625046032162,
-							"parameters": {
-								"instance-variable": "WallGrapLeft",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 145777637354488,
-							"parameters": {
-								"instance-variable": "ColideTest",
-								"value": "false"
-							}
-						},
-						{
-							"id": "stop-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 738626276747038,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"WallGrapTime\""
-							}
-						}
-					],
-					"sid": 100171654153454
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-by-wall",
-							"objectClass": "obj_playercontrol",
-							"sid": 683276919653543,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "left"
-							}
-						},
-						{
-							"id": "is-on-floor",
-							"objectClass": "obj_playercontrol",
-							"sid": 962995572950588,
-							"behaviorType": "Platform",
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 864494552785637,
-							"parameters": {
-								"instance-variable": "LeftWall",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 786436292793369
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 169612488610537
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 705141395280650,
-							"parameters": {
-								"instance-variable": "LeftWall",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 360650710094738
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 661354051542591,
-							"parameters": {
-								"instance-variable": "WallGrapLeft"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "start-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 515958434087628,
-							"behaviorType": "Timer",
-							"parameters": {
-								"duration": "obj_playercontrol.WallTime",
-								"type": "regular",
-								"tag": "\"WallGrapTime\""
-							}
-						},
-						{
-							"id": "stop-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 619029208019458,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"DashCooldown\""
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "obj_playercontrol",
-							"sid": 250043764899294,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 823738368044175,
-							"parameters": {
-								"instance-variable": "DashAvailable",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-angle-of-motion",
-							"objectClass": "obj_playercontrol",
-							"sid": 417945133346130,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "0"
-							}
-						}
-					],
-					"sid": 676598705754459
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 669765551530239,
-							"parameters": {
-								"instance-variable": "WallGrapLeft"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 241485587225750,
-							"parameters": {
-								"instance-variable": "WallGrapRight"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "obj_playercontrol",
-							"sid": 495478471735492,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						}
-					],
-					"sid": 366842933938815
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 990417214892632,
-							"parameters": {
-								"instance-variable": "ColideTest"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 587295852611324,
-							"parameters": {
-								"instance-variable": "LeftWall"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 475095776130932,
-							"parameters": {
-								"instance-variable": "Stamina"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 651806046256552,
-							"parameters": {
-								"instance-variable": "WallGrapLeft",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 396687807542036
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 974073937045235
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 396444263499789,
-							"parameters": {
-								"instance-variable": "WallGrapLeft",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 474350858847425
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-button-pressed",
-							"objectClass": "Gamepad",
-							"sid": 450669416313473,
-							"parameters": {
-								"gamepad": "0",
-								"button": "button-a"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "start-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 785366048511536,
-							"behaviorType": "Timer",
-							"parameters": {
-								"duration": "obj_playercontrol.WallTime",
-								"type": "once",
-								"tag": "\"WallGrapTimer\""
-							}
-						}
-					],
-					"sid": 674460702408767
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 459848192843847,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"WallGrapTimer\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 880706249804867,
-							"parameters": {
-								"instance-variable": "Stamina",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 944427819972963
-				}
-			],
-			"sid": 383994772258186
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Wall Grap (Right)",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-button-released",
-							"objectClass": "Gamepad",
-							"sid": 255740806835886,
-							"parameters": {
-								"gamepad": "0",
-								"button": "right-shoulder-button"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 419693238748542,
-							"parameters": {
-								"instance-variable": "WallGrapRight",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 701225054371610,
-							"parameters": {
-								"instance-variable": "ColideTest",
-								"value": "false"
-							}
-						},
-						{
-							"id": "stop-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 979118698511324,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"WallGrapTime\""
-							}
-						}
-					],
-					"sid": 792211956416217
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-by-wall",
-							"objectClass": "obj_playercontrol",
-							"sid": 691645705737184,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "right"
-							}
-						},
-						{
-							"id": "is-on-floor",
-							"objectClass": "obj_playercontrol",
-							"sid": 301167087420629,
-							"behaviorType": "Platform",
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 976441442153729,
-							"parameters": {
-								"instance-variable": "RightWall",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 438804347485009
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 634176331995254
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 280412927457917,
-							"parameters": {
-								"instance-variable": "RightWall",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 870752642303736
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 741321503700548,
-							"parameters": {
-								"instance-variable": "WallGrapRight"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "start-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 147431669420899,
-							"behaviorType": "Timer",
-							"parameters": {
-								"duration": "obj_playercontrol.WallTime",
-								"type": "regular",
-								"tag": "\"WallGrapTime\""
-							}
-						},
-						{
-							"id": "stop-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 580875369171171,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"DashCooldown\""
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "obj_playercontrol",
-							"sid": 620028313852905,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "disabled"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 526027389055600,
-							"parameters": {
-								"instance-variable": "DashAvailable",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-angle-of-motion",
-							"objectClass": "obj_playercontrol",
-							"sid": 554837275354948,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "180"
-							}
-						}
-					],
-					"sid": 673996946037184
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 900596211769740,
-							"parameters": {
-								"instance-variable": "WallGrapRight"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 182037588764143,
-							"parameters": {
-								"instance-variable": "WallGrapLeft"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "obj_playercontrol",
-							"sid": 144098108063981,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						}
-					],
-					"sid": 604410394594916
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 164998113442201,
-							"parameters": {
-								"instance-variable": "ColideTest"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 488101512525092,
-							"parameters": {
-								"instance-variable": "RightWall"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 275523104829306,
-							"parameters": {
-								"instance-variable": "Stamina"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 921879399676234,
-							"parameters": {
-								"instance-variable": "WallGrapRight",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 291893732624432
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 578066674132049
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 633186076285619,
-							"parameters": {
-								"instance-variable": "WallGrapRight",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 481370621165472
-				}
-			],
-			"sid": 117521305660403
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Wall Climb",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "comment",
-					"text": "Faz com que o jogador possa se mover para cima e para baixo quando preso na parede."
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-button-down",
-							"objectClass": "Gamepad",
-							"sid": 598757254994490,
-							"parameters": {
-								"gamepad": "0",
-								"button": "d-pad-up"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 377451492394108,
-							"parameters": {
-								"instance-variable": "Stamina"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 629330313270536,
-							"parameters": {
-								"instance-variable": "LeftWall"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "obj_playercontrol",
-							"sid": 400625650519674,
-							"parameters": {
-								"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
-							}
-						},
-						{
-							"id": "set-angle-of-motion",
-							"objectClass": "obj_playercontrol",
-							"sid": 762309892332646,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "0"
-							}
-						}
-					],
-					"sid": 354141409960665
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-button-down",
-							"objectClass": "Gamepad",
-							"sid": 957258433666949,
-							"parameters": {
-								"gamepad": "0",
-								"button": "d-pad-down"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 205389724520995,
-							"parameters": {
-								"instance-variable": "Stamina"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 550384361406722,
-							"parameters": {
-								"instance-variable": "LeftWall"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "obj_playercontrol",
-							"sid": 520604942655604,
-							"parameters": {
-								"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
-							}
-						}
-					],
-					"sid": 422560336411533
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-button-down",
-							"objectClass": "Gamepad",
-							"sid": 453590354226900,
-							"parameters": {
-								"gamepad": "0",
-								"button": "d-pad-up"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 337024746365297,
-							"parameters": {
-								"instance-variable": "RightWall"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 302455537879730,
-							"parameters": {
-								"instance-variable": "Stamina"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "obj_playercontrol",
-							"sid": 646812091225690,
-							"parameters": {
-								"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
-							}
-						},
-						{
-							"id": "set-angle-of-motion",
-							"objectClass": "obj_playercontrol",
-							"sid": 566856149801296,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"angle": "180"
-							}
-						}
-					],
-					"sid": 308039431390052
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-button-pressed",
-							"objectClass": "Gamepad",
-							"sid": 116868165008280,
-							"parameters": {
-								"gamepad": "0",
-								"button": "d-pad-down"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 463656054095658,
-							"parameters": {
-								"instance-variable": "RightWall"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "obj_playercontrol",
-							"sid": 533110707221129,
-							"parameters": {
-								"instance-variable": "Stamina"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "obj_playercontrol",
-							"sid": 239383073377078,
-							"parameters": {
-								"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
-							}
-						}
-					],
-					"sid": 430343806439094
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-timer",
-							"objectClass": "obj_playercontrol",
-							"sid": 199986033940746,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"WallTime\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-max-fall-speed",
-							"objectClass": "obj_playercontrol",
-							"sid": 934425139815723,
-							"behaviorType": "Platform",
-							"parameters": {
-								"max-fall-speed": "1000"
-							}
-						}
-					],
-					"sid": 283062852208357
-				}
-			],
-			"sid": 120055274841741
 		}
 	],
 	"sid": 677904809921252
