@@ -138,10 +138,15 @@
 						"DashTravel": 0.06,
 						"DashCooldown": 2,
 						"DashAvailable": true,
-						"WallTime": 0.5,
-						"WallSpeed": 0.65,
+						"WallTime": 0.9,
+						"WallSpeed": 0.3,
 						"Stamina": true,
-						"ColideTest": false
+						"ColideTest": false,
+						"LeftWall": false,
+						"RightWall": false,
+						"WallGrapLeft": false,
+						"Gravity": true,
+						"WallGrapRight": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -150,8 +155,8 @@
 								"acceleration": 450,
 								"deceleration": 700,
 								"jump-strength": 280,
-								"gravity": 1200,
-								"max-fall-speed": 1000,
+								"gravity": 400,
+								"max-fall-speed": 400,
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": true,
@@ -171,27 +176,13 @@
 						},
 						"Timer": {
 							"properties": {}
-						},
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
 						}
 					},
 					"world": {
-						"x": 99,
-						"y": 148,
-						"width": 16,
-						"height": 16,
+						"x": 99.98374435077437,
+						"y": 148.2459360876936,
+						"width": 13.048766947676882,
+						"height": 16.983771370779607,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

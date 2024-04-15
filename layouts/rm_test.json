@@ -141,7 +141,12 @@
 						"WallTime": 0.5,
 						"WallSpeed": 0.65,
 						"Stamina": true,
-						"ColideTest": false
+						"ColideTest": false,
+						"LeftWall": false,
+						"RightWall": false,
+						"WallGrapLeft": false,
+						"Gravity": true,
+						"WallGrapRight": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -171,20 +176,6 @@
 						},
 						"Timer": {
 							"properties": {}
-						},
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
 						}
 					},
 					"world": {

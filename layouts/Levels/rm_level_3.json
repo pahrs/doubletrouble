@@ -135,13 +135,18 @@
 					"uid": 870030,
 					"instanceVariables": {
 						"Dashing": false,
-						"DashTravel": 0.06,
-						"DashCooldown": 2,
+						"DashTravel": 0.1,
+						"DashCooldown": 0,
 						"DashAvailable": true,
-						"WallTime": 0.5,
-						"WallSpeed": 0.65,
+						"WallTime": 0.9,
+						"WallSpeed": 0.3,
 						"Stamina": true,
-						"ColideTest": false
+						"ColideTest": false,
+						"LeftWall": false,
+						"RightWall": false,
+						"WallGrapLeft": false,
+						"Gravity": true,
+						"WallGrapRight": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -149,7 +154,7 @@
 								"max-speed": 80,
 								"acceleration": 450,
 								"deceleration": 700,
-								"jump-strength": 280,
+								"jump-strength": 150,
 								"gravity": 1200,
 								"max-fall-speed": 1000,
 								"double-jump": false,
@@ -160,7 +165,7 @@
 						},
 						"Bullet": {
 							"properties": {
-								"speed": 350,
+								"speed": 150,
 								"acceleration": 0,
 								"gravity": 0,
 								"bounce-off-solids": false,
@@ -171,27 +176,13 @@
 						},
 						"Timer": {
 							"properties": {}
-						},
-						"Physics": {
-							"properties": {
-								"immovable": false,
-								"collision-mask": "use-collision-polygon",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.5,
-								"elasticity": 0.2,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
 						}
 					},
 					"world": {
-						"x": 290,
-						"y": 130,
-						"width": 16,
-						"height": 16,
+						"x": 294.856477576696,
+						"y": 129.3062147668545,
+						"width": 13.224859067418038,
+						"height": 17.38757046629098,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -815,9 +806,9 @@
 					},
 					"world": {
 						"x": 42.5,
-						"y": 95,
-						"width": 25,
-						"height": 10,
+						"y": 100.89716495407548,
+						"width": 25.000000000000004,
+						"height": 21.794329908150956,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -852,7 +843,7 @@
 					"world": {
 						"x": 292.5,
 						"y": 145,
-						"width": 50,
+						"width": 50.00000000000001,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1151,6 +1142,42 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "obj_hitbox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 130123,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 40.21730120961066,
+						"y": 49.25882753715164,
+						"width": 18.20429536271105,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
 						"zElevation": 0
 					}
 				}

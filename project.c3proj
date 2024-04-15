@@ -42,6 +42,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -52,13 +59,6 @@
 			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Physics",
-			"name": "Physics",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -136,7 +136,8 @@
 			"tilemap",
 			"Sprite",
 			"Sprite3",
-			"debugjump"
+			"debugjump",
+			"Gamepad"
 		],
 		"subfolders": [
 			{

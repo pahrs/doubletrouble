@@ -59,6 +59,41 @@
 			"desc": "",
 			"show": true,
 			"sid": 307493261364363
+		},
+		{
+			"name": "LeftWall",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 467227235861201
+		},
+		{
+			"name": "RightWall",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 926041590407128
+		},
+		{
+			"name": "WallGrapLeft",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 954986062203281
+		},
+		{
+			"name": "Gravity",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 214021452685910
+		},
+		{
+			"name": "WallGrapRight",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 314947009692584
 		}
 	],
 	"behaviorTypes": [
@@ -76,11 +111,6 @@
 			"behaviorId": "Timer",
 			"name": "Timer",
 			"sid": 223883795189345
-		},
-		{
-			"behaviorId": "Physics",
-			"name": "Physics",
-			"sid": 594586880647081
 		}
 	],
 	"effectTypes": [],
