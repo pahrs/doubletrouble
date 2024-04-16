@@ -147,7 +147,10 @@
 						"WallGrapLeft": false,
 						"Gravity": true,
 						"WallGrapRight": false,
-						"HaveKey": false
+						"HaveKey": false,
+						"SharedHP": 3,
+						"Dead": false,
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {

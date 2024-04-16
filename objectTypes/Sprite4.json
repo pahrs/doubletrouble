@@ -173,6 +173,144 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5555555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4337744,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0,
+								0,
+								0.875,
+								0,
+								0.9375,
+								0,
+								0.9375,
+								0.8888888888888885,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 431502174543979,
+				"name": "Jump",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5555555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2949730,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0,
+								0.75,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0.875,
+								1,
+								0.125,
+								1,
+								0.0625,
+								1,
+								0.0625,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 422855521474397,
+				"name": "Death",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5555555555555556,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9508367,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0,
+								0.75,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								0.875,
+								0.9444444444444444,
+								0.125,
+								0.9444444444444444,
+								0.0625,
+								0.3333333333333333,
+								0.0625,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 462868715031869,
+				"name": "Waiting",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			}
 		],
 		"subfolders": []

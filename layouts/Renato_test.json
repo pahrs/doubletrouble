@@ -578,10 +578,10 @@
 					"world": {
 						"x": 132,
 						"y": 156,
-						"width": 16,
-						"height": 16,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 15,
+						"height": 10,
+						"originX": 0.5333333333333333,
+						"originY": 0.1,
 						"color": [
 							1,
 							1,
@@ -607,10 +607,10 @@
 					"world": {
 						"x": 227,
 						"y": 156,
-						"width": 16,
-						"height": 16,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 15,
+						"height": 10,
+						"originX": 0.5333333333333333,
+						"originY": 0.1,
 						"color": [
 							1,
 							1,
@@ -759,7 +759,10 @@
 						"WallGrapLeft": false,
 						"Gravity": true,
 						"WallGrapRight": false,
-						"HaveKey": false
+						"HaveKey": false,
+						"SharedHP": 3,
+						"Dead": false,
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {

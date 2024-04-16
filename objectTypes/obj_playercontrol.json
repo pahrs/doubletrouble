@@ -101,6 +101,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 342350780182038
+		},
+		{
+			"name": "SharedHP",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 813488574270478
+		},
+		{
+			"name": "Dead",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 928897002401676
+		},
+		{
+			"name": "Arrive",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 121156447650747
 		}
 	],
 	"behaviorTypes": [
