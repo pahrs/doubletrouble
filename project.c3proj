@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Multiplayer",
+			"name": "Multiplayer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -132,12 +139,15 @@
 			"obj_hitbox",
 			"obj_playercontrol",
 			"Keyboard",
-			"Sprite2",
 			"tilemap",
 			"Sprite",
 			"Sprite3",
 			"debugjump",
-			"Gamepad"
+			"Gamepad",
+			"Multiplayer",
+			"obj_playercontrol2",
+			"Sprite4",
+			"Sprite5"
 		],
 		"subfolders": [
 			{

@@ -81,41 +81,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Standby",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 749153,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 20,
-						"y": 19,
-						"width": 15,
-						"height": 19.058823529411764,
-						"originX": 0.5333333333333333,
-						"originY": 0.5555555555555556,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "obj_playercontrol",
 					"properties": {
 						"initially-visible": true,

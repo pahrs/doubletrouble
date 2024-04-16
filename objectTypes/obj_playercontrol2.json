@@ -1,0 +1,146 @@
+{
+	"name": "obj_playercontrol2",
+	"plugin-id": "Sprite",
+	"sid": 652413168804923,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Dashing",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 839975404208885
+		},
+		{
+			"name": "DashTravel",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 277265014345801
+		},
+		{
+			"name": "DashCooldown",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 377053892094187
+		},
+		{
+			"name": "DashAvailable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 497719495095191
+		},
+		{
+			"name": "WallTime",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 188419657058977
+		},
+		{
+			"name": "WallSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 764135620062174
+		},
+		{
+			"name": "Stamina",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 210393275233497
+		},
+		{
+			"name": "ColideTest",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 377722835466162
+		},
+		{
+			"name": "LeftWall",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 592159588368833
+		},
+		{
+			"name": "RightWall",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 397935168980267
+		},
+		{
+			"name": "WallGrapLeft",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 672887367458372
+		},
+		{
+			"name": "Gravity",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 129374747921191
+		},
+		{
+			"name": "WallGrapRight",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 994926683105602
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 721188588588867
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 511576167082521
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 607100356373118
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3296961,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 105205172798097,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
