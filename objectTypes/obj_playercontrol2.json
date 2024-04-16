@@ -94,6 +94,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 994926683105602
+		},
+		{
+			"name": "Dead",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 976666690678836
+		},
+		{
+			"name": "Arrive",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 268130180357964
 		}
 	],
 	"behaviorTypes": [

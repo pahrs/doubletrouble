@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "TimePassed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 724061342214934
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Misc",
@@ -58,6 +68,22 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "Thorns",
+							"sid": 151587803749224,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "StartLayout",
+							"sid": 632218391375762,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
 							"id": "pin-to-object-properties",
 							"objectClass": "Sprite4",
 							"sid": 523468636776134,
@@ -71,9 +97,80 @@
 								"height-type": "no",
 								"z": false
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Goal",
+							"sid": 308930650048728,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 121857982694907
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 535242502611414,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "obj_playercontrol",
+							"sid": 741720272573882,
+							"parameters": {
+								"instance-variable": "HaveKey"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 815214875733912,
+							"parameters": {
+								"variable": "TimePassed",
+								"value": "0.1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 345369740816009,
+							"parameters": {
+								"text": "\"\"&TimePassed"
+							}
+						}
+					],
+					"sid": 190063224442005
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 361046003310128
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 190783454424348,
+							"parameters": {
+								"text": "\"\"&TimePassed"
+							}
+						}
+					],
+					"sid": 678852905375878
 				}
 			],
 			"sid": 260731554869993
@@ -81,7 +178,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Movement",
+			"title": "Characters",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -106,6 +203,15 @@
 									"parameters": {
 										"key": 87
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 115600598560518,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
@@ -147,6 +253,15 @@
 									"sid": 432941853386872,
 									"parameters": {
 										"instance-variable": "Dashing"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 816716383113683,
+									"parameters": {
+										"instance-variable": "Dead"
 									},
 									"isInverted": true
 								}
@@ -209,6 +324,15 @@
 										"instance-variable": "Dashing"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 120879205523053,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -260,6 +384,15 @@
 									"parameters": {
 										"key": 87
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 960388665889919,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-falling",
@@ -433,6 +566,15 @@
 									"parameters": {
 										"key": 71
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 243487012638651,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
@@ -1576,6 +1718,410 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Death System",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "obj_playercontrol",
+									"sid": 336836962007948,
+									"parameters": {
+										"object": "Thorns"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 674755627657516,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 344291157832776,
+									"parameters": {
+										"instance-variable": "Dead",
+										"value": "true"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 472212626291079,
+									"parameters": {
+										"instance-variable": "SharedHP",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite5",
+									"sid": 461386741684802,
+									"parameters": {
+										"animation": "\"Death\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 946303742215931,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "obj_playercontrol",
+									"sid": 158451042342760,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 715400445231059,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "obj_playercontrol",
+									"sid": 381827630906164,
+									"parameters": {
+										"x": "StartLayout.X",
+										"y": "StartLayout.Y"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 704441222476035,
+									"parameters": {
+										"instance-variable": "Dead",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite5",
+									"sid": 559434899407936,
+									"parameters": {
+										"animation": "\"Waiting\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 542490177940513
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "obj_playercontrol",
+									"sid": 671365725698884,
+									"parameters": {
+										"instance-variable": "SharedHP",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP5",
+									"sid": 615397237253649,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP4",
+									"sid": 442313247502401,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP3",
+									"sid": 314357259274228,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP2",
+									"sid": 323738504147464,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP",
+									"sid": 124316345218552,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 537985241719637
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "obj_playercontrol",
+									"sid": 439094944984463,
+									"parameters": {
+										"instance-variable": "SharedHP",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP5",
+									"sid": 198466508055285,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP4",
+									"sid": 634487413629269,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP3",
+									"sid": 108437041470948,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP2",
+									"sid": 576632381757318,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP",
+									"sid": 907560439937436,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 889465760226096
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "obj_playercontrol",
+									"sid": 208689228480809,
+									"parameters": {
+										"instance-variable": "SharedHP",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP5",
+									"sid": 767847299825140,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP4",
+									"sid": 767429341829911,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP3",
+									"sid": 161096851251681,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP2",
+									"sid": 883972707432717,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP",
+									"sid": 760229260842781,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 239929279696907
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "obj_playercontrol",
+									"sid": 895482526962783,
+									"parameters": {
+										"instance-variable": "SharedHP",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP5",
+									"sid": 615529232877597,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP4",
+									"sid": 442137167462938,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP3",
+									"sid": 972125369087307,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP2",
+									"sid": 721729562456682,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP",
+									"sid": 679302860853032,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 967174459660659
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "obj_playercontrol",
+									"sid": 813619034197110,
+									"parameters": {
+										"instance-variable": "SharedHP",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP5",
+									"sid": 503834652797663,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP4",
+									"sid": 999586858427173,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP3",
+									"sid": 502394178187873,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP2",
+									"sid": 598146446767534,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP",
+									"sid": 377179394375989,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 423753421683939
+						}
+					],
+					"sid": 827300990643442
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Base Movement Player 2",
 					"description": "",
 					"isActiveOnStart": true,
@@ -1590,6 +2136,15 @@
 									"parameters": {
 										"key": 38
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 495305458153487,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
@@ -1624,6 +2179,15 @@
 									"parameters": {
 										"key": 37
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 476713565552485,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
@@ -1688,6 +2252,15 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol2",
+									"sid": 697232082060279,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
 									"sid": 785833104478087,
 									"parameters": {
 										"instance-variable": "Dashing"
@@ -1744,6 +2317,15 @@
 									"parameters": {
 										"key": 38
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 340312011916790,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-falling",
@@ -1925,6 +2507,15 @@
 									"parameters": {
 										"instance-variable": "DashAvailable"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 455294321599751,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -3056,6 +3647,319 @@
 						}
 					],
 					"sid": 480549647012976
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Death System Player 2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "obj_playercontrol2",
+									"sid": 463700755909743,
+									"parameters": {
+										"object": "Thorns"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 187429751447999,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol2",
+									"sid": 688574405280398,
+									"parameters": {
+										"instance-variable": "Dead",
+										"value": "true"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 540248317624968,
+									"parameters": {
+										"instance-variable": "SharedHP",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite4",
+									"sid": 775305182912218,
+									"parameters": {
+										"animation": "\"Death\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 183893492720417,
+									"parameters": {
+										"seconds": "0.1"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "obj_playercontrol2",
+									"sid": 432303142436903,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 796175972315628,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "obj_playercontrol2",
+									"sid": 440753759235680,
+									"parameters": {
+										"x": "StartLayout.X",
+										"y": "StartLayout.Y"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol2",
+									"sid": 478369215616681,
+									"parameters": {
+										"instance-variable": "Dead",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite4",
+									"sid": 533689539504456,
+									"parameters": {
+										"animation": "\"Waiting\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 383243168386113
+						}
+					],
+					"sid": 281080258428374
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Restart System",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "obj_playercontrol",
+									"sid": 779276020782445,
+									"parameters": {
+										"instance-variable": "SharedHP",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 848963527545327
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 660998846695730,
+									"parameters": {
+										"variable": "TimePassed",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 195343238991476
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol",
+									"sid": 647895164874065,
+									"parameters": {
+										"object": "Goal"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 824874014706889,
+									"parameters": {
+										"instance-variable": "Arrive",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 257586309152036
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 151974435879196
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 572535218807278,
+									"parameters": {
+										"instance-variable": "Arrive",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 504445863301852
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol2",
+									"sid": 783193884480193,
+									"parameters": {
+										"object": "Goal"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol2",
+									"sid": 302646663623515,
+									"parameters": {
+										"instance-variable": "Arrive",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 574727141796871
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 333303638672128
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol2",
+									"sid": 572608702337531,
+									"parameters": {
+										"instance-variable": "Arrive",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 102212425538280
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 617524813479624,
+									"parameters": {
+										"instance-variable": "Arrive"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 200116922835591,
+									"parameters": {
+										"instance-variable": "Arrive"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 548184579087295,
+									"parameters": {
+										"instance-variable": "HaveKey",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 637836801708918
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 471855490979799,
+									"parameters": {
+										"key": 53
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 830839492280855
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 988819322654757,
+									"parameters": {
+										"variable": "TimePassed",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 356747697200821
+						}
+					],
+					"sid": 846085453988641
 				}
 			],
 			"sid": 972272841367651
