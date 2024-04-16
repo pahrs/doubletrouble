@@ -94,6 +94,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 314947009692584
+		},
+		{
+			"name": "HaveKey",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 342350780182038
 		}
 	],
 	"behaviorTypes": [

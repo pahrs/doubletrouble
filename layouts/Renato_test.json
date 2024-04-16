@@ -76,12 +76,12 @@
 			"global": false
 		},
 		{
-			"name": "player",
+			"name": "tilemap",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "obj_playercontrol",
+					"type": "Door",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -89,57 +89,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 818953,
-					"instanceVariables": {
-						"Dashing": false,
-						"DashTravel": 0.06,
-						"DashCooldown": 0,
-						"DashAvailable": true,
-						"WallTime": 1,
-						"WallSpeed": 0.3,
-						"Stamina": true,
-						"ColideTest": false,
-						"LeftWall": false,
-						"RightWall": false,
-						"WallGrapLeft": false,
-						"Gravity": true,
-						"WallGrapRight": false
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 80,
-								"acceleration": 450,
-								"deceleration": 700,
-								"jump-strength": 280,
-								"gravity": 1200,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": true,
-								"enabled": true
-							}
-						},
-						"Bullet": {
-							"properties": {
-								"speed": 350,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": false
-							}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
+					"uid": 821608,
+					"instanceVariables": {},
+					"behaviors": {},
 					"world": {
-						"x": 21,
-						"y": 151,
-						"width": 16,
-						"height": 16,
+						"x": 289,
+						"y": 143,
+						"width": 36,
+						"height": 37,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -151,42 +108,7 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				}
-			],
-			"sid": 498289739824204,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "tilemap",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
+				},
 				{
 					"type": "SpriteWall",
 					"properties": {
@@ -469,8 +391,8 @@
 						}
 					},
 					"world": {
-						"x": 278,
-						"y": 162,
+						"x": 350,
+						"y": 133,
 						"width": 31,
 						"height": 18,
 						"originX": 0.52,
@@ -748,9 +670,146 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Key",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 345660,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 130,
+						"y": 114,
+						"width": 8,
+						"height": 8,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 841160125192968,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "player",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "obj_playercontrol",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 818953,
+					"instanceVariables": {
+						"Dashing": false,
+						"DashTravel": 0.06,
+						"DashCooldown": 0,
+						"DashAvailable": true,
+						"WallTime": 1,
+						"WallSpeed": 0.3,
+						"Stamina": true,
+						"ColideTest": false,
+						"LeftWall": false,
+						"RightWall": false,
+						"WallGrapLeft": false,
+						"Gravity": true,
+						"WallGrapRight": false,
+						"HaveKey": false
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 80,
+								"acceleration": 450,
+								"deceleration": 700,
+								"jump-strength": 280,
+								"gravity": 1200,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 350,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": false
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 21,
+						"y": 151,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 498289739824204,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

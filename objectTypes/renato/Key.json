@@ -1,7 +1,7 @@
 {
-	"name": "SpriteWall",
+	"name": "Key",
 	"plugin-id": "Sprite",
-	"sid": 136067756269068,
+	"sid": 460906774824104,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,13 +18,13 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6364580,
+						"imageSpriteId": 6897340,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 147492958180867,
+				"sid": 800380813959191,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

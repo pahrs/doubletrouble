@@ -1593,6 +1593,101 @@
 				}
 			],
 			"sid": 127349525685209
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "obj_playercontrol",
+					"sid": 434903891091849,
+					"parameters": {
+						"object": "Key"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "obj_playercontrol",
+					"sid": 947524009872579,
+					"parameters": {
+						"instance-variable": "HaveKey",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 758531147524584
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 591943875333253
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "obj_playercontrol",
+					"sid": 966320270567257,
+					"parameters": {
+						"instance-variable": "HaveKey"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Key",
+					"sid": 657108629139766,
+					"parameters": {
+						"x": "obj_playercontrol.X",
+						"y": "obj_playercontrol.Y -16"
+					}
+				}
+			],
+			"sid": 263471026920902
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "obj_playercontrol",
+					"sid": 602401171730824,
+					"parameters": {
+						"object": "Door"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "obj_playercontrol",
+					"sid": 472970482208407,
+					"parameters": {
+						"instance-variable": "HaveKey"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 639696743625597,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 139665686889375,
+					"parameters": {
+						"layout": "rm_test"
+					}
+				}
+			],
+			"sid": 786481047923956
 		}
 	],
 	"sid": 319962163705504

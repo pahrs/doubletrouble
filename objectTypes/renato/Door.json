@@ -1,7 +1,7 @@
 {
-	"name": "SpriteWall",
+	"name": "Door",
 	"plugin-id": "Sprite",
-	"sid": 136067756269068,
+	"sid": 187170958254221,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 16,
-						"height": 16,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6364580,
+						"imageSpriteId": 4407377,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 147492958180867,
+				"sid": 248408774161473,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

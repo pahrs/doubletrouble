@@ -146,7 +146,8 @@
 						"RightWall": false,
 						"WallGrapLeft": false,
 						"Gravity": true,
-						"WallGrapRight": false
+						"WallGrapRight": false,
+						"HaveKey": false
 					},
 					"behaviors": {
 						"Platform": {

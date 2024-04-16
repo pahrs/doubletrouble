@@ -162,7 +162,9 @@
 					"CoinIcone",
 					"Text",
 					"Thorns",
-					"Saw"
+					"Saw",
+					"Door",
+					"Key"
 				],
 				"subfolders": [],
 				"name": "renato"
