@@ -163,7 +163,8 @@
 			"ValueHP2",
 			"ValueHP3",
 			"ValueHP4",
-			"ValueHP5"
+			"ValueHP5",
+			"sETA"
 		],
 		"subfolders": [
 			{

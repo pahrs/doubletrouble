@@ -138,7 +138,7 @@
 						"DashTravel": 0.06,
 						"DashCooldown": 2,
 						"DashAvailable": true,
-						"WallTime": 0.9,
+						"WallTime": 1.2,
 						"WallSpeed": 0.3,
 						"Stamina": true,
 						"ColideTest": false,
