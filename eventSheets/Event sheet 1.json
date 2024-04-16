@@ -1356,6 +1356,15 @@
 									"parameters": {
 										"instance-variable": "LeftWall"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol",
+									"sid": 644101252848174,
+									"parameters": {
+										"object": "obj_hitbox"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1405,6 +1414,15 @@
 									"parameters": {
 										"instance-variable": "LeftWall"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol",
+									"sid": 679260854937903,
+									"parameters": {
+										"object": "obj_hitbox"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1445,6 +1463,15 @@
 									"parameters": {
 										"instance-variable": "Stamina"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol",
+									"sid": 530962646564183,
+									"parameters": {
+										"object": "obj_hitbox"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1494,6 +1521,15 @@
 									"parameters": {
 										"instance-variable": "Stamina"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol2",
+									"sid": 445690041390733,
+									"parameters": {
+										"object": "obj_hitbox"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -2804,6 +2840,15 @@
 									"parameters": {
 										"instance-variable": "LeftWall"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol2",
+									"sid": 611453798415107,
+									"parameters": {
+										"object": "obj_hitbox"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -2853,6 +2898,15 @@
 									"parameters": {
 										"instance-variable": "LeftWall"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol2",
+									"sid": 241747033363586,
+									"parameters": {
+										"object": "obj_hitbox"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -2893,6 +2947,15 @@
 									"parameters": {
 										"instance-variable": "Stamina"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol2",
+									"sid": 641496487290743,
+									"parameters": {
+										"object": "obj_hitbox"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -2942,6 +3005,15 @@
 									"parameters": {
 										"instance-variable": "Stamina"
 									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "obj_playercontrol2",
+									"sid": 194854283688080,
+									"parameters": {
+										"object": "obj_hitbox"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -2955,6 +3027,32 @@
 								}
 							],
 							"sid": 221474644330575
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "obj_playercontrol2",
+									"sid": 844203887897853,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"WallTime\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "obj_playercontrol2",
+									"sid": 752948368177028,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "1000"
+									}
+								}
+							],
+							"sid": 195869442302977
 						}
 					],
 					"sid": 480549647012976
