@@ -2495,9 +2495,9 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 940964140747607,
+									"sid": 789816793658092,
 									"parameters": {
-										"key": 17
+										"key": 188
 									}
 								},
 								{
@@ -2773,9 +2773,9 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Keyboard",
-									"sid": 840114938199096,
+									"sid": 321576135041106,
 									"parameters": {
-										"key": 16
+										"key": 190
 									}
 								}
 							],
@@ -2798,9 +2798,9 @@
 								{
 									"id": "on-key-released",
 									"objectClass": "Keyboard",
-									"sid": 406989225652994,
+									"sid": 634596928779209,
 									"parameters": {
-										"key": 16
+										"key": 190
 									}
 								}
 							],
@@ -3138,9 +3138,9 @@
 								{
 									"id": "on-key-released",
 									"objectClass": "Keyboard",
-									"sid": 116660884796410,
+									"sid": 866138798414174,
 									"parameters": {
-										"key": 16
+										"key": 190
 									}
 								}
 							],
