@@ -136,7 +136,7 @@
 					"instanceVariables": {
 						"Dashing": false,
 						"DashTravel": 0.1,
-						"DashCooldown": 0,
+						"DashCooldown": 0.5,
 						"DashAvailable": true,
 						"WallTime": 1.3,
 						"WallSpeed": 0.3,
@@ -2135,45 +2135,6 @@
 							1
 						],
 						"angle": 1.5707963267948966,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpriteFont",
-					"properties": {
-						"text": "Text",
-						"enable-bbcode": true,
-						"character-width": 16,
-						"character-height": 16,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 0.8,
-						"character-spacing": -3,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "character",
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 851643,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 161.62604047118904,
-						"y": 174.8130326412988,
-						"width": 53.31746006684898,
-						"height": 11.024390604131725,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							0.9607843137254902,
-							0.9607843137254902,
-							0.9607843137254902,
-							1
-						],
-						"angle": 0,
 						"zElevation": 0
 					}
 				},
