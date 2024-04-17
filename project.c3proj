@@ -153,8 +153,8 @@
 			"Gamepad",
 			"Multiplayer",
 			"obj_playercontrol2",
-			"Sprite4",
-			"Sprite5",
+			"SpriteHamster1",
+			"SpriteHamster2",
 			"StartLayout",
 			"SpriteFont",
 			"Goal",
@@ -163,7 +163,8 @@
 			"ValueHP2",
 			"ValueHP3",
 			"ValueHP4",
-			"ValueHP5"
+			"ValueHP5",
+			"HP3"
 		],
 		"subfolders": [
 			{
@@ -174,13 +175,14 @@
 					"Background",
 					"SpriteWall",
 					"JumpPad",
-					"CoinItem",
-					"CoinIcone",
+					"CoinItem1",
+					"CoinIcon1",
 					"Text",
 					"Thorns",
 					"Saw",
 					"Door",
-					"Key"
+					"Text2",
+					"CoinIcon2"
 				],
 				"subfolders": [],
 				"name": "renato"
@@ -190,7 +192,9 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Characters"
+		],
 		"subfolders": []
 	},
 	"layouts": {

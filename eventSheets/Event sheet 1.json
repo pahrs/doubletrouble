@@ -30,7 +30,7 @@
 					"actions": [
 						{
 							"id": "pin-to-object-properties",
-							"objectClass": "Sprite5",
+							"objectClass": "SpriteHamster2",
 							"sid": 981178498960200,
 							"behaviorType": "Pin",
 							"parameters": {
@@ -85,7 +85,7 @@
 						},
 						{
 							"id": "pin-to-object-properties",
-							"objectClass": "Sprite4",
+							"objectClass": "SpriteHamster1",
 							"sid": 523468636776134,
 							"behaviorType": "Pin",
 							"parameters": {
@@ -278,7 +278,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite5",
+									"objectClass": "SpriteHamster2",
 									"sid": 675240030722570,
 									"parameters": {
 										"animation": "\"Walking\"",
@@ -287,7 +287,7 @@
 								},
 								{
 									"id": "set-mirrored",
-									"objectClass": "Sprite5",
+									"objectClass": "SpriteHamster2",
 									"sid": 903615120263318,
 									"parameters": {
 										"state": "mirrored"
@@ -347,7 +347,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite5",
+									"objectClass": "SpriteHamster2",
 									"sid": 270065421519417,
 									"parameters": {
 										"animation": "\"Walking\"",
@@ -356,7 +356,7 @@
 								},
 								{
 									"id": "set-mirrored",
-									"objectClass": "Sprite5",
+									"objectClass": "SpriteHamster2",
 									"sid": 700349478480853,
 									"parameters": {
 										"state": "not-mirrored"
@@ -485,7 +485,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite5",
+									"objectClass": "SpriteHamster2",
 									"sid": 540489400900968,
 									"parameters": {
 										"animation": "\"Standby\"",
@@ -1764,7 +1764,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite5",
+									"objectClass": "SpriteHamster2",
 									"sid": 461386741684802,
 									"parameters": {
 										"animation": "\"Death\"",
@@ -1816,7 +1816,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite5",
+									"objectClass": "SpriteHamster2",
 									"sid": 559434899407936,
 									"parameters": {
 										"animation": "\"Waiting\"",
@@ -2211,7 +2211,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite4",
+									"objectClass": "SpriteHamster1",
 									"sid": 436274250897749,
 									"parameters": {
 										"animation": "\"Walking\"",
@@ -2220,7 +2220,7 @@
 								},
 								{
 									"id": "set-mirrored",
-									"objectClass": "Sprite4",
+									"objectClass": "SpriteHamster1",
 									"sid": 100765576672099,
 									"parameters": {
 										"state": "mirrored"
@@ -2280,7 +2280,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite4",
+									"objectClass": "SpriteHamster1",
 									"sid": 160245256177555,
 									"parameters": {
 										"animation": "\"Walking\"",
@@ -2289,7 +2289,7 @@
 								},
 								{
 									"id": "set-mirrored",
-									"objectClass": "Sprite4",
+									"objectClass": "SpriteHamster1",
 									"sid": 742566493214482,
 									"parameters": {
 										"state": "not-mirrored"
@@ -2418,7 +2418,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite4",
+									"objectClass": "SpriteHamster1",
 									"sid": 259717976128346,
 									"parameters": {
 										"animation": "\"Standby\"",
@@ -3697,7 +3697,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite4",
+									"objectClass": "SpriteHamster1",
 									"sid": 775305182912218,
 									"parameters": {
 										"animation": "\"Death\"",
@@ -3749,7 +3749,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite4",
+									"objectClass": "SpriteHamster1",
 									"sid": 533689539504456,
 									"parameters": {
 										"animation": "\"Waiting\"",

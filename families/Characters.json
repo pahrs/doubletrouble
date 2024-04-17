@@ -1,0 +1,12 @@
+{
+	"name": "Characters",
+	"plugin-id": "Sprite",
+	"sid": 954641945141086,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"obj_playercontrol",
+		"obj_playercontrol2"
+	]
+}
