@@ -136,7 +136,7 @@
 					"instanceVariables": {
 						"Dashing": false,
 						"DashTravel": 0.1,
-						"DashCooldown": 0,
+						"DashCooldown": 0.3,
 						"DashAvailable": true,
 						"WallTime": 1.7,
 						"WallSpeed": 0.3,
@@ -150,8 +150,7 @@
 						"HaveKey": false,
 						"SharedHP": 5,
 						"Dead": false,
-						"Arrive": false,
-						"Coin1": 0
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -1532,8 +1531,7 @@
 						"Gravity": true,
 						"WallGrapRight": false,
 						"Dead": false,
-						"Arrive": false,
-						"Coin2": 0
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {

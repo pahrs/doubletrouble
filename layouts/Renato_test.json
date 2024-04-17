@@ -657,8 +657,7 @@
 						"HaveKey": false,
 						"SharedHP": 5,
 						"Dead": false,
-						"Arrive": false,
-						"Coin1": 0
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -666,7 +665,7 @@
 								"max-speed": 80,
 								"acceleration": 450,
 								"deceleration": 700,
-								"jump-strength": 280,
+								"jump-strength": 150,
 								"gravity": 1200,
 								"max-fall-speed": 1000,
 								"double-jump": false,
@@ -732,8 +731,7 @@
 						"Gravity": true,
 						"WallGrapRight": false,
 						"Dead": false,
-						"Arrive": false,
-						"Coin2": 0
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -1748,6 +1746,45 @@
 							1,
 							1,
 							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"character-width": 16,
+						"character-height": 16,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 0.5,
+						"character-spacing": -3,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "character",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 831630,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 293.86754560336414,
+						"y": 167.78515716421052,
+						"width": 26,
+						"height": 12,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0.9607843137254902,
+							0.9607843137254902,
+							0.9607843137254902,
 							1
 						],
 						"angle": 0,

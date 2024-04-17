@@ -3,13 +3,23 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "coins",
+			"name": "coins1",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 594501589866374
+		},
+		{
+			"eventType": "variable",
+			"name": "coins2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 670619838189538
 		},
 		{
 			"eventType": "group",
@@ -4003,11 +4013,11 @@
 					],
 					"actions": [
 						{
-							"id": "add-to-instvar",
-							"objectClass": "obj_playercontrol",
-							"sid": 280290200864200,
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 731655256812970,
 							"parameters": {
-								"instance-variable": "Coin1",
+								"variable": "coins1",
 								"value": "1"
 							}
 						}
@@ -4029,11 +4039,11 @@
 					],
 					"actions": [
 						{
-							"id": "add-to-instvar",
-							"objectClass": "obj_playercontrol2",
-							"sid": 787255696688526,
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 650173664394760,
 							"parameters": {
-								"instance-variable": "Coin2",
+								"variable": "coins2",
 								"value": "1"
 							}
 						}
@@ -4057,17 +4067,17 @@
 						{
 							"id": "set-text",
 							"objectClass": "Text",
-							"sid": 249985934998188,
+							"sid": 754488085587335,
 							"parameters": {
-								"text": "obj_playercontrol.Coin1"
+								"text": "coins1"
 							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "Text2",
-							"sid": 785491882260027,
+							"sid": 231455483247678,
 							"parameters": {
-								"text": "obj_playercontrol2.Coin2"
+								"text": "coins2"
 							}
 						}
 					],
