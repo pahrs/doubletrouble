@@ -1362,29 +1362,7 @@
 			"title": "Thorns",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "obj_playercontrol",
-							"sid": 180384638922334,
-							"parameters": {
-								"object": "Thorns"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 907391917769806
-						}
-					],
-					"sid": 598845692204482
-				}
-			],
+			"children": [],
 			"sid": 648211533284253
 		},
 		{
@@ -1688,6 +1666,410 @@
 				}
 			],
 			"sid": 786481047923956
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Death System2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol",
+							"sid": 634123110794944,
+							"parameters": {
+								"object": "Thorns"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "obj_playercontrol",
+							"sid": 622480881825274,
+							"parameters": {
+								"instance-variable": "Dead"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 852942057146004,
+							"parameters": {
+								"instance-variable": "Dead",
+								"value": "true"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 160935259744071,
+							"parameters": {
+								"instance-variable": "SharedHP",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite5",
+							"sid": 327322725273052,
+							"parameters": {
+								"animation": "\"Death\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 543818152417252,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "obj_playercontrol",
+							"sid": 126275968429648,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 943161510335102,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "obj_playercontrol",
+							"sid": 323450640641890,
+							"parameters": {
+								"x": "StartLayout.X",
+								"y": "StartLayout.Y"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 895676130982530,
+							"parameters": {
+								"instance-variable": "Dead",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite5",
+							"sid": 554581367616742,
+							"parameters": {
+								"animation": "\"Waiting\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 800531555595406
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "obj_playercontrol",
+							"sid": 152172713214207,
+							"parameters": {
+								"instance-variable": "SharedHP",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP5",
+							"sid": 415708492591164,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP4",
+							"sid": 936119376108142,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP3",
+							"sid": 317811549969285,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP2",
+							"sid": 132032300461413,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP",
+							"sid": 291211011643921,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 901189836502318
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "obj_playercontrol",
+							"sid": 194242153324236,
+							"parameters": {
+								"instance-variable": "SharedHP",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP5",
+							"sid": 308587038046020,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP4",
+							"sid": 223390033561327,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP3",
+							"sid": 990080668745988,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP2",
+							"sid": 813651150251910,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP",
+							"sid": 655636577714385,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 691210319005203
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "obj_playercontrol",
+							"sid": 834097695569051,
+							"parameters": {
+								"instance-variable": "SharedHP",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP5",
+							"sid": 575135988533671,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP4",
+							"sid": 100114481401783,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP3",
+							"sid": 447840083081663,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP2",
+							"sid": 361028035969194,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP",
+							"sid": 548764367030689,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 248473579493449
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "obj_playercontrol",
+							"sid": 732745855954569,
+							"parameters": {
+								"instance-variable": "SharedHP",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP5",
+							"sid": 931404614751132,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP4",
+							"sid": 446697993501802,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP3",
+							"sid": 327653904937096,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP2",
+							"sid": 815131183447664,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP",
+							"sid": 290892726650920,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 126982879369072
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "obj_playercontrol",
+							"sid": 710287566317345,
+							"parameters": {
+								"instance-variable": "SharedHP",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP5",
+							"sid": 377477726361098,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP4",
+							"sid": 809251467644479,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP3",
+							"sid": 977331200987267,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP2",
+							"sid": 575762003643836,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ValueHP",
+							"sid": 172202896725744,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 886962178610868
+				}
+			],
+			"sid": 384885387982636
 		}
 	],
 	"sid": 319962163705504
