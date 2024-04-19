@@ -136,9 +136,9 @@
 					"instanceVariables": {
 						"Dashing": false,
 						"DashTravel": 0.1,
-						"DashCooldown": 0,
+						"DashCooldown": 0.3,
 						"DashAvailable": true,
-						"WallTime": 2.1,
+						"WallTime": 1.7,
 						"WallSpeed": 0.3,
 						"Stamina": true,
 						"ColideTest": false,
@@ -150,8 +150,7 @@
 						"HaveKey": false,
 						"SharedHP": 5,
 						"Dead": false,
-						"Arrive": false,
-						"Coin1": 0
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -337,64 +336,6 @@
 						"height": 15,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Thorns",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 646510,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 169.5575862319426,
-						"y": 162,
-						"width": 305,
-						"height": 8.767248724117387,
-						"originX": 0.5333333333333333,
-						"originY": 0.1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Thorns",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 177668,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 192.8265369599445,
-						"y": 72.7188705446774,
-						"width": 255,
-						"height": 8.767248724117387,
-						"originX": 0.5333333333333333,
-						"originY": 0.1,
 						"color": [
 							1,
 							1,
@@ -804,7 +745,7 @@
 					},
 					"world": {
 						"x": 165,
-						"y": 35,
+						"y": 30,
 						"width": 10,
 						"height": 10,
 						"originX": 0.5,
@@ -951,7 +892,7 @@
 					},
 					"world": {
 						"x": 165,
-						"y": 125,
+						"y": 120,
 						"width": 10,
 						"height": 10,
 						"originX": 0.5,
@@ -1371,7 +1312,7 @@
 					"world": {
 						"x": 205,
 						"y": 145,
-						"width": 30,
+						"width": 29.999999999999996,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1407,7 +1348,7 @@
 					"world": {
 						"x": 125,
 						"y": 145,
-						"width": 30,
+						"width": 29.999999999999996,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1590,8 +1531,7 @@
 						"Gravity": true,
 						"WallGrapRight": false,
 						"Dead": false,
-						"Arrive": false,
-						"Coin2": 0
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -1769,10 +1709,68 @@
 					"world": {
 						"x": 45,
 						"y": 45,
-						"width": 30,
+						"width": 29.999999999999996,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Thorns",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 694423,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 170,
+						"y": 165,
+						"width": 305,
+						"height": 8.767248724117387,
+						"originX": 0.5333333333333333,
+						"originY": 0.1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Thorns",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 558480,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 195,
+						"y": 75,
+						"width": 255,
+						"height": 8.767248724117387,
+						"originX": 0.5333333333333333,
+						"originY": 0.1,
 						"color": [
 							1,
 							1,

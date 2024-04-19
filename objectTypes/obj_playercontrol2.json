@@ -108,13 +108,6 @@
 			"desc": "",
 			"show": true,
 			"sid": 268130180357964
-		},
-		{
-			"name": "Coin2",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 627015250909715
 		}
 	],
 	"behaviorTypes": [

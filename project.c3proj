@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -164,7 +171,8 @@
 			"ValueHP3",
 			"ValueHP4",
 			"ValueHP5",
-			"HP3"
+			"HP3",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -226,7 +234,56 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "sndWallClimb.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 260019195577600,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sndWallGrab.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 740600084409812,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sndDash.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 930170158435386,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sndJump.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 853672909064605,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sndLanding.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 240483170503772,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sndTeleporter.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 555211093384501,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

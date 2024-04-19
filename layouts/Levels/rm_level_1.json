@@ -150,8 +150,7 @@
 						"HaveKey": false,
 						"SharedHP": 3,
 						"Dead": false,
-						"Arrive": false,
-						"Coin1": 0
+						"Arrive": false
 					},
 					"behaviors": {
 						"Platform": {
