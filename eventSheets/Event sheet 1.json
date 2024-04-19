@@ -4700,6 +4700,48 @@
 				}
 			],
 			"sid": 693980496788657
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Arrive",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "obj_playercontrol",
+							"sid": 180506678794611,
+							"parameters": {
+								"instance-variable": "Arrive"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "obj_playercontrol2",
+							"sid": 870942280753953,
+							"parameters": {
+								"instance-variable": "Arrive"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 782092956753904,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 719983055239700
+				}
+			],
+			"sid": 452578460079202
 		}
 	],
 	"sid": 677904809921252
