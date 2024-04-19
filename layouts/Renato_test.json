@@ -537,10 +537,10 @@
 					"world": {
 						"x": 135.8,
 						"y": 154,
-						"width": 24,
+						"width": 16,
 						"height": 10,
-						"originX": 0.5333333333333333,
-						"originY": 0.1,
+						"originX": 0,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -566,10 +566,10 @@
 					"world": {
 						"x": 226,
 						"y": 155,
-						"width": 29,
+						"width": 19.333333333333332,
 						"height": 10,
-						"originX": 0.5333333333333333,
-						"originY": 0.1,
+						"originX": 0,
+						"originY": 1,
 						"color": [
 							1,
 							1,
