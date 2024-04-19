@@ -3963,6 +3963,743 @@
 				}
 			],
 			"sid": 972272841367651
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "JumpPad",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Quando player cair em cima do JUMP_PAD, ele é jogado pra cima"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol",
+							"sid": 353045261679541,
+							"parameters": {
+								"object": "JumpPad"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "obj_playercontrol",
+							"sid": 889468864544788,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "-JumpPad.Pulo"
+							}
+						}
+					],
+					"sid": 252515321249317
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol2",
+							"sid": 680135530937059,
+							"parameters": {
+								"object": "JumpPad"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "obj_playercontrol2",
+							"sid": 846069289057250,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "-JumpPad.Pulo"
+							}
+						}
+					],
+					"sid": 280410016581315
+				}
+			],
+			"sid": 166738851200206
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Coins",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Quando colidir com a MOEDA(semente)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol",
+							"sid": 713213112878070,
+							"parameters": {
+								"object": "CoinItem1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Desativa a animação senoidal da moeda"
+						},
+						{
+							"id": "set-active",
+							"objectClass": "CoinItem1",
+							"sid": 201259162759886,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Move da layer TILEMAP, para HUD (parallax 0,0)"
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "CoinItem1",
+							"sid": 387387416470575,
+							"parameters": {
+								"layer": "\"HUD\""
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Converte a posição da moeda usando as expressões do sistema \"CanvasToLayerX/Y\" e \"LayerToCanvasX/Y\", que neste caso são usadas para compensar a diferença entre cada camada, por causa de seus valores de parallax"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "CoinItem1",
+							"sid": 343577071548383,
+							"parameters": {
+								"x": "CanvasToLayerX(\"HUD\", LayerToCanvasX(\"PLAYER\", CoinItem1.X, CoinItem1.Y), LayerToCanvasY(\"PLAYER\", CoinItem1.x, CoinItem1.y))",
+								"y": "CanvasToLayerY(\"HUD\", LayerToCanvasX(\"PLAYER\", CoinItem1.x, CoinItem1.y), LayerToCanvasY(\"PLAYER\", CoinItem1.x, CoinItem1.y))"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Animação do CoinItem para o CoinIcon"
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "CoinItem1",
+							"sid": 354920386849788,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"CoinHUD2\"",
+								"property": "position",
+								"end-x": "CoinIcon1.X",
+								"end-y": "CoinIcon1.Y",
+								"time": "0.5",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "yes",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 586065497488450
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol2",
+							"sid": 145182180602108,
+							"parameters": {
+								"object": "CoinItem1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Desativa a animação senoidal da moeda"
+						},
+						{
+							"id": "set-active",
+							"objectClass": "CoinItem1",
+							"sid": 380854593602834,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Move da layer TILEMAP, para HUD (parallax 0,0)"
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "CoinItem1",
+							"sid": 157202080058498,
+							"parameters": {
+								"layer": "\"hud\""
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Converte a posição da moeda usando as expressões do sistema \"CanvasToLayerX/Y\" e \"LayerToCanvasX/Y\", que neste caso são usadas para compensar a diferença entre cada camada, por causa de seus valores de parallax"
+						},
+						{
+							"id": "set-position",
+							"objectClass": "CoinItem1",
+							"sid": 474760063611007,
+							"parameters": {
+								"x": "CanvasToLayerX(\"HUD\", LayerToCanvasX(\"PLAYER\", CoinItem1.X, CoinItem1.Y), LayerToCanvasY(\"PLAYER\", CoinItem1.x, CoinItem1.y))",
+								"y": "CanvasToLayerY(\"HUD\", LayerToCanvasX(\"PLAYER\", CoinItem1.x, CoinItem1.y), LayerToCanvasY(\"PLAYER\", CoinItem1.x, CoinItem1.y))"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "Animação do CoinItem para o CoinIcon"
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "CoinItem1",
+							"sid": 547286732181890,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"CoinHUD1\"",
+								"property": "position",
+								"end-x": "CoinIcon2.X",
+								"end-y": "CoinIcon2.Y",
+								"time": "0.5",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "yes",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 726252029969109
+				},
+				{
+					"eventType": "comment",
+					"text": "Quando CoinItem, chegar em CoinIcon adiciona pontuação"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "CoinItem1",
+							"sid": 341592454935117,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"CoinHUD1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 618263776886656,
+							"parameters": {
+								"variable": "coins1",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 326729913853788
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "CoinItem1",
+							"sid": 872005117123362,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"CoinHUD2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 845179638335922,
+							"parameters": {
+								"variable": "coins2",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 644069899378825
+				},
+				{
+					"eventType": "comment",
+					"text": "A cada tick, atualiza para seguir a pontuação"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 484869704055777
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 468125294173388,
+							"parameters": {
+								"text": "coins1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 644072110036231,
+							"parameters": {
+								"text": "coins2"
+							}
+						}
+					],
+					"sid": 920393827013678
+				}
+			],
+			"sid": 278914065999927
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Saw",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "animação indo para baixo"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Saw",
+							"sid": 573132467360586,
+							"parameters": {
+								"instance-variable": "direção",
+								"comparison": 0,
+								"value": "\"baixo\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Saw",
+							"sid": 544138123802067,
+							"parameters": {
+								"instance-variable": "movendo"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Saw",
+							"sid": 227436660140552,
+							"parameters": {
+								"instance-variable": "movendo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Saw",
+							"sid": 119751381609875,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"baixo\"",
+								"property": "offsetY",
+								"end-value": "Self.Y + Saw.distancia_Y",
+								"time": "Saw.tempo_Y",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 222770516419518
+				},
+				{
+					"eventType": "comment",
+					"text": "animacao indo para cima"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Saw",
+							"sid": 813872930361724,
+							"parameters": {
+								"instance-variable": "direção",
+								"comparison": 0,
+								"value": "\"cima\""
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Saw",
+							"sid": 428745747028410,
+							"parameters": {
+								"instance-variable": "movendo"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Saw",
+							"sid": 273708413399944,
+							"parameters": {
+								"instance-variable": "movendo",
+								"value": "true"
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "Saw",
+							"sid": 719589545881607,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"cima\"",
+								"property": "offsetY",
+								"end-value": "Self.Y - Saw.distancia_Y",
+								"time": "Saw.tempo_Y",
+								"ease": "easeinoutsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 371064174348153
+				},
+				{
+					"eventType": "comment",
+					"text": "quando \"baixo\" acabar, definir ir para cima"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "Saw",
+							"sid": 397722608574854,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"baixo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Saw",
+							"sid": 900196550529845,
+							"parameters": {
+								"instance-variable": "direção",
+								"value": "\"cima\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Saw",
+							"sid": 609587873598810,
+							"parameters": {
+								"instance-variable": "movendo",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 681713479960912
+				},
+				{
+					"eventType": "comment",
+					"text": "quando \"cima\" acabar, definir ir para baixo"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "Saw",
+							"sid": 860822539457696,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"cima\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Saw",
+							"sid": 297550165601238,
+							"parameters": {
+								"instance-variable": "direção",
+								"value": "\"baixo\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Saw",
+							"sid": 605625118926028,
+							"parameters": {
+								"instance-variable": "movendo",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 884007194125079
+				},
+				{
+					"eventType": "comment",
+					"text": "quando player2 encostar na serra, perde vida"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol2",
+							"sid": 308742140385660,
+							"parameters": {
+								"object": "Saw"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "obj_playercontrol2",
+							"sid": 655493839171435,
+							"parameters": {
+								"instance-variable": "Dead"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "obj_playercontrol2",
+							"sid": 431375016983593,
+							"parameters": {
+								"instance-variable": "Dead",
+								"value": "true"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 562297861364814,
+							"parameters": {
+								"instance-variable": "SharedHP",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "SpriteHamster1",
+							"sid": 711929597500688,
+							"parameters": {
+								"animation": "\"Death\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 483563767635033,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "obj_playercontrol2",
+							"sid": 255352687944112,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 842712135372303,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "obj_playercontrol2",
+							"sid": 413842489759076,
+							"parameters": {
+								"x": "StartLayout.X",
+								"y": "StartLayout.Y"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "obj_playercontrol2",
+							"sid": 633482522395110,
+							"parameters": {
+								"instance-variable": "Dead",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "SpriteHamster1",
+							"sid": 984754366004064,
+							"parameters": {
+								"animation": "\"Waiting\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 512587171871847
+				},
+				{
+					"eventType": "comment",
+					"text": "quando player1 encostar na serra, perde vida"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "obj_playercontrol",
+							"sid": 940798484571249,
+							"parameters": {
+								"object": "Saw"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "obj_playercontrol2",
+							"sid": 960567627448404,
+							"parameters": {
+								"instance-variable": "Dead"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 217252261906124,
+							"parameters": {
+								"instance-variable": "Dead",
+								"value": "true"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 606660166275454,
+							"parameters": {
+								"instance-variable": "SharedHP",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "SpriteHamster2",
+							"sid": 904299724174466,
+							"parameters": {
+								"animation": "\"Death\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 653339354449505,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "obj_playercontrol",
+							"sid": 763451685580325,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 298784285358172,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "obj_playercontrol",
+							"sid": 752854018371532,
+							"parameters": {
+								"x": "StartLayout.X",
+								"y": "StartLayout.Y"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 339770817233404,
+							"parameters": {
+								"instance-variable": "Dead",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "SpriteHamster2",
+							"sid": 557952214253112,
+							"parameters": {
+								"animation": "\"Waiting\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 954365988350078
+				}
+			],
+			"sid": 693980496788657
 		}
 	],
 	"sid": 677904809921252
