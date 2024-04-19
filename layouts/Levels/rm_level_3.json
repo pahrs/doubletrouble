@@ -132,7 +132,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 870030,
+					"uid": 342642,
 					"instanceVariables": {
 						"Dashing": false,
 						"DashTravel": 0.1,
@@ -183,10 +183,113 @@
 						}
 					},
 					"world": {
-						"x": 294.6088549122177,
-						"y": 130.2967258287448,
-						"width": 12.72961373846141,
-						"height": 16.397052603074968,
+						"x": 295.5,
+						"y": 131,
+						"width": 13,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "obj_playercontrol2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 845857,
+					"instanceVariables": {
+						"Dashing": false,
+						"DashTravel": 0,
+						"DashCooldown": 0,
+						"DashAvailable": true,
+						"WallTime": 0,
+						"WallSpeed": 0,
+						"Stamina": true,
+						"ColideTest": false,
+						"LeftWall": false,
+						"RightWall": false,
+						"WallGrapLeft": false,
+						"Gravity": true,
+						"WallGrapRight": false,
+						"Dead": false,
+						"Arrive": false
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 80,
+								"acceleration": 450,
+								"deceleration": 700,
+								"jump-strength": 150,
+								"gravity": 1200,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"Bullet": {
+							"properties": {
+								"speed": 150,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": false
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 280.5,
+						"y": 131,
+						"width": 13,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "StartLayout",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 685887,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 288,
+						"y": 134,
+						"width": 10,
+						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -279,70 +382,6 @@
 							1,
 							1
 						],
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpriteHamster2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Standby",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 123110,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 294.9348206216545,
-						"y": 131.41223942234967,
-						"width": 15,
-						"height": 18.8756646216396,
-						"originX": 0.5333333333333333,
-						"originY": 0.5555555555555556,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "StartLayout",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 982467,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 294.85476287783325,
-						"y": 130.93673706054688,
-						"width": 16,
-						"height": 15,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
 						"zElevation": 0
 					}
 				},
@@ -955,6 +994,76 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "SpriteHamster2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Standby",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 529523,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 296,
+						"y": 132,
+						"width": 15,
+						"height": 18,
+						"originX": 0.5333333333333333,
+						"originY": 0.5555555555555556,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteHamster1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Standby",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 572063,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 281,
+						"y": 132,
+						"width": 15,
+						"height": 18,
+						"originX": 0.5333333333333333,
+						"originY": 0.5555555555555556,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 187219869368447,
@@ -1496,115 +1605,6 @@
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "obj_playercontrol2",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 772306,
-					"instanceVariables": {
-						"Dashing": false,
-						"DashTravel": 0,
-						"DashCooldown": 0,
-						"DashAvailable": true,
-						"WallTime": 0,
-						"WallSpeed": 0,
-						"Stamina": true,
-						"ColideTest": false,
-						"LeftWall": false,
-						"RightWall": false,
-						"WallGrapLeft": false,
-						"Gravity": true,
-						"WallGrapRight": false,
-						"Dead": false,
-						"Arrive": false
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 80,
-								"acceleration": 450,
-								"deceleration": 700,
-								"jump-strength": 150,
-								"gravity": 1200,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": false,
-								"enabled": true
-							}
-						},
-						"Bullet": {
-							"properties": {
-								"speed": 150,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": false
-							}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 278.8160554268877,
-						"y": 130.34214242369956,
-						"width": 13.07305745540458,
-						"height": 16.19507671306758,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpriteHamster1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Standby",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 277841,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 278.98951684460263,
-						"y": 131.38281426566223,
-						"width": 15,
-						"height": 18,
-						"originX": 0.5333333333333333,
-						"originY": 0.5555555555555556,
 						"color": [
 							1,
 							1,
