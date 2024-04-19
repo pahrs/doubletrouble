@@ -628,80 +628,6 @@
 					}
 				},
 				{
-					"type": "CoinIcon1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 611452,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 14,
-						"y": 10,
-						"width": 10,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Text",
-					"properties": {
-						"text": "1",
-						"enable-bbcode": true,
-						"font": "Segoe Print",
-						"size": 6,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 808123,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 28,
-						"y": 10,
-						"width": 26,
-						"height": 13,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 6.280609525192199,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "SpriteHamster2",
 					"properties": {
 						"initially-visible": true,
@@ -761,6 +687,212 @@
 						"height": 18,
 						"originX": 0.5333333333333333,
 						"originY": 0.5555555555555556,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HP3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Laranja",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 430519,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 306.85283894517204,
+						"y": 9.981302031578428,
+						"width": 15,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text2",
+					"properties": {
+						"text": "0",
+						"enable-bbcode": true,
+						"font": "Segoe Print",
+						"size": 6,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 559976,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 34.09047770510552,
+						"y": 14.38050144343399,
+						"width": 26,
+						"height": 13,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.280609525192199,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "0",
+						"enable-bbcode": true,
+						"font": "Segoe Print",
+						"size": 6,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 733248,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 287.23791700202594,
+						"y": 14.463968420529577,
+						"width": 26,
+						"height": 13,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.280609525192199,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CoinIcon2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 711532,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 310.4916717564463,
+						"y": 14.226528236664558,
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HP3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Azul",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 649869,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 14.48409423736576,
+						"y": 10.483726185117424,
+						"width": 15,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.273374719735993,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CoinIcon1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 768678,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 10.48409423736576,
+						"y": 14.483726185117424,
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

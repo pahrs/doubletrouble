@@ -975,6 +975,212 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "HP3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Laranja",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 483556,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 307.1166632765413,
+						"y": 10.57126849965457,
+						"width": 15,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text2",
+					"properties": {
+						"text": "0",
+						"enable-bbcode": true,
+						"font": "Segoe Print",
+						"size": 6,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 593388,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 34.35430203647483,
+						"y": 14.970467911510134,
+						"width": 26,
+						"height": 13,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.280609525192199,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "0",
+						"enable-bbcode": true,
+						"font": "Segoe Print",
+						"size": 6,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 817521,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 287.5017413333952,
+						"y": 15.053934888605717,
+						"width": 26,
+						"height": 13,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.280609525192199,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CoinIcon2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 538299,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 310.7554960878156,
+						"y": 14.8164947047407,
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "HP3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Azul",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 594831,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 14.747918568735066,
+						"y": 11.073692653193566,
+						"width": 15,
+						"height": 14,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.273374719735993,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CoinIcon1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 231635,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 10.747918568735066,
+						"y": 15.073692653193568,
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 475843416253375,
