@@ -1434,93 +1434,6 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 153562,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 210,
-						"y": 110,
-						"width": 40,
-						"height": 5,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Thorns",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 816799,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 210,
-						"y": 125,
-						"width": 40,
-						"height": 5,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Thorns",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 192415,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 210,
-						"y": 170,
-						"width": 40,
-						"height": 5,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Thorns",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 704995,
 					"instanceVariables": {},
 					"behaviors": {},
@@ -1556,7 +1469,7 @@
 					"world": {
 						"x": 220,
 						"y": 50,
-						"width": 40,
+						"width": 35,
 						"height": 5,
 						"originX": 0,
 						"originY": 1,
@@ -1615,6 +1528,122 @@
 						"x": 60,
 						"y": 50,
 						"width": 30,
+						"height": 5,
+						"originX": 0,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Thorns",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 559727,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 85,
+						"y": 170,
+						"width": 35,
+						"height": 5,
+						"originX": 0,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Thorns",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 275270,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 215,
+						"y": 110,
+						"width": 35,
+						"height": 5,
+						"originX": 0,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Thorns",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 743247,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 210,
+						"y": 170,
+						"width": 35,
+						"height": 5,
+						"originX": 0,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Thorns",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 718192,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 210,
+						"y": 125,
+						"width": 35,
 						"height": 5,
 						"originX": 0,
 						"originY": 1,
