@@ -595,6 +595,15 @@
 									}
 								},
 								{
+									"id": "set-animation",
+									"objectClass": "SpriteHamster2",
+									"sid": 112117857189195,
+									"parameters": {
+										"animation": "\"Standby\"",
+										"from": "beginning"
+									}
+								},
+								{
 									"id": "play",
 									"objectClass": "Audio",
 									"sid": 437762743358068,
@@ -1169,17 +1178,6 @@
 							],
 							"actions": [
 								{
-									"id": "start-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 865523148509297,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "obj_playercontrol.WallTime",
-										"type": "regular",
-										"tag": "\"WallGrapTime\""
-									}
-								},
-								{
 									"id": "stop-timer",
 									"objectClass": "obj_playercontrol",
 									"sid": 108547052266277,
@@ -1711,14 +1709,6 @@
 									}
 								},
 								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
-									"sid": 693842027590001,
-									"parameters": {
-										"instance-variable": "LeftWall"
-									}
-								},
-								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "obj_playercontrol",
 									"sid": 428703308185642,
@@ -1788,14 +1778,6 @@
 									}
 								},
 								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
-									"sid": 879419506451762,
-									"parameters": {
-										"instance-variable": "LeftWall"
-									}
-								},
-								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "obj_playercontrol",
 									"sid": 585238756594343,
@@ -1846,14 +1828,6 @@
 									"sid": 620907617140355,
 									"parameters": {
 										"instance-variable": "WallGrapRight"
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
-									"sid": 346802718062770,
-									"parameters": {
-										"instance-variable": "RightWall"
 									}
 								},
 								{
@@ -1920,14 +1894,6 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 517727258900127,
-									"parameters": {
-										"instance-variable": "RightWall"
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
 									"sid": 175192105520099,
 									"parameters": {
 										"instance-variable": "Stamina"
@@ -1968,71 +1934,55 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-timer",
-									"objectClass": "obj_playercontrol",
-									"sid": 553389522361660,
-									"behaviorType": "Timer",
-									"parameters": {
-										"tag": "\"WallTime\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-max-fall-speed",
-									"objectClass": "obj_playercontrol",
-									"sid": 542593963376480,
-									"behaviorType": "Platform",
-									"parameters": {
-										"max-fall-speed": "1000"
-									}
-								}
-							],
-							"sid": 380124268472062
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-axis",
 									"objectClass": "Gamepad",
-									"sid": 907105252660289,
+									"sid": 715086627145782,
 									"parameters": {
 										"gamepad": "0",
-										"axis": "left-analog-x-axis",
+										"axis": "left-analog-y-axis",
 										"comparison": 1,
 										"value": "0"
 									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
-									"sid": 177248602262811,
-									"parameters": {
-										"instance-variable": "Stamina"
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol",
-									"sid": 608691260146133,
-									"parameters": {
-										"instance-variable": "ColideTest"
-									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 898390005020397,
+							"children": [
 								{
-									"id": "set-paused",
-									"objectClass": "Audio",
-									"sid": 109843592219036,
-									"parameters": {
-										"tag": "\"Climbing\"",
-										"state": "resume"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "obj_playercontrol",
+											"sid": 661431729302854,
+											"parameters": {
+												"instance-variable": "WallGrapLeft"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "obj_playercontrol",
+											"sid": 635458022440562,
+											"parameters": {
+												"instance-variable": "WallGrapRight"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-paused",
+											"objectClass": "Audio",
+											"sid": 738333162380105,
+											"parameters": {
+												"tag": "\"Climbing\"",
+												"state": "resume"
+											}
+										}
+									],
+									"sid": 817632163432719,
+									"isOrBlock": true
 								}
-							],
-							"sid": 178665403492418
+							]
 						},
 						{
 							"eventType": "block",
@@ -3422,17 +3372,6 @@
 							],
 							"actions": [
 								{
-									"id": "start-timer",
-									"objectClass": "obj_playercontrol2",
-									"sid": 591770564649865,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "obj_playercontrol.WallTime",
-										"type": "regular",
-										"tag": "\"WallGrapTime2\""
-									}
-								},
-								{
 									"id": "stop-timer",
 									"objectClass": "obj_playercontrol2",
 									"sid": 106968957418527,
@@ -3771,17 +3710,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "start-timer",
-									"objectClass": "obj_playercontrol2",
-									"sid": 278972022344724,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "obj_playercontrol.WallTime",
-										"type": "regular",
-										"tag": "\"WallGrapTimer2\""
-									}
-								},
 								{
 									"id": "stop-timer",
 									"objectClass": "obj_playercontrol2",
@@ -4199,43 +4127,53 @@
 								{
 									"id": "compare-axis",
 									"objectClass": "Gamepad",
-									"sid": 145171755144057,
+									"sid": 301125129861198,
 									"parameters": {
 										"gamepad": "1",
-										"axis": "left-analog-x-axis",
+										"axis": "left-analog-y-axis",
 										"comparison": 1,
 										"value": "0"
 									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol2",
-									"sid": 222206358428878,
-									"parameters": {
-										"instance-variable": "Stamina"
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "obj_playercontrol2",
-									"sid": 169607526502431,
-									"parameters": {
-										"instance-variable": "ColideTest"
-									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 199578765748268,
+							"children": [
 								{
-									"id": "set-paused",
-									"objectClass": "Audio",
-									"sid": 403948068192147,
-									"parameters": {
-										"tag": "\"Climbing2\"",
-										"state": "resume"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "obj_playercontrol2",
+											"sid": 330483448639355,
+											"parameters": {
+												"instance-variable": "WallGrapLeft"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "obj_playercontrol2",
+											"sid": 735533053939370,
+											"parameters": {
+												"instance-variable": "WallGrapRight"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-paused",
+											"objectClass": "Audio",
+											"sid": 837954898640277,
+											"parameters": {
+												"tag": "\"Climbing2\"",
+												"state": "resume"
+											}
+										}
+									],
+									"sid": 769218193857592,
+									"isOrBlock": true
 								}
-							],
-							"sid": 354001206414090
+							]
 						},
 						{
 							"eventType": "block",
@@ -4243,21 +4181,21 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 696152084298775
+									"sid": 355623818967974
 								}
 							],
 							"actions": [
 								{
 									"id": "set-paused",
 									"objectClass": "Audio",
-									"sid": 825091064338655,
+									"sid": 295103637723428,
 									"parameters": {
 										"tag": "\"Climbing2\"",
 										"state": "pause"
 									}
 								}
 							],
-							"sid": 340535139021719
+							"sid": 782999538623273
 						}
 					],
 					"sid": 480549647012976
@@ -4338,9 +4276,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 796175972315628,
+									"sid": 793642056150759,
 									"parameters": {
-										"seconds": "1"
+										"seconds": "0.4"
 									}
 								},
 								{

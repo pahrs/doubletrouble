@@ -172,7 +172,8 @@
 			"ValueHP4",
 			"ValueHP5",
 			"HP3",
-			"Audio"
+			"Audio",
+			"Climb"
 		],
 		"subfolders": [
 			{
