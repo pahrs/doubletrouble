@@ -105,6 +105,30 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 711787165960034,
+							"parameters": {
+								"audio-file": "sndWallClimb",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"Climbing\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 576715478017890,
+							"parameters": {
+								"audio-file": "sndWallClimb",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"Climbing2\""
+							}
 						}
 					],
 					"sid": 121857982694907
@@ -197,11 +221,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 180096480734581,
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 317979823679414,
 									"parameters": {
-										"key": 87
+										"gamepad": "0",
+										"button": "button-x"
 									}
 								},
 								{
@@ -221,6 +246,24 @@
 										"instance-variable": "Dashing"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 289466820678930,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 838611826667786,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -232,6 +275,18 @@
 									"parameters": {
 										"control": "jump"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 499511831695417,
+									"parameters": {
+										"audio-file": "sndJump",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 659140395332019
@@ -240,11 +295,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 324922037490976,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 940896720203761,
 									"parameters": {
-										"key": 65
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 2,
+										"value": "0"
 									}
 								},
 								{
@@ -262,6 +320,24 @@
 									"sid": 816716383113683,
 									"parameters": {
 										"instance-variable": "Dead"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 347065770578685,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 476301733354141,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
 									},
 									"isInverted": true
 								}
@@ -309,11 +385,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 987892298544008,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 246087317518999,
 									"parameters": {
-										"key": 68
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 4,
+										"value": "0"
 									}
 								},
 								{
@@ -331,6 +410,24 @@
 									"sid": 120879205523053,
 									"parameters": {
 										"instance-variable": "Dead"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 794765790229274,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 260735536539608,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
 									},
 									"isInverted": true
 								}
@@ -378,11 +475,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-released",
-									"objectClass": "Keyboard",
-									"sid": 299814820532474,
+									"id": "on-button-released",
+									"objectClass": "Gamepad",
+									"sid": 366166456538673,
 									"parameters": {
-										"key": 87
+										"gamepad": "0",
+										"button": "button-x"
 									}
 								},
 								{
@@ -391,6 +489,24 @@
 									"sid": 960388665889919,
 									"parameters": {
 										"instance-variable": "Dead"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 164621594492026,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 743543077555779,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
 									},
 									"isInverted": true
 								},
@@ -468,6 +584,27 @@
 									"parameters": {
 										"state": "enabled"
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 754941084648928,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 437762743358068,
+									"parameters": {
+										"audio-file": "sndLanding",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 445288607205438
@@ -480,6 +617,33 @@
 									"objectClass": "obj_playercontrol",
 									"sid": 817266067272425,
 									"behaviorType": "Platform"
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 410614272715172,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 951545882857331,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 439726391560552,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -560,11 +724,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 858241853399452,
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 940772758511277,
 									"parameters": {
-										"key": 71
+										"gamepad": "0",
+										"button": "button-y"
 									}
 								},
 								{
@@ -586,6 +751,18 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 676829906299667,
+									"parameters": {
+										"audio-file": "sndDash",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
 								{
 									"id": "set-enabled",
 									"objectClass": "obj_playercontrol",
@@ -681,6 +858,24 @@
 										"type": "once",
 										"tag": "\"WallGrapTimer\""
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 716018367509647,
+									"parameters": {
+										"instance-variable": "WallGrapLeft",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 305111698967298,
+									"parameters": {
+										"instance-variable": "WallGrapRight",
+										"value": "false"
+									}
 								}
 							],
 							"sid": 617338750961739
@@ -709,7 +904,8 @@
 									}
 								}
 							],
-							"sid": 138234959181795
+							"sid": 138234959181795,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -838,11 +1034,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 722930886176183,
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 785917203092037,
 									"parameters": {
-										"key": 72
+										"gamepad": "0",
+										"button": "right-shoulder-button"
 									}
 								}
 							],
@@ -863,11 +1060,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-released",
-									"objectClass": "Keyboard",
-									"sid": 591785451988207,
+									"id": "on-button-released",
+									"objectClass": "Gamepad",
+									"sid": 425598526100801,
 									"parameters": {
-										"key": 72
+										"gamepad": "0",
+										"button": "right-shoulder-button"
 									}
 								}
 							],
@@ -1016,6 +1214,14 @@
 									"parameters": {
 										"angle": "0"
 									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "SpriteHamster2",
+									"sid": 547776420971427,
+									"parameters": {
+										"state": "not-mirrored"
+									}
 								}
 							],
 							"sid": 244689743153310
@@ -1122,11 +1328,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 705255810992161,
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 239008383931893,
 									"parameters": {
-										"key": 87
+										"gamepad": "0",
+										"button": "button-x"
 									}
 								},
 								{
@@ -1203,11 +1410,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-released",
-									"objectClass": "Keyboard",
-									"sid": 870308482380045,
+									"id": "on-button-released",
+									"objectClass": "Gamepad",
+									"sid": 167984787418437,
 									"parameters": {
-										"key": 72
+										"gamepad": "0",
+										"button": "right-shoulder-button"
 									}
 								}
 							],
@@ -1356,6 +1564,14 @@
 									"parameters": {
 										"angle": "180"
 									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "SpriteHamster2",
+									"sid": 675649695702170,
+									"parameters": {
+										"state": "mirrored"
+									}
 								}
 							],
 							"sid": 896203045939272
@@ -1476,17 +1692,20 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 292853718352462,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 570463478691240,
 									"parameters": {
-										"key": 87
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 2,
+										"value": "0"
 									}
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 811872397450305,
+									"sid": 305411353389803,
 									"parameters": {
 										"instance-variable": "Stamina"
 									}
@@ -1494,7 +1713,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 997484659480138,
+									"sid": 693842027590001,
 									"parameters": {
 										"instance-variable": "LeftWall"
 									}
@@ -1502,18 +1721,26 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "obj_playercontrol",
-									"sid": 644101252848174,
+									"sid": 428703308185642,
 									"parameters": {
 										"object": "obj_hitbox"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 664681414843583,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-y",
 									"objectClass": "obj_playercontrol",
-									"sid": 315316707234951,
+									"sid": 916800936888681,
 									"parameters": {
 										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
 									}
@@ -1521,30 +1748,41 @@
 								{
 									"id": "set-angle-of-motion",
 									"objectClass": "obj_playercontrol",
-									"sid": 588366944713660,
+									"sid": 149980891474884,
 									"behaviorType": "Bullet",
 									"parameters": {
 										"angle": "0"
 									}
 								}
 							],
-							"sid": 997331699719887
+							"sid": 741602055217515
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 390885438216309,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 649123420481277,
 									"parameters": {
-										"key": 83
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 4,
+										"value": "0"
 									}
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 593795226449919,
+									"sid": 610298708438669,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 460657962691413,
 									"parameters": {
 										"instance-variable": "Stamina"
 									}
@@ -1552,7 +1790,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 201514363177188,
+									"sid": 879419506451762,
 									"parameters": {
 										"instance-variable": "LeftWall"
 									}
@@ -1560,7 +1798,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "obj_playercontrol",
-									"sid": 679260854937903,
+									"sid": 585238756594343,
 									"parameters": {
 										"object": "obj_hitbox"
 									},
@@ -1571,29 +1809,49 @@
 								{
 									"id": "set-y",
 									"objectClass": "obj_playercontrol",
-									"sid": 933756120885134,
+									"sid": 641908572128741,
 									"parameters": {
 										"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
 									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 104984455124961,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "0"
+									}
 								}
 							],
-							"sid": 516020282328674
+							"sid": 289352323250661
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 603621487087888,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 757317255910108,
 									"parameters": {
-										"key": 87
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 2,
+										"value": "0"
 									}
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 638535498876455,
+									"sid": 620907617140355,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 346802718062770,
 									"parameters": {
 										"instance-variable": "RightWall"
 									}
@@ -1601,7 +1859,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 969513279489713,
+									"sid": 993694251889970,
 									"parameters": {
 										"instance-variable": "Stamina"
 									}
@@ -1609,7 +1867,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "obj_playercontrol",
-									"sid": 530962646564183,
+									"sid": 827591102752558,
 									"parameters": {
 										"object": "obj_hitbox"
 									},
@@ -1620,7 +1878,7 @@
 								{
 									"id": "set-y",
 									"objectClass": "obj_playercontrol",
-									"sid": 538071367308184,
+									"sid": 340972322879432,
 									"parameters": {
 										"y": "obj_playercontrol.Y - obj_playercontrol.WallSpeed"
 									}
@@ -1628,30 +1886,41 @@
 								{
 									"id": "set-angle-of-motion",
 									"objectClass": "obj_playercontrol",
-									"sid": 819887225125630,
+									"sid": 807733324743845,
 									"behaviorType": "Bullet",
 									"parameters": {
 										"angle": "180"
 									}
 								}
 							],
-							"sid": 126254597680249
+							"sid": 116591528431299
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 303498837250988,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 984507379144895,
 									"parameters": {
-										"key": 83
+										"gamepad": "0",
+										"axis": "left-analog-y-axis",
+										"comparison": 4,
+										"value": "0"
 									}
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 721748485714692,
+									"sid": 806185862170007,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 517727258900127,
 									"parameters": {
 										"instance-variable": "RightWall"
 									}
@@ -1659,7 +1928,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "obj_playercontrol",
-									"sid": 450352025116653,
+									"sid": 175192105520099,
 									"parameters": {
 										"instance-variable": "Stamina"
 									}
@@ -1667,7 +1936,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "obj_playercontrol2",
-									"sid": 445690041390733,
+									"sid": 633609681826047,
 									"parameters": {
 										"object": "obj_hitbox"
 									},
@@ -1678,13 +1947,22 @@
 								{
 									"id": "set-y",
 									"objectClass": "obj_playercontrol",
-									"sid": 448796098516921,
+									"sid": 384320039697402,
 									"parameters": {
 										"y": "obj_playercontrol.Y + obj_playercontrol.WallSpeed"
 									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "obj_playercontrol",
+									"sid": 742917581551678,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "180"
+									}
 								}
 							],
-							"sid": 205096992701879
+							"sid": 484600622592253
 						},
 						{
 							"eventType": "block",
@@ -1692,7 +1970,7 @@
 								{
 									"id": "on-timer",
 									"objectClass": "obj_playercontrol",
-									"sid": 393646302027892,
+									"sid": 553389522361660,
 									"behaviorType": "Timer",
 									"parameters": {
 										"tag": "\"WallTime\""
@@ -1703,17 +1981,83 @@
 								{
 									"id": "set-max-fall-speed",
 									"objectClass": "obj_playercontrol",
-									"sid": 996894769494184,
+									"sid": 542593963376480,
 									"behaviorType": "Platform",
 									"parameters": {
 										"max-fall-speed": "1000"
 									}
 								}
 							],
-							"sid": 524574913695020
+							"sid": 380124268472062
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 907105252660289,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 1,
+										"value": "0"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 177248602262811,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol",
+									"sid": 608691260146133,
+									"parameters": {
+										"instance-variable": "ColideTest"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-paused",
+									"objectClass": "Audio",
+									"sid": 109843592219036,
+									"parameters": {
+										"tag": "\"Climbing\"",
+										"state": "resume"
+									}
+								}
+							],
+							"sid": 178665403492418
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 263796996573766
+								}
+							],
+							"actions": [
+								{
+									"id": "set-paused",
+									"objectClass": "Audio",
+									"sid": 177095034048139,
+									"parameters": {
+										"tag": "\"Climbing\"",
+										"state": "pause"
+									}
+								}
+							],
+							"sid": 675032591635571
 						}
 					],
-					"sid": 852963102550380
+					"sid": 123066760152507
 				},
 				{
 					"eventType": "group",
@@ -1791,9 +2135,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 715400445231059,
+									"sid": 803804981125223,
 									"parameters": {
-										"seconds": "1"
+										"seconds": "0.4"
 									}
 								},
 								{
@@ -2130,12 +2474,31 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 380825354585548,
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 286790038470016,
 									"parameters": {
-										"key": 38
+										"gamepad": "1",
+										"button": "button-x"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 817939207837043,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 654359171851394,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
@@ -2165,6 +2528,18 @@
 									"parameters": {
 										"control": "jump"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 918244073827847,
+									"parameters": {
+										"audio-file": "sndJump",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 417520211915984
@@ -2173,12 +2548,33 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 350142151697377,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 215795921916147,
 									"parameters": {
-										"key": 37
+										"gamepad": "1",
+										"axis": "left-analog-x-axis",
+										"comparison": 2,
+										"value": "0"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 869135686383209,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 611337699782153,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
@@ -2242,12 +2638,33 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 950301330129071,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 954514661198879,
 									"parameters": {
-										"key": 39
+										"gamepad": "1",
+										"axis": "left-analog-x-axis",
+										"comparison": 4,
+										"value": "0"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 281403541999873,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 948318934184204,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
@@ -2311,12 +2728,31 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-released",
-									"objectClass": "Keyboard",
-									"sid": 385324350435666,
+									"id": "on-button-released",
+									"objectClass": "Gamepad",
+									"sid": 859072463051680,
 									"parameters": {
-										"key": 38
+										"gamepad": "1",
+										"button": "button-x"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 799207509270087,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 245630490250712,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
@@ -2401,6 +2837,27 @@
 									"parameters": {
 										"state": "enabled"
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol2",
+									"sid": 215168912425246,
+									"parameters": {
+										"instance-variable": "DashAvailable",
+										"value": "true"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 292173199404045,
+									"parameters": {
+										"audio-file": "sndLanding",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 563289956210178
@@ -2413,6 +2870,33 @@
 									"objectClass": "obj_playercontrol2",
 									"sid": 662510188999752,
 									"behaviorType": "Platform"
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 871703546771669,
+									"parameters": {
+										"instance-variable": "WallGrapRight"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 240362764850200,
+									"parameters": {
+										"instance-variable": "WallGrapLeft"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 337632747930767,
+									"parameters": {
+										"instance-variable": "Dead"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -2493,11 +2977,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 918135691141627,
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 897707410096040,
 									"parameters": {
-										"key": 101
+										"gamepad": "1",
+										"button": "button-y"
 									}
 								},
 								{
@@ -2614,6 +3099,36 @@
 										"type": "once",
 										"tag": "\"WallGrapTimer2\""
 									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol2",
+									"sid": 562875620633862,
+									"parameters": {
+										"instance-variable": "WallGrapLeft",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "obj_playercontrol2",
+									"sid": 967986206271461,
+									"parameters": {
+										"instance-variable": "WallGrapRight",
+										"value": "false"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 753571159892902,
+									"parameters": {
+										"audio-file": "sndDash",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 152731553661268
@@ -2642,7 +3157,8 @@
 									}
 								}
 							],
-							"sid": 514809134967894
+							"sid": 514809134967894,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -2771,11 +3287,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 509404885734471,
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 480901019640084,
 									"parameters": {
-										"key": 102
+										"gamepad": "1",
+										"button": "right-shoulder-button"
 									}
 								}
 							],
@@ -2796,11 +3313,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-released",
-									"objectClass": "Keyboard",
-									"sid": 854450309993065,
+									"id": "on-button-released",
+									"objectClass": "Gamepad",
+									"sid": 191792491590098,
 									"parameters": {
-										"key": 102
+										"gamepad": "1",
+										"button": "right-shoulder-button"
 									}
 								}
 							],
@@ -2949,6 +3467,14 @@
 									"parameters": {
 										"angle": "0"
 									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "SpriteHamster1",
+									"sid": 240249356028967,
+									"parameters": {
+										"state": "not-mirrored"
+									}
 								}
 							],
 							"sid": 800600785797337
@@ -3055,11 +3581,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 279353638295421,
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 986780680244056,
 									"parameters": {
-										"key": 38
+										"gamepad": "1",
+										"button": "button-x"
 									}
 								},
 								{
@@ -3136,11 +3663,12 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-key-released",
-									"objectClass": "Keyboard",
-									"sid": 476731757833510,
+									"id": "on-button-released",
+									"objectClass": "Gamepad",
+									"sid": 319109920315017,
 									"parameters": {
-										"key": 102
+										"gamepad": "1",
+										"button": "right-shoulder-button"
 									}
 								}
 							],
@@ -3289,6 +3817,14 @@
 									"parameters": {
 										"angle": "180"
 									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "SpriteHamster1",
+									"sid": 639571864093126,
+									"parameters": {
+										"state": "mirrored"
+									}
 								}
 							],
 							"sid": 889099126684727
@@ -3409,11 +3945,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 486465487062180,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 798768061605040,
 									"parameters": {
-										"key": 38
+										"gamepad": "1",
+										"axis": "left-analog-y-axis",
+										"comparison": 2,
+										"value": "0"
 									}
 								},
 								{
@@ -3467,11 +4006,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 761525624547337,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 491926061199018,
 									"parameters": {
-										"key": 40
+										"gamepad": "1",
+										"axis": "left-analog-y-axis",
+										"comparison": 4,
+										"value": "0"
 									}
 								},
 								{
@@ -3516,11 +4058,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 677827896007633,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 161302999809631,
 									"parameters": {
-										"key": 38
+										"gamepad": "1",
+										"axis": "left-analog-y-axis",
+										"comparison": 2,
+										"value": "0"
 									}
 								},
 								{
@@ -3574,11 +4119,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 497573236716911,
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 688312312406867,
 									"parameters": {
-										"key": 40
+										"gamepad": "1",
+										"axis": "left-analog-y-axis",
+										"comparison": 4,
+										"value": "0"
 									}
 								},
 								{
@@ -3644,6 +4192,72 @@
 								}
 							],
 							"sid": 195869442302977
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 145171755144057,
+									"parameters": {
+										"gamepad": "1",
+										"axis": "left-analog-x-axis",
+										"comparison": 1,
+										"value": "0"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 222206358428878,
+									"parameters": {
+										"instance-variable": "Stamina"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "obj_playercontrol2",
+									"sid": 169607526502431,
+									"parameters": {
+										"instance-variable": "ColideTest"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-paused",
+									"objectClass": "Audio",
+									"sid": 403948068192147,
+									"parameters": {
+										"tag": "\"Climbing2\"",
+										"state": "resume"
+									}
+								}
+							],
+							"sid": 354001206414090
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 696152084298775
+								}
+							],
+							"actions": [
+								{
+									"id": "set-paused",
+									"objectClass": "Audio",
+									"sid": 825091064338655,
+									"parameters": {
+										"tag": "\"Climbing2\"",
+										"state": "pause"
+									}
+								}
+							],
+							"sid": 340535139021719
 						}
 					],
 					"sid": 480549647012976
@@ -3996,6 +4610,15 @@
 							"parameters": {
 								"vector-y": "-JumpPad.Pulo"
 							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 783297778544467,
+							"parameters": {
+								"instance-variable": "DashAvailable",
+								"value": "true"
+							}
 						}
 					],
 					"sid": 252515321249317
@@ -4020,6 +4643,15 @@
 							"behaviorType": "Platform",
 							"parameters": {
 								"vector-y": "-JumpPad.Pulo"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "obj_playercontrol2",
+							"sid": 262028941608446,
+							"parameters": {
+								"instance-variable": "DashAvailable",
+								"value": "true"
 							}
 						}
 					],

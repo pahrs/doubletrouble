@@ -122,6 +122,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 121156447650747
+		},
+		{
+			"name": "Climbing",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 876923954814649
 		}
 	],
 	"behaviorTypes": [

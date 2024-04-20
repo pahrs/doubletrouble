@@ -136,7 +136,7 @@
 					"instanceVariables": {
 						"Dashing": false,
 						"DashTravel": 0.1,
-						"DashCooldown": 0.3,
+						"DashCooldown": 0.5,
 						"DashAvailable": true,
 						"WallTime": 1.7,
 						"WallSpeed": 0.3,
@@ -150,7 +150,8 @@
 						"HaveKey": false,
 						"SharedHP": 5,
 						"Dead": false,
-						"Arrive": false
+						"Arrive": false,
+						"Climbing": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -159,8 +160,8 @@
 								"acceleration": 450,
 								"deceleration": 700,
 								"jump-strength": 150,
-								"gravity": 1200,
-								"max-fall-speed": 1000,
+								"gravity": 600,
+								"max-fall-speed": 600,
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
@@ -233,8 +234,8 @@
 								"acceleration": 450,
 								"deceleration": 700,
 								"jump-strength": 150,
-								"gravity": 1200,
-								"max-fall-speed": 1000,
+								"gravity": 600,
+								"max-fall-speed": 600,
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,

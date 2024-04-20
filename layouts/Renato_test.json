@@ -657,7 +657,8 @@
 						"HaveKey": false,
 						"SharedHP": 5,
 						"Dead": false,
-						"Arrive": false
+						"Arrive": false,
+						"Climbing": false
 					},
 					"behaviors": {
 						"Platform": {

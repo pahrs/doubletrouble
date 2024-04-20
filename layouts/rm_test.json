@@ -150,7 +150,8 @@
 						"HaveKey": false,
 						"SharedHP": 3,
 						"Dead": false,
-						"Arrive": false
+						"Arrive": false,
+						"Climbing": false
 					},
 					"behaviors": {
 						"Platform": {
