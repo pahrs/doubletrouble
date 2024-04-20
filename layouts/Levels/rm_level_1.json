@@ -332,6 +332,37 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "JumpPad",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 312794,
+					"instanceVariables": {
+						"Pulo": 300
+					},
+					"behaviors": {},
+					"world": {
+						"x": 250,
+						"y": 90,
+						"width": 10,
+						"height": 10,
+						"originX": 0,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 792370814499088,
@@ -451,55 +482,6 @@
 					"world": {
 						"x": 300,
 						"y": 160,
-						"width": 10,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CoinItem1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 329027,
-					"instanceVariables": {},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 1,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 1,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 255,
-						"y": 80,
 						"width": 10,
 						"height": 10,
 						"originX": 0.5,
@@ -1536,9 +1518,9 @@
 						}
 					},
 					"world": {
-						"x": 135,
+						"x": 139,
 						"y": 145,
-						"width": 29.999999999999996,
+						"width": 22,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1874,7 +1856,44 @@
 			"name": "HUD",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "obj_hitbox",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 315691,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 125,
+						"y": 145,
+						"width": 10,
+						"height": 5,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.651721714497566,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 921705380674487,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
