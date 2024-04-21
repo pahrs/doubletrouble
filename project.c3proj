@@ -173,7 +173,9 @@
 			"ValueHP5",
 			"HP3",
 			"Audio",
-			"Climb"
+			"Climb",
+			"SpriteFont2",
+			"SpriteFont3"
 		],
 		"subfolders": [
 			{
@@ -299,7 +301,16 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "what is this cole.ttf",
+					"type": "application/font-sfnt",
+					"sid": 798267945900422,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
