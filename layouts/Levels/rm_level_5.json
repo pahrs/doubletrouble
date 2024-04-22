@@ -859,7 +859,7 @@
 						"direção": "baixo",
 						"distancia_X": 70,
 						"distancia_Y": 140,
-						"tempo_Y": 1.6,
+						"tempo_Y": 1.7,
 						"tempo_X": 2,
 						"movendo": false
 					},
