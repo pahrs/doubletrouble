@@ -861,7 +861,7 @@
 						"direção": "baixo",
 						"distancia_X": 70,
 						"distancia_Y": 140,
-						"tempo_Y": 1.5,
+						"tempo_Y": 3,
 						"tempo_X": 2,
 						"movendo": false
 					},
@@ -939,7 +939,7 @@
 					},
 					"uid": 819829,
 					"instanceVariables": {
-						"Pulo": 300
+						"Pulo": 280
 					},
 					"behaviors": {},
 					"world": {
