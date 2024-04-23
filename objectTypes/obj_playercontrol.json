@@ -129,6 +129,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 876923954814649
+		},
+		{
+			"name": "Death_Orange",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 685569290221903
 		}
 	],
 	"behaviorTypes": [

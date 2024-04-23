@@ -12,6 +12,26 @@
 			"sid": 724061342214934
 		},
 		{
+			"eventType": "variable",
+			"name": "coins1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 109481550747781
+		},
+		{
+			"eventType": "variable",
+			"name": "coins2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 873425324929146
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Misc",
@@ -195,6 +215,30 @@
 						}
 					],
 					"sid": 678852905375878
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 614677976578462,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 203109316571255,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 733384291299817
 				}
 			],
 			"sid": 260731554869993
@@ -2116,6 +2160,15 @@
 										"animation": "\"Waiting\"",
 										"from": "beginning"
 									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "obj_playercontrol2",
+									"sid": 188284483013746,
+									"parameters": {
+										"instance-variable": "Death_Blue",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 542490177940513
@@ -2224,14 +2277,6 @@
 									"parameters": {
 										"visibility": "visible"
 									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "ValueHP",
-									"sid": 907560439937436,
-									"parameters": {
-										"visibility": "visible"
-									}
 								}
 							],
 							"sid": 889465760226096
@@ -2271,6 +2316,14 @@
 									"id": "set-visible",
 									"objectClass": "ValueHP3",
 									"sid": 161096851251681,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ValueHP",
+									"sid": 387248254404834,
 									"parameters": {
 										"visibility": "visible"
 									}
@@ -4307,6 +4360,15 @@
 										"animation": "\"Waiting\"",
 										"from": "beginning"
 									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "obj_playercontrol",
+									"sid": 610660438310701,
+									"parameters": {
+										"instance-variable": "Death_Orange",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 383243168386113
@@ -4782,7 +4844,7 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 618263776886656,
+							"sid": 377556437072282,
 							"parameters": {
 								"variable": "coins1",
 								"value": "1"
@@ -4808,7 +4870,7 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 845179638335922,
+							"sid": 576199385681861,
 							"parameters": {
 								"variable": "coins2",
 								"value": "1"
@@ -4834,7 +4896,7 @@
 						{
 							"id": "set-text",
 							"objectClass": "Text",
-							"sid": 468125294173388,
+							"sid": 993334052964538,
 							"parameters": {
 								"text": "coins1"
 							}
@@ -4842,7 +4904,7 @@
 						{
 							"id": "set-text",
 							"objectClass": "Text2",
-							"sid": 644072110036231,
+							"sid": 604180382756265,
 							"parameters": {
 								"text": "coins2"
 							}
@@ -5156,6 +5218,15 @@
 								"animation": "\"Waiting\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "obj_playercontrol",
+							"sid": 786228812313917,
+							"parameters": {
+								"instance-variable": "Death_Orange",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 512587171871847
@@ -5264,6 +5335,15 @@
 								"animation": "\"Waiting\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "obj_playercontrol2",
+							"sid": 547548274861679,
+							"parameters": {
+								"instance-variable": "Death_Blue",
+								"value": "1"
+							}
 						}
 					],
 					"sid": 954365988350078
@@ -5312,6 +5392,100 @@
 				}
 			],
 			"sid": 452578460079202
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Menus",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 754082796477734
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "moedas_blue",
+							"sid": 824990612865241,
+							"parameters": {
+								"text": "coins2"
+							}
+						}
+					],
+					"sid": 772286870779599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 382051008780049
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "moedas_orange",
+							"sid": 221451630976075,
+							"parameters": {
+								"text": "coins1"
+							}
+						}
+					],
+					"sid": 908122835184376
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 365540088631496
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "mortes_orange",
+							"sid": 248666340172037,
+							"parameters": {
+								"text": "obj_playercontrol.Death_Orange"
+							}
+						}
+					],
+					"sid": 477763064344756
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 902047730361982
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "mortes_blue",
+							"sid": 448836935893349,
+							"parameters": {
+								"text": "obj_playercontrol2.Death_Blue"
+							}
+						}
+					],
+					"sid": 607031117477674
+				}
+			],
+			"sid": 139627878152013
 		}
 	],
 	"sid": 677904809921252

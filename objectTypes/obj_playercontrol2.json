@@ -108,6 +108,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 268130180357964
+		},
+		{
+			"name": "Death_Blue",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 778367025536190
 		}
 	],
 	"behaviorTypes": [

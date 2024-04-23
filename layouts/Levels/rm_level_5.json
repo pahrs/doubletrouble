@@ -543,7 +543,8 @@
 						"SharedHP": 5,
 						"Dead": false,
 						"Arrive": false,
-						"Climbing": false
+						"Climbing": false,
+						"Death_Orange": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -617,7 +618,8 @@
 						"Gravity": true,
 						"WallGrapRight": false,
 						"Dead": false,
-						"Arrive": false
+						"Arrive": false,
+						"Death_Blue": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -681,56 +683,6 @@
 					"world": {
 						"x": 31,
 						"y": 165,
-						"width": 10,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Saw",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 939259,
-					"instanceVariables": {
-						"direção": "baixo",
-						"distancia_X": 70,
-						"distancia_Y": 140,
-						"tempo_Y": 2,
-						"tempo_X": 2,
-						"movendo": false
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 360,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 75,
-						"y": 20,
 						"width": 10,
 						"height": 10,
 						"originX": 0.5,

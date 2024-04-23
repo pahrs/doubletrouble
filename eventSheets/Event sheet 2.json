@@ -3,7 +3,7 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "coins1",
+			"name": "coins5",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -13,7 +13,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "coins2",
+			"name": "coins6",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -4017,7 +4017,7 @@
 							"objectClass": "System",
 							"sid": 731655256812970,
 							"parameters": {
-								"variable": "coins1",
+								"variable": "coins5",
 								"value": "1"
 							}
 						}
@@ -4043,7 +4043,7 @@
 							"objectClass": "System",
 							"sid": 650173664394760,
 							"parameters": {
-								"variable": "coins2",
+								"variable": "coins6",
 								"value": "1"
 							}
 						}
@@ -4069,7 +4069,7 @@
 							"objectClass": "Text",
 							"sid": 754488085587335,
 							"parameters": {
-								"text": "coins1"
+								"text": "coins5"
 							}
 						},
 						{
@@ -4077,7 +4077,7 @@
 							"objectClass": "Text2",
 							"sid": 231455483247678,
 							"parameters": {
-								"text": "coins2"
+								"text": "coins6"
 							}
 						}
 					],

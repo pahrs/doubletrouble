@@ -175,7 +175,12 @@
 			"Audio",
 			"Climb",
 			"SpriteFont2",
-			"SpriteFont3"
+			"SpriteFont3",
+			"Text3",
+			"mortes_orange",
+			"mortes_blue",
+			"moedas_orange",
+			"moedas_blue"
 		],
 		"subfolders": [
 			{
@@ -216,11 +221,13 @@
 		"subfolders": [
 			{
 				"items": [
+					"rm_menu",
 					"rm_level_1",
 					"rm_level_2",
 					"rm_level_3",
 					"rm_level_4",
-					"rm_level_5"
+					"rm_level_5",
+					"rm_score"
 				],
 				"subfolders": [],
 				"name": "Levels"

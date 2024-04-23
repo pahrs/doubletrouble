@@ -151,7 +151,8 @@
 						"SharedHP": 5,
 						"Dead": false,
 						"Arrive": false,
-						"Climbing": false
+						"Climbing": false,
+						"Death_Orange": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -225,7 +226,8 @@
 						"Gravity": true,
 						"WallGrapRight": false,
 						"Dead": false,
-						"Arrive": false
+						"Arrive": false,
+						"Death_Blue": 0
 					},
 					"behaviors": {
 						"Platform": {

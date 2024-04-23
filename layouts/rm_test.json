@@ -151,7 +151,8 @@
 						"SharedHP": 3,
 						"Dead": false,
 						"Arrive": false,
-						"Climbing": false
+						"Climbing": false,
+						"Death_Orange": 0
 					},
 					"behaviors": {
 						"Platform": {
