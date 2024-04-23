@@ -1135,6 +1135,35 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Goal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 361321,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 30,
+						"y": 30,
+						"width": 39.27439609548475,
+						"height": 38.87990268549697,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 475843416253375,
@@ -1600,7 +1629,7 @@
 					"world": {
 						"x": 265,
 						"y": 95,
-						"width": 50,
+						"width": 50.00000000000001,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
