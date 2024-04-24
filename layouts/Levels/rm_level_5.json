@@ -698,206 +698,6 @@
 					}
 				},
 				{
-					"type": "Saw",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 372295,
-					"instanceVariables": {
-						"direção": "baixo",
-						"distancia_X": 70,
-						"distancia_Y": 140,
-						"tempo_Y": 1.9,
-						"tempo_X": 2,
-						"movendo": false
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 360,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 125,
-						"y": 20,
-						"width": 10,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Saw",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 382971,
-					"instanceVariables": {
-						"direção": "baixo",
-						"distancia_X": 70,
-						"distancia_Y": 140,
-						"tempo_Y": 1.8,
-						"tempo_X": 2,
-						"movendo": false
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 360,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 195,
-						"y": 20,
-						"width": 10,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Saw",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 359479,
-					"instanceVariables": {
-						"direção": "baixo",
-						"distancia_X": 70,
-						"distancia_Y": 140,
-						"tempo_Y": 1.7,
-						"tempo_X": 2,
-						"movendo": false
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 360,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 245,
-						"y": 20,
-						"width": 10,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Saw",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 242115,
-					"instanceVariables": {
-						"direção": "baixo",
-						"distancia_X": 70,
-						"distancia_Y": 140,
-						"tempo_Y": 3,
-						"tempo_X": 2,
-						"movendo": false
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Rotate": {
-							"properties": {
-								"speed": 360,
-								"acceleration": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"world": {
-						"x": 295,
-						"y": 20,
-						"width": 10,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "JumpPad",
 					"properties": {
 						"initially-visible": true,
@@ -1094,10 +894,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 290.1576118836168,
-						"y": 30.11485184283407,
-						"width": 39.27439609548475,
-						"height": 38.87990268549697,
+						"x": 285,
+						"y": 35,
+						"width": 30,
+						"height": 30,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1546,6 +1346,206 @@
 					"world": {
 						"x": 10,
 						"y": 15,
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Saw",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 846913,
+					"instanceVariables": {
+						"direção": "baixo",
+						"distancia_X": 70,
+						"distancia_Y": 140,
+						"tempo_Y": 1.9,
+						"tempo_X": 2,
+						"movendo": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 360,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 125,
+						"y": 25,
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Saw",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 667830,
+					"instanceVariables": {
+						"direção": "baixo",
+						"distancia_X": 70,
+						"distancia_Y": 140,
+						"tempo_Y": 1.8,
+						"tempo_X": 2,
+						"movendo": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 360,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 195,
+						"y": 25,
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Saw",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 133319,
+					"instanceVariables": {
+						"direção": "baixo",
+						"distancia_X": 70,
+						"distancia_Y": 140,
+						"tempo_Y": 1.7,
+						"tempo_X": 2,
+						"movendo": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 360,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 245,
+						"y": 25,
+						"width": 10,
+						"height": 10,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Saw",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 563404,
+					"instanceVariables": {
+						"direção": "baixo",
+						"distancia_X": 70,
+						"distancia_Y": 140,
+						"tempo_Y": 3,
+						"tempo_X": 2,
+						"movendo": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 360,
+								"acceleration": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 295,
+						"y": 25,
 						"width": 10,
 						"height": 10,
 						"originX": 0.5,

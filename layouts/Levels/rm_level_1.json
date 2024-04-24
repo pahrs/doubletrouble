@@ -616,55 +616,6 @@
 					}
 				},
 				{
-					"type": "CoinItem1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 369245,
-					"instanceVariables": {},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "vertical",
-								"wave": "sine",
-								"period": 1,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 1,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 45,
-						"y": 40,
-						"width": 10,
-						"height": 10,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "SpriteHamster2",
 					"properties": {
 						"initially-visible": true,
@@ -1150,9 +1101,9 @@
 					"behaviors": {},
 					"world": {
 						"x": 30,
-						"y": 30,
-						"width": 39.27439609548475,
-						"height": 38.87990268549697,
+						"y": 35,
+						"width": 30,
+						"height": 30,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1521,7 +1472,7 @@
 					"world": {
 						"x": 135,
 						"y": 155,
-						"width": 30,
+						"width": 29.999999999999996,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1557,7 +1508,7 @@
 					"world": {
 						"x": 195,
 						"y": 145,
-						"width": 50,
+						"width": 50.00000000000001,
 						"height": 10,
 						"originX": 0.5,
 						"originY": 0.5,
