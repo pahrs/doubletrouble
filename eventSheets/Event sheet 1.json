@@ -119,14 +119,6 @@
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "Goal",
-							"sid": 308930650048728,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 711787165960034,
